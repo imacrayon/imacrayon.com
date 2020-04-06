@@ -1,0 +1,12 @@
+th {
+    @apply text-left;
+}
+
+::selection {
+    background: rgba(142, 192, 124, .25);
+}
+
+input::placeholder,
+textarea::placeholder {
+    @apply text-gray-600;
+}

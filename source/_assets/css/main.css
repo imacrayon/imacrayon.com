@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+
+@import 'base';
+
+@import 'tailwindcss/components';
+
+@import 'highlight.js/styles/gruvbox-dark.css';
+@import 'components/search';
+@import 'components/link';
+@import 'components/heading';
+@import 'components/rich-text';
+@import 'components/table-collapse';
+
+@import 'tailwindcss/utilities';
