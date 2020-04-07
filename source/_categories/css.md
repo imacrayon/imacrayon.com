@@ -4,4 +4,4 @@ title: CSS
 description: Posts related to the CSS language
 ---
 
-These posts are all about the Cascading Style Sheets language.
+These posts are all about **Cascading Style Sheets**.

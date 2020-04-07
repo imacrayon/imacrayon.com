@@ -1,7 +1,7 @@
 ---
 extends: _layouts.category
-title: Shell
+title: Tips & Tricks
 description: Post related to shell scripting
 ---
 
-These posts are all about shell scripts.
+These posts are all about development **tips & tricks**.
