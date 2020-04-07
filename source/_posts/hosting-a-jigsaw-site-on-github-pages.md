@@ -9,7 +9,7 @@ categories: [php, tips]
 
 Last week I re-built this site using the [Jigsaw](https://jigsaw.tighten.co) static site generator. Before now I've been hosting my site on a Digital Ocean droplet, but I thought it might be fun to try hosting it through GitHub Pages.
 
-Unfortunatly, Jigsaw's documentation for deploying to GitHub Pages is sparce. My intitial push to the `gh-pages` branch was easy, but after that I struggle with pushing subsequent updates to the `master` and `gh-pages` branches.
+Unfortunatly, Jigsaw's documentation for deploying to GitHub Pages is sparce. My intitial push to the `gh-pages` branch was easy, but after that I struggled with pushing subsequent updates to the `master` and `gh-pages` branches.
 
 I wrestled with trying to come up with a clean deployment strategy until I stumbled upon an [awesome blog post by James Brooks](https://james.brooks.page/blog/jigsaw-github-actions/). James recently setup his own Jigsaw blog to deploy to Github Pages using GitHub Actions and it's exactly what I was needing.
 
