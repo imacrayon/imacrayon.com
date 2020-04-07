@@ -73,7 +73,7 @@ export default {
 </script>
 ```
 
-As soon as our Vue component is created, we create a `<div>` and set it's `innerHTML` to the SVG file's HTML. Then we place the `<div>` inside of a document fragment and query for the SVG node inside. Building a document fragment in this way lets us use the vue DOM API without having to actually insert any elements into our webpage's real DOM.
+As soon as our Vue component is created, we create a `<div>` and set its `innerHTML` to the SVG file's HTML. Then we place the `<div>` inside of a document fragment and query for the SVG node inside. Building a document fragment in this way lets us use the Vue DOM API without having to actually insert any elements into our webpage's real DOM.
 
 Finally, now that we have our `svg` node we can finish off the `<template>` code that will render the SVG onto the page.
 
