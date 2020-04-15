@@ -17,7 +17,7 @@ php artisan test
 
 It's essentially a wrapper around [PHPUnit](https://phpunit.de/) that provides excellent formatting with plenty of colors and whitespace. The new test command also gives you more context around failed tests.
 
-With a small config change to Better PHPUnit, you can use the extension fire off the new test runner; Add the following line to your Visual Studio Code settings JSON and you're all set!
+With a small config change to Better PHPUnit, you can use the extension to fire off the new test runner; add the following line to your Visual Studio Code settings JSON and you're all set!
 
 ```
 "better-phpunit.phpunitBinary": "php artisan test",
