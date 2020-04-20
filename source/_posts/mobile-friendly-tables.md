@@ -111,22 +111,22 @@ First, let's take a look at the markup:
 
 ```html
 <table class="table-collapse">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Artist</th>
-            <th>Album</th>
-            <th class="text-right">Release Date</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-heading="Title">Our Song</td>
-            <td data-heading="Artist">Radiator Hospital</td>
-            <td data-heading="Album">Something Wild</td>
-            <td data-heading="Release Date" class="text-right">2013</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th class="text-right">Release Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-heading="Title">Our Song</td>
+      <td data-heading="Artist">Radiator Hospital</td>
+      <td data-heading="Album">Something Wild</td>
+      <td data-heading="Release Date" class="text-right">2013</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -139,58 +139,58 @@ Now, for the CSS:
 
 ```css
 @media (max-width: 768px) {
-    .table-collapse {
-        width: 100%;
-        & > tfoot,
-        & > thead {
-            display: none;
-        }
-        & > tbody,
-        & > tbody > tr,
-        & > tbody > tr > td,
-        & > tbody > tr > th {
-            display: block;
-            width: auto;
-        }
-        & > tbody > tr {
-            padding-top: 0.5em;
-            padding-bottom: 0.5em;
-            & > th {
-                border: none !important;
-                padding: 0.25em 0.5em;
-                text-align: left !important;
-                &:first-child {
-                    padding-left: 0.5em;
-                }
-                &:last-child {
-                    padding-right: 0.5em;
-                }
-            }
-            & > td {
-                border: none !important;
-                padding: 0.25em 0.5em 0.25em 35%;
-                box-shadow: none !important;
-                text-align: left !important;
-                position: relative;
-                &:first-child {
-                    padding-left: 35%;
-                }
-                &:last-child {
-                    padding-right: 0.5em;
-                }
-                &::before {
-                    content: attr(data-heading);
-                    position: absolute;
-                    top: 0.25em;
-                    left: 0.5em;
-                    width: 35%;
-                    padding-right: 0.25em;
-                    white-space: nowrap;
-                    z-index: 1;
-                }
-            }
-        }
+  .table-collapse {
+    width: 100%;
+    & > tfoot,
+    & > thead {
+      display: none;
     }
+    & > tbody,
+    & > tbody > tr,
+    & > tbody > tr > td,
+    & > tbody > tr > th {
+      display: block;
+      width: auto;
+    }
+    & > tbody > tr {
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      & > th {
+        border: none !important;
+        padding: 0.25em 0.5em;
+        text-align: left !important;
+        &:first-child {
+          padding-left: 0.5em;
+        }
+        &:last-child {
+          padding-right: 0.5em;
+        }
+      }
+      & > td {
+        border: none !important;
+        padding: 0.25em 0.5em 0.25em 35%;
+        box-shadow: none !important;
+        text-align: left !important;
+        position: relative;
+        &:first-child {
+          padding-left: 35%;
+        }
+        &:last-child {
+          padding-right: 0.5em;
+        }
+        &::before {
+          content: attr(data-heading);
+          position: absolute;
+          top: 0.25em;
+          left: 0.5em;
+          width: 35%;
+          padding-right: 0.25em;
+          white-space: nowrap;
+          z-index: 1;
+        }
+      }
+    }
+  }
 }
 ```
 
