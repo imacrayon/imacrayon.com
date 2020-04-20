@@ -4,7 +4,7 @@ section: content
 title: A Clean Start With Dotfiles
 date: 2020-01-28 17:54:00
 description: New year new computer. What dotfiles are and how to use them.
-categories: [tips]
+categories: [tooling]
 ---
 
 ## New Year, New Computer
