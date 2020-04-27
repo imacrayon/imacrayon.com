@@ -4,7 +4,7 @@ section: content
 title: Make Laravel Tests Easier To Debug With `assertSessionHasNoErrors`
 date: 2020-04-26 20:55:00
 description: The `assertSessionHasNoErrors` method in Laravel's test suit is a suprisingly powerful tool.
-categories: [laravel]
+categories: [laravel, php]
 ---
 
 The `assertSessionHasNoErrors` method in Laravel's test suit is surprisingly powerful. It not only asserts that your request has validation errors, it also clearly identifies exactly which validation rules are triggering the errors.
