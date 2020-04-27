@@ -15,7 +15,7 @@
 
     <div class="rich-text">
         <p>
-            I'm Christian Taylor, a full-stack developer and visual artist from Wichita, Kansas.
+            I'm Christian Taylor, a full stack developer and visual artist from Wichita, Kansas.
             I build online software at a company I co-founded called <a href="https://moonbaselabs.com">Moonbase Labs</a>.
             I maintain a few open source things on <a href="https://github.com/imacrayon">GitHub</a> and through <a href="https://devict.org">devICT</a>.
         </p>
