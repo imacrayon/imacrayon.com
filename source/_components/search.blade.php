@@ -3,7 +3,7 @@
         role="combobox"
         aria-haspopup="listbox"
         aria-owns="autocomplete-results"
-        :aria-expanded="open"
+        :aria-expanded="results.length ? 'true' : 'false'"
         class="absolute md:relative w-full justify-end left-0 z-10 px-6 md:px-0 hidden md:flex"
         :class="{'hidden md:flex': ! searching}"
     >
