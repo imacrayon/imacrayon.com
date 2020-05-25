@@ -54,8 +54,9 @@ export default {
       this.selected + 1 > this.results.length ? 1 : this.selected + 1
     this.scrollTo(this.selected - 1)
   },
-  onEnter() {
-    if (this.results.length == 0) return
+  onEnter(event) {
+    event.preventDefault()
+    event.stopPropagation()
     if (this.selected) {
       return this.choose(this.results[this.selected - 1])
     }
