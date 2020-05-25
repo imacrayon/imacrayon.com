@@ -17,14 +17,14 @@ export default {
         })
       })
     this.$watch('selected', value => {
-      if (!this.searching) return
+      if (this.results.length === 0) return
 
       if (this.selected === null) {
         this.activeDescendant = ''
         return
       }
 
-      this.activeDescendant = this.getItemId(this.selected)
+      this.activeDescendant = this.getItemId(this.selected - 1)
     })
   },
   showInput() {
@@ -43,19 +43,19 @@ export default {
     this.reset()
   },
   onArrowUp() {
-    if (!this.results.length) return
+    if (this.results.length == 0) return
     this.selected =
       this.selected - 1 < 1 ? this.results.length : this.selected - 1
     this.scrollTo(this.selected - 1)
   },
   onArrowDown() {
-    if (!this.results.length) return
+    if (this.results.length == 0) return
     this.selected =
       this.selected + 1 > this.results.length ? 1 : this.selected + 1
     this.scrollTo(this.selected - 1)
   },
   onEnter() {
-    if (!this.results.length) return
+    if (this.results.length == 0) return
     if (this.selected) {
       return this.choose(this.results[this.selected - 1])
     }
