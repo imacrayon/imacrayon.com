@@ -3,8 +3,8 @@ import hljsVue from 'highlightjs-vue'
 import 'alpinejs'
 import Search from './components/search'
 
-window.components = {
-    search: () => Search,
+window.Components = {
+  search: () => Search,
 }
 
 // Syntax highlighting
@@ -21,5 +21,5 @@ hljs.registerLanguage('php', require('highlight.js/lib/languages/php'))
 hljsVue(hljs)
 
 document.querySelectorAll('pre code').forEach(block => {
-    hljs.highlightBlock(block)
+  hljs.highlightBlock(block)
 })
