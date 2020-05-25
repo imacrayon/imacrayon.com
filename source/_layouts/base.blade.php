@@ -51,13 +51,13 @@
     </head>
 
     <body class="text-gray-600 leading-6 font-sans antialiased">
-        <a
-            class="sr-only block bg-black text-white text-lg text-center font-bold focus:not-sr-only"
-            href="#main"
-        >
-            <span class="block p-4">Skip to content</span>
-        </a>
-        <header class="flex items-center leading-none mt-8 lg:mt-12" role="banner">
+        <header class="mt-8 lg:mt-12" role="banner">
+            <a
+                class="sr-only block bg-black text-white text-lg text-center font-bold focus:not-sr-only"
+                href="#main"
+            >
+                <span class="block p-4">Skip to content</span>
+            </a>
             <div class="container flex items-center max-w-3xl mx-auto px-6">
                 <h1>
                     <a class="{{ $page->isActive('/') ? 'text-gray-400' : 'text-gray-500 hover:text-gray-900' }}" href="/" title="{{ $page->siteName }} home">
