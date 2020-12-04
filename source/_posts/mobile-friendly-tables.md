@@ -13,6 +13,70 @@ Building a table that works well on smaller screens is tricky, but I've come up 
 
 Check out the example below by resizing your browser window:
 
+<style>
+    table > caption {
+        padding: .5rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    @media (max-width: 768px) {
+        .table-collapse {
+            width: 100%;
+        }
+        .table-collapse > tfoot,
+        .table-collapse > thead {
+            display: none;
+        }
+        .table-collapse > tbody,
+        .table-collapse > tbody > tr,
+        .table-collapse > tbody > tr > td,
+        .table-collapse > tbody > tr > th {
+            display: block;
+            width: auto;
+        }
+        .table-collapse > tbody > tr {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            border-top: 1px solid theme('colors.gray.200');
+        }
+        .table-collapse > tbody > tr > th {
+            border: none !important;
+            padding: 0.25em 0.5em;
+            text-align: left !important;
+        }
+        .table-collapse > tbody > tr > th:first-child {
+            padding-left: 0.5em;
+        }
+        .table-collapse > tbody > tr > th:last-child {
+            padding-right: 0.5em;
+        }
+        .table-collapse > tbody > tr > td {
+            border: none !important;
+            padding: 0.25em 0.5em 0.25em 35%;
+            box-shadow: none !important;
+            text-align: left !important;
+            position: relative;
+        }
+        .table-collapse > tbody > tr > td:first-child {
+            padding-left: 35%;
+        }
+        .table-collapse > tbody > tr > td:last-child {
+            padding-right: 0.5em;
+        }
+        .table-collapse > tbody > tr > td::before {
+            content: attr(data-heading);
+            position: absolute;
+            top: 0.25em;
+            left: 0.5em;
+            width: 35%;
+            padding-right: 0.25em;
+            white-space: nowrap;
+            z-index: 1;
+        }
+    }
+    </style>
+
 <table class="table-collapse">
   <caption>My Most Played Songs of 2018</caption>
   <thead>
@@ -141,55 +205,56 @@ Now, for the CSS:
 @media (max-width: 768px) {
   .table-collapse {
     width: 100%;
-    & > tfoot,
-    & > thead {
-      display: none;
-    }
-    & > tbody,
-    & > tbody > tr,
-    & > tbody > tr > td,
-    & > tbody > tr > th {
-      display: block;
-      width: auto;
-    }
-    & > tbody > tr {
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      & > th {
-        border: none !important;
-        padding: 0.25em 0.5em;
-        text-align: left !important;
-        &:first-child {
-          padding-left: 0.5em;
-        }
-        &:last-child {
-          padding-right: 0.5em;
-        }
-      }
-      & > td {
-        border: none !important;
-        padding: 0.25em 0.5em 0.25em 35%;
-        box-shadow: none !important;
-        text-align: left !important;
-        position: relative;
-        &:first-child {
-          padding-left: 35%;
-        }
-        &:last-child {
-          padding-right: 0.5em;
-        }
-        &::before {
-          content: attr(data-heading);
-          position: absolute;
-          top: 0.25em;
-          left: 0.5em;
-          width: 35%;
-          padding-right: 0.25em;
-          white-space: nowrap;
-          z-index: 1;
-        }
-      }
-    }
+  }
+  .table-collapse > tfoot,
+  .table-collapse > thead {
+    display: none;
+  }
+  .table-collapse > tbody,
+  .table-collapse > tbody > tr,
+  .table-collapse > tbody > tr > td,
+  .table-collapse > tbody > tr > th {
+    display: block;
+    width: auto;
+  }
+  .table-collapse > tbody > tr {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-top: 1px solid theme('colors.gray.200');
+  }
+  .table-collapse > tbody > tr > th {
+    border: none !important;
+    padding: 0.25em 0.5em;
+    text-align: left !important;
+  }
+  .table-collapse > tbody > tr > th:first-child {
+    padding-left: 0.5em;
+  }
+  .table-collapse > tbody > tr > th:last-child {
+    padding-right: 0.5em;
+  }
+  .table-collapse > tbody > tr > td {
+    border: none !important;
+    padding: 0.25em 0.5em 0.25em 35%;
+    box-shadow: none !important;
+    text-align: left !important;
+    position: relative;
+  }
+  .table-collapse > tbody > tr > td:first-child {
+    padding-left: 35%;
+  }
+  .table-collapse > tbody > tr > td:last-child {
+    padding-right: 0.5em;
+  }
+  .table-collapse > tbody > tr > td::before {
+    content: attr(data-heading);
+    position: absolute;
+    top: 0.25em;
+    left: 0.5em;
+    width: 35%;
+    padding-right: 0.25em;
+    white-space: nowrap;
+    z-index: 1;
   }
 }
 ```

@@ -1,22 +1,17 @@
 @extends('_layouts.base')
 
-@push('meta')
-<meta property="og:title" content="{{ $page->title }}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="{{ $page->getUrl() }}"/>
-<meta property="og:description" content="{{ $page->description }}" />
-@endpush
-
-@section('main')
-<h1 class="h1">{{ $page->title }}</h1>
-
-<div class="text-base leading-6 sm:text-lg sm:leading-8">
-    @yield('content')
+@section('content')
+<div class="pt-12 px-4 sm:px-6">
+  <div class="mx-auto text-xl max-w-prose space-y-12">
+    <div class="border-l-4 border-peach-200 py-3 pl-6">
+      <h1 class="text-3xl sm:text-5xl text-gray-900 font-extrabold">{{ $page->title }}</h1>
+      <div class="text-xl">@yield('content')</div>
+    </div>
+    <ul class="space-y-12">
+      @foreach ($page->posts($posts) as $post)
+        <x-post-item :post="$post" />
+      @endforeach
+    </ul>
+  </div>
 </div>
-
-<hr class="my-8 md:my-12">
-
-@foreach ($page->posts($posts) as $post)
-    @include('_components.post-item')
-@endforeach
-@stop
+@overwrite
