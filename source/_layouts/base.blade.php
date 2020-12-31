@@ -27,6 +27,11 @@
 
     {{-- indielogin.com --}}
     <link href="https://twitter.com/ima_crayon" rel="me">
+
+    {{-- webmention.io --}}
+    <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc" />
+
     <link href="/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Atom Feed">
 
     <x-google-font src="https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&family=Bitter:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono" />
