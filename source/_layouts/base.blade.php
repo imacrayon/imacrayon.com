@@ -25,6 +25,8 @@
     <meta name="twitter:site" content="@ima_crayon">
     <meta name="twitter:creator" content="@ima_crayon">
 
+    {{-- indielogin.com --}}
+    <link href="https://twitter.com/ima_crayon" rel="me">
     <link href="/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Atom Feed">
 
     <x-google-font src="https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&family=Bitter:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono" />
