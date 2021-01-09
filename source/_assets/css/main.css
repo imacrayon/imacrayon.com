@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /** https://google-webfonts-helper.herokuapp.com **/
+  @font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('/assets/fonts/rubik/rubik-v11-latin-regular.woff2') format('woff2'),
+        url('/assets/fonts/rubik/rubik-v11-latin-regular.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 800;
+    src: local(''),
+        url('/assets/fonts/rubik/rubik-v11-latin-800.woff2') format('woff2'),
+        url('/assets/fonts/rubik/rubik-v11-latin-800.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('/assets/fonts/ibm-plex-mono/ibm-plex-mono-v6-latin-regular.woff2') format('woff2'),
+        url('/assets/fonts/ibm-plex-mono/ibm-plex-mono-v6-latin-regular.woff') format('woff');
+  }
+}
