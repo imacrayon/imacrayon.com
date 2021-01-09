@@ -8,6 +8,31 @@ module.exports = {
     './source/**/*.md',
   ],
   theme: {
+    colors: {
+      current: defaultTheme.colors.current,
+      transparent: defaultTheme.colors.transparent,
+      white: defaultTheme.colors.white,
+      black: defaultTheme.colors.black,
+      gray: defaultTheme.colors.gray,
+      peach: {
+        50: '#fffdfd',
+        100: '#fef6f5',
+        200: '#feebe9',
+        300: '#fddad7',
+        400: '#fbbcb6',
+        500: '#f7897f',
+        600: '#f34131',
+        700: '#c41b0c',
+        800: '#851208',
+        900: '#370803'
+      }
+    },
+    fontFamily: {
+      display: ['Rubik', ...defaultTheme.fontFamily.sans],
+      sans: ['Rubik', ...defaultTheme.fontFamily.sans],
+      serif: ['Georgia', ...defaultTheme.fontFamily.serif],
+      mono: ['"IBM Plex Mono"', ...defaultTheme.fontFamily.mono],
+    },
     extend: {
       typography: theme => ({
         DEFAULT: {
@@ -22,26 +47,6 @@ module.exports = {
           },
         },
       }),
-      colors: {
-        peach: {
-          50: '#fffdfd',
-          100: '#fef6f5',
-          200: '#feebe9',
-          300: '#fddad7',
-          400: '#fbbcb6',
-          500: '#f7897f',
-          600: '#f34131',
-          700: '#c41b0c',
-          800: '#851208',
-          900: '#370803'
-        }
-      },
-      fontFamily: {
-        display: ['Rubik', ...defaultTheme.fontFamily.sans],
-        sans: ['Rubik', ...defaultTheme.fontFamily.sans],
-        serif: ['Georgia', ...defaultTheme.fontFamily.serif],
-        mono: ['IBM\ Plex\ Mono', ...defaultTheme.fontFamily.mono],
-      },
     },
   },
   plugins: [
