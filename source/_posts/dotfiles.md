@@ -21,11 +21,11 @@ Backing up and tracking changes to these files makes it easier to restore your s
 
 Surprisingly, finding a good approach to managing dotfiles can be overwhelming, [there are a **ton** of solutions out there](https://dotfiles.github.io/inspiration/) and everybody has their own priorities when it comes to backing up these simple files.
 
-I settled on an approach that is ~~heavily inspired~~ stolen from [Dries Vints' Mackup Solution](https://driesvints.com/blog/getting-started-with-dotfiles/).
+I settled on an approach that is <del>heavily inspired</del> stolen from [Dries Vints' Mackup Solution](https://driesvints.com/blog/getting-started-with-dotfiles/).
 
 ### Mackup
 
-This is an awesome little tool that keeps a lot of your application config files synchronized with a iCloud. It does a lot of the heavy lifting in my setup. Mackup takes care of backing up preferences for my apps like Spotify, TablePlus, VSCode, and Terminal.
+This is an awesome little tool that keeps a lot of your application config files synchronized with iCloud. It does a lot of the heavy lifting in my setup. Mackup takes care of backing up preferences for my apps like Spotify, TablePlus, VSCode, and Terminal.
 
 ### Homebrew
 
