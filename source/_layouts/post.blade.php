@@ -38,6 +38,8 @@
               </span>
             </span>
           </a>
+        @else
+          <div></div>
         @endif
         @if ($previous = $page->getPrevious())
           <a class="group flex justify-end text-right w-1/2 hover:text-gray-900 hover:bg-peach-50" href="{{ $previous->getUrl() }}" title="Newer Post: {{ $previous->title }}">
@@ -53,6 +55,8 @@
               </svg>
             </span>
           </a>
+        @else
+          <div></div>
         @endif
     </nav>
   </article>
