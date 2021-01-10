@@ -29,7 +29,7 @@ description: My 2020 end of year recap
 * I didn’t eat any meat.
 * I started composting.
 * I listened to a lot of [Pinegrove](https://songwhip.com/pinegrove); [Phoebe Bridges](https://songwhip.com/phoebe-bridgers); [Kevin Devin](https://songwhip.com/kevin-devine), [Touché Amoré](https://songwhip.com/touche-amore); [Slaughter Beach, Dog](https://songwhip.com/slaughter-beach-dog); [David Bazan](https://songwhip.com/david-bazan); & [Jeff Rosenstock](https://songwhip.com/jeff-rosenstock).
-* I discovered new bands like [Dogleg](https://songwhip.com/dogleg), [Beach Bunny](https://songwhip.com/beach-bunny), and [Ernest Rarebergg](https://songwhip.com/ernestrareberrg).
+* I discovered new bands like [Dogleg](https://songwhip.com/dogleg), [Beach Bunny](https://songwhip.com/beach-bunny), and [Ernest Rareberrg](https://songwhip.com/ernestrareberrg).
 * I discovered cool work by artists [Adam Hale](https://thedailysplice.com), [Ian Francis](https://www.ifrancis.co.uk), [inside_a_ginger](https://www.instagram.com/inside_a_ginger/), [Nikolas Antoniou](https://www.nikolasantoniou.com), [Michael Reeder](http://www.michael-reeder.com).
 * I built [kansasbeatsthevirus.org](https://kansasbeatsthevirus.org) where over 800 communities & organizations across Kansas committed to mitigating the impact of Covid-19.
 * Miranda & I ended our relationship.
