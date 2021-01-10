@@ -44,7 +44,7 @@
         <a class="sr-only block bg-black text-white text-lg text-center font-bold focus:not-sr-only" href="#main">
           <span class="block p-4">Skip to content</span>
         </a>
-        <div class="flex items-center">
+        <div class="flex items-center text-sm">
           <a class="text-gray-500 {{ $page->isActive('/') ? '' : 'hover:text-gray-900 hover:bg-peach-100' }}" href="/" title="{{ $page->siteName }} home">
             I'm a crayon
           </a>

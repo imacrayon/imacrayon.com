@@ -8,13 +8,15 @@ return [
     'siteName' => "I'm a crayon",
     'siteDescription' => 'Work by Christian Taylor. An artist & full stack developer based in Wichita, KS.',
     'siteAuthor' => 'Christian Taylor',
-
-    // collections
     'collections' => [
         'posts' => [
             'author' => 'Christian Taylor', // Default author, if not provided in a post
             'sort' => '-date',
             'path' => 'words/{filename}',
+        ],
+        'pictures' => [
+            'sort' => '-date',
+            'path' => 'pictures/{filename}',
         ],
         'categories' => [
             'path' => '/words/categories/{filename}',
@@ -58,6 +60,6 @@ return [
             : $cleaned;
     },
     'isActive' => function ($page, $path) {
-        return Str::endsWith(trimPath($page->getPath()), trimPath($path));
+        return Str::is($path, $page->getPath());
     },
 ];
