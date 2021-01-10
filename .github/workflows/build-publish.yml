@@ -29,6 +29,6 @@ jobs:
         git commit -m "Build for deploy"
     - name: Publish
       run: |
-        git subtree split --prefix build_production -b master
-        git push -f origin master:master
-        git branch -D master
+        git subtree split --prefix build_production -b production
+        git push -f origin production:production
+        git branch -D production

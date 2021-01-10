@@ -20,9 +20,9 @@ name: Tests
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   tests:
@@ -62,7 +62,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy to Envoyer
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: curl ${{ secrets.ENVOYER_HOOK }}?sha=${{ github.sha }}
 ```
 
@@ -73,7 +73,7 @@ Here's a summary of the steps and some required configuration:
 - `Setup PHP` will setup PHP 7.4 as well as Laravel's required extensions.
 - `Execute tests` runs PHPUnit.
 - `Send Slack notification` will send a notification to the specified webhook if any tests fail.
-- `Deploy to Envoyer` triggers a new Envoyer deployment when new code is pushed to the `master` branch.
+- `Deploy to Envoyer` triggers a new Envoyer deployment when new code is pushed to the `main` branch.
 
 In order for PHPUnit to work your Laravel app must have an `APP_KEY` set. The easiest way to do this is to modify the `phpunit.xml` file in your project and hardcode an app key:
 
