@@ -8,10 +8,10 @@ image: /assets/img/pictures/pulling-a-thread/pulling-a-thread.jpg
 ---
 
 <div class="grid gap-px grid-cols-6">
-    <img class="col-span-2" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-detail-01.jpg">
-    <img class="col-span-2" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-detail-02.jpg">
-    <img class="col-span-2" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-detail-03.jpg">
-    <img class="col-span-6" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-detail-04.jpg">
-    <img class="col-span-3" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-process-01.jpg">
-    <img class="col-span-3" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-process-02.jpg">
+    <img loading="lazy" class="col-span-2" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-detail-01.jpg">
+    <img loading="lazy" class="col-span-2" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-detail-02.jpg">
+    <img loading="lazy" class="col-span-2" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-detail-03.jpg">
+    <img loading="lazy" class="col-span-6" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-detail-04.jpg">
+    <img loading="lazy" class="col-span-3" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-process-01.jpg">
+    <img loading="lazy" class="col-span-3" src="/assets/img/pictures/pulling-a-thread/pulling-a-thread-process-02.jpg">
 </div>

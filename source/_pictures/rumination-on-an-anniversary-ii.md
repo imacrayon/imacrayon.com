@@ -8,10 +8,10 @@ image: /assets/img/pictures/rumination-on-an-anniversary-ii/rumination.jpg
 ---
 
 <div class="grid gap-px grid-cols-6">
-    <img class="col-span-4" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-01.jpg">
-    <img class="col-span-2" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-02.jpg">
-    <img class="col-span-3" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-03.jpg">
-    <img class="col-span-3" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-04.jpg">
-    <img class="col-span-3" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-process-01.jpg">
-    <img class="col-span-3" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-process-02.jpg">
+    <img loading="lazy" class="col-span-4" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-01.jpg">
+    <img loading="lazy" class="col-span-2" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-02.jpg">
+    <img loading="lazy" class="col-span-3" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-03.jpg">
+    <img loading="lazy" class="col-span-3" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-04.jpg">
+    <img loading="lazy" class="col-span-3" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-process-01.jpg">
+    <img loading="lazy" class="col-span-3" src="/assets/img/pictures/rumination-on-an-anniversary-ii/rumination-process-02.jpg">
 </div>

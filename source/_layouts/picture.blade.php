@@ -18,7 +18,7 @@
   <div class="my-10 sm:px-6">
     <div class="mx-auto text-xl max-w-prose">
       <div class="space-y-px">
-        <img src="{{ $page->image }}" alt="{{ $page->title }}" />
+        <img loading="lazy" src="{{ $page->image }}" alt="{{ $page->title }}" />
         @yield('content')
       </div>
     </div>

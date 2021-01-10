@@ -8,7 +8,7 @@ image: /assets/img/pictures/sushi/sushi.jpg
 ---
 
 <div class="grid gap-px grid-cols-6">
-    <img class="col-span-6" src="/assets/img/pictures/sushi/sushi-i.jpg">
-    <img class="col-span-6" src="/assets/img/pictures/sushi/sushi-ii.jpg">
-    <img class="col-span-6" src="/assets/img/pictures/sushi/sushi-iii.jpg">
+    <img loading="lazy" class="col-span-6" src="/assets/img/pictures/sushi/sushi-i.jpg">
+    <img loading="lazy" class="col-span-6" src="/assets/img/pictures/sushi/sushi-ii.jpg">
+    <img loading="lazy" class="col-span-6" src="/assets/img/pictures/sushi/sushi-iii.jpg">
 </div>
