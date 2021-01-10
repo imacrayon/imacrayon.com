@@ -34,6 +34,8 @@
 
     <link href="/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Atom Feed">
 
+    <link rel="preload" href="/assets/fonts/rubik/rubik-v11-latin-800.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/rubik/rubik-v11-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 
     @stack('head')
