@@ -8,6 +8,7 @@
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: local(''),
         url('/assets/fonts/rubik/rubik-v11-latin-regular.woff2') format('woff2'),
         url('/assets/fonts/rubik/rubik-v11-latin-regular.woff') format('woff');
@@ -16,6 +17,7 @@
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 800;
+    font-display: swap;
     src: local(''),
         url('/assets/fonts/rubik/rubik-v11-latin-800.woff2') format('woff2'),
         url('/assets/fonts/rubik/rubik-v11-latin-800.woff') format('woff');
@@ -24,6 +26,7 @@
     font-family: 'IBM Plex Mono';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: local(''),
         url('/assets/fonts/ibm-plex-mono/ibm-plex-mono-v6-latin-regular.woff2') format('woff2'),
         url('/assets/fonts/ibm-plex-mono/ibm-plex-mono-v6-latin-regular.woff') format('woff');
