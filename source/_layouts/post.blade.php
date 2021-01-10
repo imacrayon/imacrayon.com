@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <div class="my-10 prose sm:prose-xl font-serif">
+    <div class="my-10 prose sm:prose-xl max-w-full font-serif">
       @yield('content')
     </div>
 
