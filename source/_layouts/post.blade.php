@@ -1,5 +1,9 @@
 @extends('_layouts.base')
 
+@push('head')
+<script src="/assets/js/webmention.js" data-page-url="https://imacrayon.com/pictures/" async></script>
+@endpush
+
 @section('content')
 <div class="pt-12 px-4 sm:px-6">
   <article class="mx-auto text-xl max-w-prose">
@@ -22,7 +26,33 @@
     <div class="my-10 prose sm:prose-xl max-w-full font-serif">
       @yield('content')
     </div>
+  </article>
 
+  <div class="my-10 space-y-8">
+    @foreach($page->getWebmentions() as $webmention)
+      <div class="text-base">
+        <div class="flex items-center">
+          <div class="mr-2 flex-shrink-0">
+            <img loading="lazy" src="{{ $webmention->author->photo }}" class="h-8 w-8 rounded-full border border-gray-200 bg-white text-gray-500"/>
+          </div>
+          <div>
+            <h4 class="text-sm">
+              <a href="{{ $webmention->author->url }}" class="font-bold">{{ $webmention->author->name }}</a>
+              <span class="text-sm">
+                <a href="{{ $webmention->url }}" class="underline hover:bg-peach-100">{{ $webmention->verb }}</a>
+                <span class="text-gray-500">on {{ $webmention->date->format('M jS Y') }}</span>
+              </span>
+            </h4>
+          </div>
+        </div>
+        @if ($webmention->text)
+          <div class="mt-2 font-serif">{{ $webmention->text }}</div>
+        @endif
+      </div>
+    @endforeach
+  </div>
+
+  <div class="mx-auto text-xl max-w-prose">
     <nav class="sm:flex justify-between leading-tight mb-12">
         @if ($next = $page->getNext())
           <a class="group flex justify-start w-1/2 hover:text-gray-900 hover:bg-peach-50" href="{{ $next->getUrl() }}" title="Older Post: {{ $next->title }}">
@@ -59,6 +89,6 @@
           <div></div>
         @endif
     </nav>
-  </article>
+  </div>
 </div>
 @overwrite
