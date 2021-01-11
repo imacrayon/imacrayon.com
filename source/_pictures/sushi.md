@@ -1,6 +1,6 @@
 ---
 extends: _layouts.picture
-title: Sushi
+title: Sushi I, Sushi II, Sushi III
 date: 2014-12-01
 media: acrylic & colored pencil on bristol & rice paper
 dimentions: 8" × 8"
