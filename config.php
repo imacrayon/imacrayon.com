@@ -94,6 +94,7 @@ return [
             : $cleaned;
     },
     'getWebmentions' => function ($page) {
+        $path = $page->getPath() ?: 'index';
         $path = 'webmentions'.$page->getPath().'.json';
         if (file_exists($path)) {
             return (new Collection(json_decode(file_get_contents($path), true)))
