@@ -9,7 +9,7 @@ categories: [tooling]
 
 ## New Year, New Computer
 
-I started off this new year with a new job and a fresh MacBook Pro. My previous MacBook had been around for a while and was gathering cruft; I decided this year I wanted a digital fresh start, and thus began my quest to organize my dotfiles.
+I started off this year with a new job and a fresh MacBook Pro. My previous MacBook had been around for a while and was gathering cruft; I decided this year I wanted a digital fresh start, and thus began my quest to organize my dotfiles.
 
 ## What Are Dotfiles?
 
