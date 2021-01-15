@@ -1,15 +1,17 @@
 /* Credit to https://sebastiandedeyne.com/webmentions-on-a-static-site-with-github-actions/ */
 
 const fs = require('fs')
+const path = require('path')
 const https = require('https')
 
 fetchWebmentions().then(webmentions => {
   webmentions.forEach(webmention => {
-    const path = webmention['wm-target'].replace('https://imacrayon.com/', '').replace(/\/$/, '')
+    const filePath = webmention['wm-target'].replace('https://imacrayon.com/', '').replace(/\/$/, '')
 
-    const filename = `${__dirname}/webmentions/${path}.json`
+    const filename = `${__dirname}/webmentions/${filePath}.json`
 
     if (!fs.existsSync(filename)) {
+      fs.mkdirSync(path.dirname(filename), { recursive: true })
       fs.writeFileSync(filename, JSON.stringify([webmention], null, 2))
 
       return
