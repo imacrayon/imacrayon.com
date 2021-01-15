@@ -66,7 +66,7 @@
 
     <div id="mentions" class="space-y-8 mb-12">
       <h2 class="font-display text-2xl sm:text-4xl font-extrabold">Mentions</h2>
-      @foreach($page->getWebmentions() as $webmention)
+      @forelse($page->getWebmentions() as $webmention)
         <div class="text-base">
           <div class="flex items-center">
             <div class="mr-2 flex-shrink-0">
@@ -84,7 +84,9 @@
             <div class="mt-2 font-serif">{{ $webmention->text }}</div>
           @endif
         </div>
-      @endforeach
+      @empty
+        <p class="font-serif italic text-gray-500">Nothing.</p>
+      @endforelse
     </div>
   </article>
 </div>
