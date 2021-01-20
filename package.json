@@ -7,11 +7,10 @@
     "hot": "mix watch --hot",
     "production": "mix --production"
   },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.3.1",
-    "laravel-mix": "^6.0.9",
-    "laravel-mix-jigsaw": "github:tighten/laravel-mix-jigsaw#pull/19/head",
-    "tailwindcss": "^2.0.2",
-    "webpack": "^5.12.2"
+  "dependencies": {
+    "@tailwindcss/typography": "^0.4.0",
+    "laravel-mix": "^6.0.10",
+    "laravel-mix-jigsaw": "^1.5.0",
+    "tailwindcss": "^2.0.2"
   }
 }
