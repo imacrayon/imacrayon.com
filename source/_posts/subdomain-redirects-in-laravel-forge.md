@@ -32,7 +32,7 @@ server {
 }
 ```
 
-The second server block requires you to add the SSL directives for the LetsEncrypt certificate generated in the first step. You should be able to find these directives inside your existing nginx config. They’ll probably be labeled with a commend like `# FORGE SSL (DO NOT REMOVE!)` and look like this:
+The second server block requires you to add the SSL directives for the LetsEncrypt certificate generated in the first step. You should be able to find these directives inside your existing nginx config. They’ll probably be labeled with a comment like `# FORGE SSL (DO NOT REMOVE!)` and look like this:
 
 ```bash
     # FORGE SSL (DO NOT REMOVE!)
