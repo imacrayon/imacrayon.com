@@ -1,4 +1,4 @@
-name: Build & Publish
+name: Publish
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - source
 
 jobs:
-  build-site:
+  publish:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
