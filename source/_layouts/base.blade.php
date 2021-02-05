@@ -11,10 +11,7 @@
 
     <link rel="icon" href="/favicon.svg">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fbbcb6">
-    <meta name="msapplication-TileColor" content="#feebe9">
-    <meta name="theme-color" content="#feebe9">
 
     <meta property="og:title" content="{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}"/>
     <meta property="og:type" content="website" />
