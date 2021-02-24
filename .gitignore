@@ -1,5 +1,5 @@
 /build_*/
 /node_modules/
-/source/assets/build/
+/source/assets/css/
 /vendor/
 .DS_Store
