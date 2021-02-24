@@ -1,5 +1,6 @@
 /build_*/
 /node_modules/
 /source/assets/css/
+/source/assets/mix-manifest.json
 /vendor/
 .DS_Store
