@@ -220,5 +220,27 @@
     "mention-of": "https://imacrayon.com/pictures/",
     "wm-property": "mention-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Ted Kriwiel",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/163abeac16429edb1a1c63e61a72a0947df137cdbd347d70c250e0710073097b.jpg",
+      "url": "https://twitter.com/tedkriwiel"
+    },
+    "url": "https://twitter.com/tedkriwiel/status/1366444747154481159",
+    "published": "2021-03-01T17:46:29+00:00",
+    "wm-received": "2021-03-01T18:37:36Z",
+    "wm-id": 1052608,
+    "wm-source": "https://brid.gy/comment/twitter/MoonbaseLabs/1366442862003511306/1366444747154481159",
+    "wm-target": "https://imacrayon.com/pictures/",
+    "content": {
+      "html": "“The impact” is soooooooo cool.\n<a class=\"u-mention\" href=\"https://imacrayon.com/pictures/\"></a>\n<a class=\"u-mention\" href=\"https://moonbaselabs.com/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/MoonbaseLabs\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/ima_crayon\"></a>",
+      "text": "“The impact” is soooooooo cool."
+    },
+    "in-reply-to": "https://imacrayon.com/pictures/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
   }
 ]
