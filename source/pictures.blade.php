@@ -12,6 +12,9 @@
               <time datetime="{{ $picture->getDate()->format('Y') }}">{{ $picture->getDate()->format('Y') }}</time><br>
             {{ $picture->media }}<br>
             {{ $picture->dimentions }}
+            @if ($picture->owner)
+              <br>Collection of {{ $picture->owner }}
+            @endif
           </div>
         </li>
       @endforeach

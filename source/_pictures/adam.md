@@ -5,6 +5,7 @@ date: 2014-03-01
 media: acrylic on canvas
 dimentions: 40" × 56"
 image: /assets/img/pictures/adam/adam.jpg
+owner: Sean Anderson
 ---
 
 <div class="grid gap-px grid-cols-6">

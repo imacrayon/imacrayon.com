@@ -10,6 +10,9 @@
           <time datetime="{{ $page->getDate()->format('Y') }}">{{ $page->getDate()->format('Y') }}</time><br>
           {{ $page->media }}<br>
           {{ $page->dimentions }}
+          @if ($page->owner)
+            <br>Collection of {{ $page->owner }}
+          @endif
         </div>
       </div>
     </div>

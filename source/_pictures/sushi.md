@@ -5,6 +5,7 @@ date: 2014-12-01
 media: acrylic & colored pencil on bristol & rice paper
 dimentions: 8" × 8"
 image: /assets/img/pictures/sushi/sushi.jpg
+owner: Kim Trupia
 ---
 
 <div class="grid gap-px grid-cols-6">

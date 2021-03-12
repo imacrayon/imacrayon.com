@@ -5,6 +5,7 @@ date: 2019-06-14
 media: acrylic on canvas
 dimentions: 24" × 24"
 image: /assets/img/pictures/rumination-on-an-anniversary-ii/rumination.jpg
+owner: Stephan Bisaha
 ---
 
 <div class="grid gap-px grid-cols-6">
