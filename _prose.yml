@@ -1,0 +1,48 @@
+prose:
+  rooturl: 'source'
+  siteurl: 'https://imacrayon.com'
+  media: 'source/assets/img'
+  ignore:
+    - .github
+    - listeners
+    - webmentions
+    - source/_assets
+    - source/_components
+    - source/_layouts
+    - source/404.md
+    - source/about.md
+    - source/index.blade.php
+    - source/pictures.blade.php
+  metadata:
+    source/_posts:
+      - name: "extends"
+        field:
+          element: "hidden"
+          value: "_layouts.post"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          value: "CURRENT_DATETIME"
+      - name: "description"
+        field:
+          element: "text"
+          label: "Description"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          options:
+            - name: "Option 1"
+              value: "1"
+            - name: "Option 2"
+              value: "2"
+    source/_categories:
+      - name: "extends"
+        field:
+          element: "hidden"
+          value: "_layouts.category"
+      - name: "description"
+        field:
+          element: "text"
+          label: "Description"
