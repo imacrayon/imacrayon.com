@@ -2,11 +2,10 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: [
-    './source/**/*.php',
-    './source/**/*.html',
-    './source/**/*.md',
-  ],
+  content: require('fast-glob').sync([
+    'source/**/*.{blade.php,md,html}',
+    '!source/**/_tmp/*' // exclude temporary files
+  ], { dot: true }),
   theme: {
     colors: {
       current: defaultTheme.colors.current,

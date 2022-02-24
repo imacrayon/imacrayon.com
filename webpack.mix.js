@@ -4,6 +4,6 @@ require('laravel-mix-jigsaw')
 mix.disableSuccessNotifications()
 mix.setPublicPath('source/assets')
 
-mix.jigsaw({ watch: ['config.php', 'source/**/*.md', 'source/**/*.php'] })
+mix.jigsaw()
    .postCss('source/_assets/css/main.css', 'css/main.css', [require('tailwindcss')])
    .version()
