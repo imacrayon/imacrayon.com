@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>Demo: Mobile Friendlt Tables</title>
+        <style>
+        body {
+            font-family: sans-serif;
+        }
+        td, th {
+            padding: .5em;
+        }
+        @media (max-width: 768px) {
+        .table-collapse {
+        width: 100%;
+        }
+        .table-collapse > tfoot,
+        .table-collapse > thead {
+        display: none;
+        }
+        .table-collapse > tbody,
+        .table-collapse > tbody > tr,
+        .table-collapse > tbody > tr > td,
+        .table-collapse > tbody > tr > th {
+        display: block;
+        width: auto;
+        }
+        .table-collapse > tbody > tr {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            border-top: 1px solid theme('colors.gray.200');
+        }
+        .table-collapse > tbody > tr > th {
+            border: none !important;
+            padding: 0.25em 0.5em;
+            text-align: left !important;
+        }
+        .table-collapse > tbody > tr > th:first-child {
+            padding-left: 0.5em;
+        }
+        .table-collapse > tbody > tr > th:last-child {
+            padding-right: 0.5em;
+        }
+        .table-collapse > tbody > tr > td {
+            border: none !important;
+            padding: 0.25em 0.5em 0.25em 35%;
+            box-shadow: none !important;
+            text-align: left !important;
+            position: relative;
+        }
+        .table-collapse > tbody > tr > td:first-child {
+            padding-left: 35%;
+        }
+        .table-collapse > tbody > tr > td:last-child {
+            padding-right: 0.5em;
+        }
+        .table-collapse > tbody > tr > td:::before {
+            content: attr(data-heading);
+            position: absolute;
+            top: 0.25em;
+            left: 0.5em;
+            width: 35%;
+            padding-right: 0.25em;
+            white-space: nowrap;
+            z-index: 1;
+          }
+        }
+        </style>
+    </head>
+    <body>
+        <table class="table-collapse">
+            <caption>My Most Played Songs of 2018</caption>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th class="text-right">Released</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-heading="Title">Our Song</td>
+                <td data-heading="Artist">Radiator Hospital</td>
+                <td data-heading="Album">Something Wild</td>
+                <td data-heading="Released" class="text-right">2013</td>
+              </tr>
+              <tr>
+                <td data-heading="Title">DEB</td>
+                <td data-heading="Artist">Thin Lips</td>
+                <td data-heading="Album">Riff Hard</td>
+                <td data-heading="Released" class="text-right">2016</td>
+              </tr>
+              <tr>
+                <td data-heading="Title">Crown Victoria</td>
+                <td data-heading="Artist">Lithuania</td>
+                <td data-heading="Album">White Reindeer</td>
+                <td data-heading="Released" class="text-right">2017</td>
+              </tr>
+              <tr>
+                <td data-heading="Title">Phoenix</td>
+                <td data-heading="Artist">Slaughter Beach, Dog</td>
+                <td data-heading="Album">Birdie</td>
+                <td data-heading="Released" class="text-right">2018</td>
+              </tr>
+              <tr>
+                <td data-heading="Title">Enter Entirely</td>
+                <td data-heading="Artist">Cloud Nothings</td>
+                <td data-heading="Album">Life Without Sound</td>
+                <td data-heading="Released" class="text-right">2017</td>
+              </tr>
+              <tr>
+                <td data-heading="Title">the cool</td>
+                <td data-heading="Artist">Oso Oso</td>
+                <td data-heading="Album">The Yunahon Mixtape</td>
+                <td data-heading="Released" class="text-right">2017</td>
+              </tr>
+              <tr>
+                <td data-heading="Title">How Simple</td>
+                <td data-heading="Artist">Hop Along</td>
+                <td data-heading="Album">Bark Your Head Off Dog</td>
+                <td data-heading="Released" class="text-right">2018</td>
+              </tr>
+              <tr>
+                <td data-heading="Title">Shark Smile - Edit</td>
+                <td data-heading="Artist">Big Thief</td>
+                <td data-heading="Album">Shark Smile (Edit)</td>
+                <td data-heading="Released" class="text-right">2017</td>
+              </tr>
+              <tr>
+                <td data-heading="Title">Raining in Kyoto</td>
+                <td data-heading="Artist">The Wonder Years</td>
+                <td data-heading="Album">Sister Cities</td>
+                <td data-heading="Released" class="text-right">2018</td>
+              </tr>
+              <tr>
+                <td data-heading="Title">Dead-Bird</td>
+                <td data-heading="Artist">McCafferty</td>
+                <td data-heading="Album">Beachboy</td>
+                <td data-heading="Released" class="text-right">2014</td>
+              </tr>
+              <tr>
+                <td data-heading="Title">I Never Wanted You</td>
+                <td data-heading="Artist">Headphones</td>
+                <td data-heading="Album">Headphones</td>
+                <td data-heading="Released" class="text-right">2005</td>
+              </tr>
+              <tr>
+                <td data-heading="Title">Your Best American Girl</td>
+                <td data-heading="Artist">Mitski</td>
+                <td data-heading="Album">Puberty 2</td>
+                <td data-heading="Released" class="text-right">2016</td>
+              </tr>
+            </tbody>
+          </table>
+    </body>
+</html>

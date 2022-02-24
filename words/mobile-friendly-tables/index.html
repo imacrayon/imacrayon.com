@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="referrer" content="always">
+    <link rel="canonical" href="https://imacrayon.com/words/mobile-friendly-tables">
+
+    <title>Mobile Friendly Tables | I&#039;m a crayon</title>
+    <meta name="description" content="An easy way to build mobile friendly tables with only CSS">
+
+    <link rel="icon" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#AA8C2C">
+
+    <meta property="og:title" content="Mobile Friendly Tables | I&#039;m a crayon"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://imacrayon.com/words/mobile-friendly-tables"/>
+    <meta property="og:description" content="Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS." />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ima_crayon">
+    <meta name="twitter:creator" content="@ima_crayon">
+
+    
+    <link href="https://twitter.com/ima_crayon" rel="me">
+
+    
+    <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc" />
+
+    <link href="/feed.atom" type="application/atom+xml" rel="alternate" title="I&#039;m a crayon Atom Feed">
+
+    <link rel="stylesheet" href="/assets/css/main.css?id=04e600291c4a9453082a11c3f2e48b4b">
+
+    <script src="/assets/js/webmention.js" data-page-url="https://imacrayon.com/pictures/" async></script>
+  </head>
+  <body class="text-gray-700 font-sans antialiased">
+    <header role="banner" class="mt-12">
+      <div class="mx-auto px-4 max-w-2xl">
+        <a class="sr-only block bg-black text-white text-lg text-center font-medium focus:not-sr-only" href="#main">
+          <span class="block p-4">Skip to content</span>
+        </a>
+        <div class="flex items-center text-sm">
+          <a class="text-gray-500 hover:bg-gold-100 hover:text-gold-800" href="/" title="I&#039;m a crayon home">
+            I'm a crayon
+          </a>
+          <div class="flex flex-1 justify-end items-center">
+             <nav class="flex items-center justify-end space-x-6">
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/pictures">
+  Pictures
+</a>
+ 
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/about">
+  About
+</a>
+ 
+</nav>
+ 
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <div class="pt-12">
+  <article class="mx-auto px-4 max-w-2xl">
+    <div class="space-y-2">
+      <h1 class="text-2xl sm:text-3xl font-medium break-words">Mobile Friendly Tables</h1>
+      <div class="grid sm:grid-cols-2 gap-1">
+        <div>
+           <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2019-07-14T17:13:00+00:00">
+  July 14, 2019
+</time>
+ 
+        </div>
+                  <div class="text-xs uppercase tracking-widest flex justify-end">
+            <div>
+                              <a href="/words/categories/css" class="hover:text-gold-800 focus:text-gold-800 hover:bg-gold-100 focus:bg-gold-100">css</a>                          </div>
+          </div>
+              </div>
+    </div>
+
+    <div class="mt-10 prose max-w-full">
+      <p>Building a table that works well on smaller screens is tricky, but I've come up with a simple CSS-only approach that works well for the 80% use case.</p>
+
+<h2>An Example</h2>
+
+<p>Check out the example below by resizing your browser window:</p>
+
+<style>
+    table > caption {
+        padding: .5rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    @media (max-width: 768px) {
+        .table-collapse {
+            width: 100%;
+        }
+        .table-collapse > tfoot,
+        .table-collapse > thead {
+            display: none;
+        }
+        .table-collapse > tbody,
+        .table-collapse > tbody > tr,
+        .table-collapse > tbody > tr > td,
+        .table-collapse > tbody > tr > th {
+            display: block;
+            width: auto;
+        }
+        .table-collapse > tbody > tr {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            border-top: 1px solid theme('colors.gray.200');
+        }
+        .table-collapse > tbody > tr > th {
+            border: none !important;
+            padding: 0.25em 0.5em;
+            text-align: left !important;
+        }
+        .table-collapse > tbody > tr > th:first-child {
+            padding-left: 0.5em;
+        }
+        .table-collapse > tbody > tr > th:last-child {
+            padding-right: 0.5em;
+        }
+        .table-collapse > tbody > tr > td {
+            border: none !important;
+            padding: 0.25em 0.5em 0.25em 35%;
+            box-shadow: none !important;
+            text-align: left !important;
+            position: relative;
+        }
+        .table-collapse > tbody > tr > td:first-child {
+            padding-left: 35%;
+        }
+        .table-collapse > tbody > tr > td:last-child {
+            padding-right: 0.5em;
+        }
+        .table-collapse > tbody > tr > td::before {
+            content: attr(data-heading);
+            position: absolute;
+            top: 0.25em;
+            left: 0.5em;
+            width: 35%;
+            padding-right: 0.25em;
+            white-space: nowrap;
+            z-index: 1;
+        }
+    }
+    </style>
+
+<table class="table-collapse">
+  <caption>My Most Played Songs of 2018</caption>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th class="text-right">Released</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-heading="Title">Our Song</td>
+      <td data-heading="Artist">Radiator Hospital</td>
+      <td data-heading="Album">Something Wild</td>
+      <td data-heading="Released" class="text-right">2013</td>
+    </tr>
+    <tr>
+      <td data-heading="Title">DEB</td>
+      <td data-heading="Artist">Thin Lips</td>
+      <td data-heading="Album">Riff Hard</td>
+      <td data-heading="Released" class="text-right">2016</td>
+    </tr>
+    <tr>
+      <td data-heading="Title">Crown Victoria</td>
+      <td data-heading="Artist">Lithuania</td>
+      <td data-heading="Album">White Reindeer</td>
+      <td data-heading="Released" class="text-right">2017</td>
+    </tr>
+    <tr>
+      <td data-heading="Title">Phoenix</td>
+      <td data-heading="Artist">Slaughter Beach, Dog</td>
+      <td data-heading="Album">Birdie</td>
+      <td data-heading="Released" class="text-right">2018</td>
+    </tr>
+    <tr>
+      <td data-heading="Title">Enter Entirely</td>
+      <td data-heading="Artist">Cloud Nothings</td>
+      <td data-heading="Album">Life Without Sound</td>
+      <td data-heading="Released" class="text-right">2017</td>
+    </tr>
+    <tr>
+      <td data-heading="Title">the cool</td>
+      <td data-heading="Artist">Oso Oso</td>
+      <td data-heading="Album">The Yunahon Mixtape</td>
+      <td data-heading="Released" class="text-right">2017</td>
+    </tr>
+    <tr>
+      <td data-heading="Title">How Simple</td>
+      <td data-heading="Artist">Hop Along</td>
+      <td data-heading="Album">Bark Your Head Off Dog</td>
+      <td data-heading="Released" class="text-right">2018</td>
+    </tr>
+    <tr>
+      <td data-heading="Title">Shark Smile - Edit</td>
+      <td data-heading="Artist">Big Thief</td>
+      <td data-heading="Album">Shark Smile (Edit)</td>
+      <td data-heading="Released" class="text-right">2017</td>
+    </tr>
+    <tr>
+      <td data-heading="Title">Raining in Kyoto</td>
+      <td data-heading="Artist">The Wonder Years</td>
+      <td data-heading="Album">Sister Cities</td>
+      <td data-heading="Released" class="text-right">2018</td>
+    </tr>
+    <tr>
+      <td data-heading="Title">Dead-Bird</td>
+      <td data-heading="Artist">McCafferty</td>
+      <td data-heading="Album">Beachboy</td>
+      <td data-heading="Released" class="text-right">2014</td>
+    </tr>
+    <tr>
+      <td data-heading="Title">I Never Wanted You</td>
+      <td data-heading="Artist">Headphones</td>
+      <td data-heading="Album">Headphones</td>
+      <td data-heading="Released" class="text-right">2005</td>
+    </tr>
+    <tr>
+      <td data-heading="Title">Your Best American Girl</td>
+      <td data-heading="Artist">Mitski</td>
+      <td data-heading="Album">Puberty 2</td>
+      <td data-heading="Released" class="text-right">2016</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>How It's Done</h2>
+
+<p>The first step to creating a good table is to ask yourself <em>"Do I actually need to use a table?"</em>. Many times there's better ways to present tabular data than just a boring table, <a href="https://www.steveschoger.com/">Steve Schoger</a> has some <a href="https://twitter.com/steveschoger/status/997125312411570176">great tips on organizing tabular data</a>.</p>
+
+<p>If it turns out you <em>really</em> do need a table, check out the code in the next section.</p>
+
+<h2>The Code</h2>
+
+<p>First, let's take a look at the markup:</p>
+
+<pre><code class="language-html">&lt;table class="table-collapse"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Title&lt;/th&gt;
+      &lt;th&gt;Artist&lt;/th&gt;
+      &lt;th&gt;Album&lt;/th&gt;
+      &lt;th class="text-right"&gt;Release Date&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td data-heading="Title"&gt;Our Song&lt;/td&gt;
+      &lt;td data-heading="Artist"&gt;Radiator Hospital&lt;/td&gt;
+      &lt;td data-heading="Album"&gt;Something Wild&lt;/td&gt;
+      &lt;td data-heading="Release Date" class="text-right"&gt;2013&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>There's two important thing to note in the markup above:</p>
+
+<ol>
+<li>The <code>table-collapse</code> class will apply the collapsible behavior to the table.</li>
+<li>The <code>data-heading</code> attribute on each <code>&lt;td&gt;</code> element should describe the table cell data.</li>
+</ol>
+
+<p>Now, for the CSS:</p>
+
+<pre><code class="language-css">@media (max-width: 768px) {
+  .table-collapse {
+    width: 100%;
+  }
+  .table-collapse &gt; tfoot,
+  .table-collapse &gt; thead {
+    display: none;
+  }
+  .table-collapse &gt; tbody,
+  .table-collapse &gt; tbody &gt; tr,
+  .table-collapse &gt; tbody &gt; tr &gt; td,
+  .table-collapse &gt; tbody &gt; tr &gt; th {
+    display: block;
+    width: auto;
+  }
+  .table-collapse &gt; tbody &gt; tr {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-top: 1px solid theme('colors.gray.200');
+  }
+  .table-collapse &gt; tbody &gt; tr &gt; th {
+    border: none !important;
+    padding: 0.25em 0.5em;
+    text-align: left !important;
+  }
+  .table-collapse &gt; tbody &gt; tr &gt; th:first-child {
+    padding-left: 0.5em;
+  }
+  .table-collapse &gt; tbody &gt; tr &gt; th:last-child {
+    padding-right: 0.5em;
+  }
+  .table-collapse &gt; tbody &gt; tr &gt; td {
+    border: none !important;
+    padding: 0.25em 0.5em 0.25em 35%;
+    box-shadow: none !important;
+    text-align: left !important;
+    position: relative;
+  }
+  .table-collapse &gt; tbody &gt; tr &gt; td:first-child {
+    padding-left: 35%;
+  }
+  .table-collapse &gt; tbody &gt; tr &gt; td:last-child {
+    padding-right: 0.5em;
+  }
+  .table-collapse &gt; tbody &gt; tr &gt; td::before {
+    content: attr(data-heading);
+    position: absolute;
+    top: 0.25em;
+    left: 0.5em;
+    width: 35%;
+    padding-right: 0.25em;
+    white-space: nowrap;
+    z-index: 1;
+  }
+}
+</code></pre>
+
+<p><a href="https://gist.github.com/imacrayon/ffab2dfb5f0f143f6e2110aea8b11212">View the code for this table as a gist</a>.</p>
+
+<p>Thanks to the media query in the first line above these styles are applied when the browser window is <strong>less than or equal to</strong> <code>768px</code> wide. The table's header and footer are hidden and the cells in each row stack vertically using <code>display: block</code>. Each of the table cells also have <code>padding-left: 35%</code> which allows a healthy amount of space for the <code>::before</code> pseudo element to sit to the left of the cell's data using <code>position: absolute</code>. The <code>content: attr(data-heading)</code> line dynamically pulls text from the <code>data-heading</code> attribute in the HTML and uses that text as a new label for the cell. The best part is the CSS <code>attr()</code> function has support all the way back to IE 8 when used as a <code>content</code> value.</p>
+    </div>
+
+    <nav class="my-12 border-t border-gray-200 grid sm:grid-cols-2 sm:border-0 sm:gap-8">
+              <a class="group border-b border-gray-200 flex hover:bg-gold-50 hover:text-gold-800" href="https://imacrayon.com/words/expressive-syncing-in-laravel" title="Older Post: Expressive Syncing in Laravel">
+          <span class="flex-shrink-0 flex items-center group-hover:bg-gold-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" class="h-6 w-6 text-gray-400 group-hover:text-gold-400" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </span>
+          <span class="flex-1 py-3 px-6 flex items-center justify-end text-right">
+            <span class="space-y-1">
+              <span class="font-medium">Expressive Syncing in Laravel</span>
+               <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2019-07-06T14:49:00+00:00">
+  July 6, 2019
+</time>
+ 
+            </span>
+          </span>
+        </a>
+                    <a class="group border-b border-gray-200 flex hover:bg-gold-50 hover:text-gold-800" href="https://imacrayon.com/words/an-inline-svg-component-using-vue-and-laravel-mix" title="Newer Post: An Inline SVG Component Using Vue &amp; Laravel Mix">
+          <span class="flex-1 py-3 px-6 flex items-center">
+            <span class="space-y-1">
+              <span class="font-medium">An Inline SVG Component Using Vue &amp; Laravel Mix</span>
+               <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2019-08-25T14:24:00+00:00">
+  August 25, 2019
+</time>
+ 
+            </span>
+          </span>
+          <span class="flex-shrink-0 flex items-center group-hover:bg-gold-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" class="h-6 w-6 text-gray-400 group-hover:text-gold-400" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+          </nav>
+
+    <div id="mentions" class="space-y-8 mb-12">
+      <h2 class="text-2xl sm:text-3xl font-medium">Mentions</h2>
+              <p class="italic text-gray-500">Nothing.</p>
+          </div>
+  </article>
+</div>
+    </main>
+    <footer class="mb-12 text-sm flex justify-center">
+       <nav class="flex items-center justify-end space-x-6">
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/pictures">
+  Pictures
+</a>
+ 
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/about">
+  About
+</a>
+ 
+</nav>
+ 
+    </footer>
+  </body>
+</html>

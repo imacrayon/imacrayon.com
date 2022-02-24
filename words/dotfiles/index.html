@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="referrer" content="always">
+    <link rel="canonical" href="https://imacrayon.com/words/dotfiles">
+
+    <title>A Clean Start With Dotfiles | I&#039;m a crayon</title>
+    <meta name="description" content="New year new computer. What dotfiles are and how to use them.">
+
+    <link rel="icon" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#AA8C2C">
+
+    <meta property="og:title" content="A Clean Start With Dotfiles | I&#039;m a crayon"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://imacrayon.com/words/dotfiles"/>
+    <meta property="og:description" content="Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS." />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ima_crayon">
+    <meta name="twitter:creator" content="@ima_crayon">
+
+    
+    <link href="https://twitter.com/ima_crayon" rel="me">
+
+    
+    <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc" />
+
+    <link href="/feed.atom" type="application/atom+xml" rel="alternate" title="I&#039;m a crayon Atom Feed">
+
+    <link rel="stylesheet" href="/assets/css/main.css?id=04e600291c4a9453082a11c3f2e48b4b">
+
+    <script src="/assets/js/webmention.js" data-page-url="https://imacrayon.com/pictures/" async></script>
+  </head>
+  <body class="text-gray-700 font-sans antialiased">
+    <header role="banner" class="mt-12">
+      <div class="mx-auto px-4 max-w-2xl">
+        <a class="sr-only block bg-black text-white text-lg text-center font-medium focus:not-sr-only" href="#main">
+          <span class="block p-4">Skip to content</span>
+        </a>
+        <div class="flex items-center text-sm">
+          <a class="text-gray-500 hover:bg-gold-100 hover:text-gold-800" href="/" title="I&#039;m a crayon home">
+            I'm a crayon
+          </a>
+          <div class="flex flex-1 justify-end items-center">
+             <nav class="flex items-center justify-end space-x-6">
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/pictures">
+  Pictures
+</a>
+ 
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/about">
+  About
+</a>
+ 
+</nav>
+ 
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <div class="pt-12">
+  <article class="mx-auto px-4 max-w-2xl">
+    <div class="space-y-2">
+      <h1 class="text-2xl sm:text-3xl font-medium break-words">A Clean Start With Dotfiles</h1>
+      <div class="grid sm:grid-cols-2 gap-1">
+        <div>
+           <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2020-01-28T17:54:00+00:00">
+  January 28, 2020
+</time>
+ 
+        </div>
+                  <div class="text-xs uppercase tracking-widest flex justify-end">
+            <div>
+                              <a href="/words/categories/tooling" class="hover:text-gold-800 focus:text-gold-800 hover:bg-gold-100 focus:bg-gold-100">tooling</a>                          </div>
+          </div>
+              </div>
+    </div>
+
+    <div class="mt-10 prose max-w-full">
+      <h2>New Year, New Computer</h2>
+
+<p>I started off this year with a new job and a fresh MacBook Pro. My previous MacBook had been around for a while and was gathering cruft; I decided this year I wanted a digital fresh start, and thus began my quest to organize my dotfiles.</p>
+
+<h2>What Are Dotfiles?</h2>
+
+<p>Dotfiles are various text files that store your preferred system setup. They're commonly used to define preferences for development tools like shell environments, git, and system configurations.</p>
+
+<p>Backing up and tracking changes to these files makes it easier to restore your system preferences on any install of MacOS.</p>
+
+<h2>My Approach</h2>
+
+<p>Surprisingly, finding a good approach to managing dotfiles can be overwhelming, <a href="https://dotfiles.github.io/inspiration/">there are a <strong>ton</strong> of solutions out there</a> and everybody has their own priorities when it comes to backing up these simple files.</p>
+
+<p>I settled on an approach that is <del>heavily inspired</del> stolen from <a href="https://driesvints.com/blog/getting-started-with-dotfiles/">Dries Vints' Mackup Solution</a>.</p>
+
+<h3>Mackup</h3>
+
+<p>This is an awesome little tool that keeps a lot of your application config files synchronized with iCloud. It does a lot of the heavy lifting in my setup. Mackup takes care of backing up preferences for my apps like Spotify, TablePlus, VSCode, and Terminal.</p>
+
+<h3>Homebrew</h3>
+
+<p>At this point I think <a href="http://brew.sh">Homebrew</a> is pretty much a must-have for any Mac developer. My dotfiles use a <code>Brewfile</code> to define most of the apps, development tools, and libraries I use everyday. Running <code>brew bundle</code> installs all of these tools in a single command.</p>
+
+<h3>Z Shell</h3>
+
+<p>I'm a fan of <a href="http://www.zsh.org">Z Shell</a> and as of MacOS Catalina it is the default shell for mac users. I use the <a href="https://github.com/zimfw/zimfw">Zsh Improved Framework (ZIM)</a> which supplies additional features on top of Z Shell's defaults. <a href="http://ohmyz.sh/">Oh-My-Zsh</a> and <a href="https://github.com/sorin-ionescu/prezto">Presto</a> are two other popular Z Shell frameworks, but I think they both include a lot of over-the-top features I never end up needing.</p>
+
+<h2>A Fresh Install</h2>
+
+<p>Installation of my dotfile preferences is super simple: Run <code>./install.sh</code>, and you're good to go!</p>
+
+<p><a href="https://github.com/imacrayon/dotfiles">You can find a full installation guide on GitHub</a>. Feel free to fork it and modify it as you see fit.</p>
+    </div>
+
+    <nav class="my-12 border-t border-gray-200 grid sm:grid-cols-2 sm:border-0 sm:gap-8">
+              <a class="group border-b border-gray-200 flex hover:bg-gold-50 hover:text-gold-800" href="https://imacrayon.com/words/an-inline-svg-component-using-vue-and-laravel-mix" title="Older Post: An Inline SVG Component Using Vue &amp; Laravel Mix">
+          <span class="flex-shrink-0 flex items-center group-hover:bg-gold-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" class="h-6 w-6 text-gray-400 group-hover:text-gold-400" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </span>
+          <span class="flex-1 py-3 px-6 flex items-center justify-end text-right">
+            <span class="space-y-1">
+              <span class="font-medium">An Inline SVG Component Using Vue &amp; Laravel Mix</span>
+               <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2019-08-25T14:24:00+00:00">
+  August 25, 2019
+</time>
+ 
+            </span>
+          </span>
+        </a>
+                    <a class="group border-b border-gray-200 flex hover:bg-gold-50 hover:text-gold-800" href="https://imacrayon.com/words/upgrading-php-with-laravel-forge-and-envoyer" title="Newer Post: Upgrading PHP with Laravel Forge and Envoyer">
+          <span class="flex-1 py-3 px-6 flex items-center">
+            <span class="space-y-1">
+              <span class="font-medium">Upgrading PHP with Laravel Forge and Envoyer</span>
+               <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2020-02-12T21:24:00+00:00">
+  February 12, 2020
+</time>
+ 
+            </span>
+          </span>
+          <span class="flex-shrink-0 flex items-center group-hover:bg-gold-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" class="h-6 w-6 text-gray-400 group-hover:text-gold-400" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+          </nav>
+
+    <div id="mentions" class="space-y-8 mb-12">
+      <h2 class="text-2xl sm:text-3xl font-medium">Mentions</h2>
+              <div class="text-base">
+          <div class="flex items-center">
+            <div class="mr-2 flex-shrink-0">
+              <img loading="lazy" src="https://webmention.io/avatar/pbs.twimg.com/b0cf2ef375b636407411202b83fd48ff50e320aec6e9c519e2bdb1bac8190c70.jpg" class="h-8 w-8 rounded-full border border-gray-200 bg-white text-gray-500"/>
+            </div>
+            <div>
+              <h3>
+                <a href="https://twitter.com/KatiMichel" class="font-medium hover:bg-gold-100 hover:text-gold-800">Katherine Michel</a>
+                <a href="https://twitter.com/ima_crayon/status/1350182620093689860#favorited-by-101186457" class="underline hover:bg-gold-100 hover:text-gold-800">liked</a>
+                <span class="text-gray-500">on January 15, 2021</span>
+              </h3>
+            </div>
+          </div>
+                  </div>
+          </div>
+  </article>
+</div>
+    </main>
+    <footer class="mb-12 text-sm flex justify-center">
+       <nav class="flex items-center justify-end space-x-6">
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/pictures">
+  Pictures
+</a>
+ 
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/about">
+  About
+</a>
+ 
+</nav>
+ 
+    </footer>
+  </body>
+</html>

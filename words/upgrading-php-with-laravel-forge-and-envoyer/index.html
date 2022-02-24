@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="referrer" content="always">
+    <link rel="canonical" href="https://imacrayon.com/words/upgrading-php-with-laravel-forge-and-envoyer">
+
+    <title>Upgrading PHP with Laravel Forge and Envoyer | I&#039;m a crayon</title>
+    <meta name="description" content="I ran into a hiccup to day upgrading the PHP version on my Laravel Forge server today.">
+
+    <link rel="icon" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#AA8C2C">
+
+    <meta property="og:title" content="Upgrading PHP with Laravel Forge and Envoyer | I&#039;m a crayon"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://imacrayon.com/words/upgrading-php-with-laravel-forge-and-envoyer"/>
+    <meta property="og:description" content="Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS." />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ima_crayon">
+    <meta name="twitter:creator" content="@ima_crayon">
+
+    
+    <link href="https://twitter.com/ima_crayon" rel="me">
+
+    
+    <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc" />
+
+    <link href="/feed.atom" type="application/atom+xml" rel="alternate" title="I&#039;m a crayon Atom Feed">
+
+    <link rel="stylesheet" href="/assets/css/main.css?id=04e600291c4a9453082a11c3f2e48b4b">
+
+    <script src="/assets/js/webmention.js" data-page-url="https://imacrayon.com/pictures/" async></script>
+  </head>
+  <body class="text-gray-700 font-sans antialiased">
+    <header role="banner" class="mt-12">
+      <div class="mx-auto px-4 max-w-2xl">
+        <a class="sr-only block bg-black text-white text-lg text-center font-medium focus:not-sr-only" href="#main">
+          <span class="block p-4">Skip to content</span>
+        </a>
+        <div class="flex items-center text-sm">
+          <a class="text-gray-500 hover:bg-gold-100 hover:text-gold-800" href="/" title="I&#039;m a crayon home">
+            I'm a crayon
+          </a>
+          <div class="flex flex-1 justify-end items-center">
+             <nav class="flex items-center justify-end space-x-6">
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/pictures">
+  Pictures
+</a>
+ 
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/about">
+  About
+</a>
+ 
+</nav>
+ 
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <div class="pt-12">
+  <article class="mx-auto px-4 max-w-2xl">
+    <div class="space-y-2">
+      <h1 class="text-2xl sm:text-3xl font-medium break-words">Upgrading PHP with Laravel Forge and Envoyer</h1>
+      <div class="grid sm:grid-cols-2 gap-1">
+        <div>
+           <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2020-02-12T21:24:00+00:00">
+  February 12, 2020
+</time>
+ 
+        </div>
+                  <div class="text-xs uppercase tracking-widest flex justify-end">
+            <div>
+                              <a href="/words/categories/php" class="hover:text-gold-800 focus:text-gold-800 hover:bg-gold-100 focus:bg-gold-100">php</a>,                               <a href="/words/categories/laravel" class="hover:text-gold-800 focus:text-gold-800 hover:bg-gold-100 focus:bg-gold-100">laravel</a>,                               <a href="/words/categories/tooling" class="hover:text-gold-800 focus:text-gold-800 hover:bg-gold-100 focus:bg-gold-100">tooling</a>                          </div>
+          </div>
+              </div>
+    </div>
+
+    <div class="mt-10 prose max-w-full">
+      <p>Laravel Forge makes it dead simple switch PHP versions. It's literally just a one button click and you're good to go. However, today I ran into a hiccup with Forge and Envoyer after upgrading from PHP 7.3 to 7.4.</p>
+
+<p>First, after upgrading, I had to manually change the PHP FPM version in my Nginx config:</p>
+
+<pre><code>fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+</code></pre>
+
+<p>After this change re-deploying my site through Forge appeared to work, yet I shortly ran up against problems when trying to deploy through Envoyer. It turns out Envoyer also needs to know about any changes to your server's PHP version. From the "Servers" tab, if you click "Update server" (the pencil icon), you'll find a "PHP Version" menu under the "System" section. This field also needs to be set to "PHP 7.4".</p>
+
+<p>Changing the PHP version in Envoyer quickly fixed all my deployment woes, hopefully this might help somebody else facing the same issue.</p>
+    </div>
+
+    <nav class="my-12 border-t border-gray-200 grid sm:grid-cols-2 sm:border-0 sm:gap-8">
+              <a class="group border-b border-gray-200 flex hover:bg-gold-50 hover:text-gold-800" href="https://imacrayon.com/words/dotfiles" title="Older Post: A Clean Start With Dotfiles">
+          <span class="flex-shrink-0 flex items-center group-hover:bg-gold-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" class="h-6 w-6 text-gray-400 group-hover:text-gold-400" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </span>
+          <span class="flex-1 py-3 px-6 flex items-center justify-end text-right">
+            <span class="space-y-1">
+              <span class="font-medium">A Clean Start With Dotfiles</span>
+               <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2020-01-28T17:54:00+00:00">
+  January 28, 2020
+</time>
+ 
+            </span>
+          </span>
+        </a>
+                    <a class="group border-b border-gray-200 flex hover:bg-gold-50 hover:text-gold-800" href="https://imacrayon.com/words/hosting-a-jigsaw-site-on-github-pages" title="Newer Post: Hosting a Jigsaw Site on GitHub Pages">
+          <span class="flex-1 py-3 px-6 flex items-center">
+            <span class="space-y-1">
+              <span class="font-medium">Hosting a Jigsaw Site on GitHub Pages</span>
+               <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2020-04-07T17:36:00+00:00">
+  April 7, 2020
+</time>
+ 
+            </span>
+          </span>
+          <span class="flex-shrink-0 flex items-center group-hover:bg-gold-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" class="h-6 w-6 text-gray-400 group-hover:text-gold-400" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+          </nav>
+
+    <div id="mentions" class="space-y-8 mb-12">
+      <h2 class="text-2xl sm:text-3xl font-medium">Mentions</h2>
+              <p class="italic text-gray-500">Nothing.</p>
+          </div>
+  </article>
+</div>
+    </main>
+    <footer class="mb-12 text-sm flex justify-center">
+       <nav class="flex items-center justify-end space-x-6">
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/pictures">
+  Pictures
+</a>
+ 
+   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/about">
+  About
+</a>
+ 
+</nav>
+ 
+    </footer>
+  </body>
+</html>
