@@ -5,30 +5,29 @@
 @layer base {
   /** https://google-webfonts-helper.herokuapp.com **/
   @font-face {
-    font-family: 'Rubik';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
-    src: local(''),
-        url('/assets/fonts/rubik/rubik-v11-latin-regular.woff2') format('woff2'),
-        url('/assets/fonts/rubik/rubik-v11-latin-regular.woff') format('woff');
+    src: local(''), url('/assets/fonts/inter-v7-latin/inter-v7-latin-regular.woff2') format('woff2');
   }
   @font-face {
-    font-family: 'Rubik';
+    font-family: 'Inter';
     font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: local(''),
-        url('/assets/fonts/rubik/rubik-v11-latin-800.woff2') format('woff2'),
-        url('/assets/fonts/rubik/rubik-v11-latin-800.woff') format('woff');
+    font-weight: 500;
+    src: local(''), url('/assets/fonts/inter-v7-latin/inter-v7-latin-500.woff2') format('woff2');
   }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''), url('/assets/fonts/inter-v7-latin/inter-v7-latin-700.woff2') format('woff2');
+  }
+
   @font-face {
     font-family: 'IBM Plex Mono';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local(''),
-        url('/assets/fonts/ibm-plex-mono/ibm-plex-mono-v6-latin-regular.woff2') format('woff2'),
-        url('/assets/fonts/ibm-plex-mono/ibm-plex-mono-v6-latin-regular.woff') format('woff');
+    src: local(''), url('/assets/fonts/ibm-plex-mono/ibm-plex-mono-v6-latin-regular.woff2') format('woff2');
   }
 }
