@@ -1,0 +1,22 @@
+---
+layout: layout.webc
+---
+
+<link rel="stylesheet" href="./css/prism-gruvbox.css">
+
+<article>
+  <header>
+    <div class="center stack" style="--gap: .5rem">
+      <h1 @text="title"></h1>
+      <time :datetime="htmlDate(page.date)" @text="readableDate(page.date)"></time>
+    </div>
+  </header>
+  <div class="center stack prose" @raw="content"></div>
+</article>
+<pagination @collection="words" @aria-label="Words"></pagination>
+<section aria-labelledby="webmentions">
+  <div class="center">
+    <h2 id="webmentions">Webmentions</h2>
+    <webmentions></webmentions>
+  </div>
+</section>
