@@ -1,5 +1,4 @@
 ---
-# Metadata comes from _data/metadata.json
 permalink: "{{ metadata.jsonfeed.path }}"
 eleventyExcludeFromCollections: true
 ---
@@ -15,7 +14,7 @@ eleventyExcludeFromCollections: true
     "url": "{{ metadata.author.url }}"
   },
   "items": [
-    {%- for post in collections.posts | reverse %}
+    {%- for post in collections.latest %}
     {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset -%}
     {
       "id": "{{ absolutePostUrl }}",

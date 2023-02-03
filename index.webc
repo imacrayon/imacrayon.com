@@ -15,7 +15,7 @@ title: I'm a crayon
     <h2 id="latest">Latest</h2>
     <ul role="list" class="posts stack" style="--gap:1rem;">
       <script webc:type="js" webc:is="template">
-        collections.latest.reverse().slice(0, 5).map(post => {
+        collections.latest.slice(0, 5).map(post => {
           return `<li>
             <strong><a href="${post.url}">${helpers.widont(post.data.title)}</a></strong>
             <time datetime="${helpers.htmlDate(post.date)}">${helpers.readableDate(post.date)}</time>

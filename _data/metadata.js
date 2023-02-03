@@ -17,8 +17,7 @@ module.exports = function () {
     },
     "author": {
       "name": "Christian",
-      "email": "christianbtaylor@gmail.com",
-      "url": "https://imacrayon.com/about/"
+      "url": "https://imacrayon.com"
     }
   }
 }

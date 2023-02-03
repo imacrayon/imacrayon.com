@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('latest', function (collection) {
     return collection.getAllSorted().filter(item => {
       return item.data.tags && item.data.tags.some(tag => ['words', 'pictures'].includes(tag))
-    })
+    }).reverse()
   });
 
   eleventyConfig.addFilter('version', path => {
