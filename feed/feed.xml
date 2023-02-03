@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>I&#39;m a crayon</title>
+	<subtitle>Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS.</subtitle>
+	
+	<link href="https://imacrayon.com/feed/feed.xml" rel="self"/>
+	<link href="https://imacrayon.com"/>
+	<updated>2023-02-03T22:11:25Z</updated>
+	<id>https://imacrayon.com</id>
+	<author>
+		<name>Christian</name>
+		<email>christianbtaylor@gmail.com</email>
+	</author>
+</feed>

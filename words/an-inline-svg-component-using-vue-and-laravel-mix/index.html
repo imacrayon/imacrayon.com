@@ -1,250 +1,346 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="referrer" content="always">
-    <link rel="canonical" href="https://imacrayon.com/words/an-inline-svg-component-using-vue-and-laravel-mix">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>An Inline SVG Component Using Vue &amp; Laravel Mix</title>
+  <meta name="description" content="Building an SVG icon Vue component">
+  <meta name="generator" content="Eleventy v2.0.0">
+  <link rel="icon" href="/img/favicon.svg">
 
-    <title>An Inline SVG Component Using Vue &amp; Laravel Mix | I&#039;m a crayon</title>
-    <meta name="description" content="Building an SVG icon Vue component">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="An Inline SVG Component Using Vue &amp; Laravel Mix">
+  <meta property="og:description" content="Building an SVG icon Vue component">
+  <meta property="og:url" content="/words/an-inline-svg-component-using-vue-and-laravel-mix/">
+  <meta property="og:locale">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@ima_crayon">
+  <meta name="twitter:creator" content="@ima_crayon">
 
-    <link rel="icon" href="/favicon.svg">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#AA8C2C">
+  <link rel="me" href="https://twitter.com/ima_crayon">
+  <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention">
+  <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc">
 
-    <meta property="og:title" content="An Inline SVG Component Using Vue &amp; Laravel Mix | I&#039;m a crayon"/>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://imacrayon.com/words/an-inline-svg-component-using-vue-and-laravel-mix"/>
-    <meta property="og:description" content="Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS." />
+  <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="I'm a crayon">
+  <link rel="alternate" href="/feed/feed.json" type="application/json" title="I'm a crayon">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@ima_crayon">
-    <meta name="twitter:creator" content="@ima_crayon">
+  <link rel="stylesheet" href="/css/main.css?id=115607463">
 
-    
-    <link href="https://twitter.com/ima_crayon" rel="me">
+  
+  <style>/**
+ * Gruvbox dark theme
+ *
+ * Adapted from a theme based on:
+ * Vim Gruvbox dark Theme (https://github.com/morhetz/gruvbox)
+ *
+ * @author Azat S. <to@azat.io>
+ * @version 1.0
+ */
 
-    
-    <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention" />
-    <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc" />
+:root {
+  /* Changed from #1d2021 for accessible contrast */
+  --code-fg: #ebdbb2;
+  --code-fg4: #a89984;
+  --code-bg: #1C1C1C;
+  --code-highlight: rgba(104, 157, 106, 0.5);
+  --code-gray: #928374;
+  --code-green: #b8bb26;
+  --code-red: #fb4934;
+  --code-aqua: #8ec07c;
+  --code-yellow: #fabd2f;
+  --code-orange: #fe8019;
+  --code-blue: #83a598;
+  --code-purple: #d3869b;
+}
 
-    <link href="/feed.atom" type="application/atom+xml" rel="alternate" title="I&#039;m a crayon Atom Feed">
+code,
+pre {
+  color: var(--code-fg);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 2;
 
-    <link rel="stylesheet" href="/assets/css/main.css?id=04e600291c4a9453082a11c3f2e48b4b">
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
 
-    <script src="/assets/js/webmention.js" data-page-url="https://imacrayon.com/pictures/" async></script>
-  </head>
-  <body class="text-gray-700 font-sans antialiased">
-    <header role="banner" class="mt-12">
-      <div class="mx-auto px-4 max-w-2xl">
-        <a class="sr-only block bg-black text-white text-lg text-center font-medium focus:not-sr-only" href="#main">
-          <span class="block p-4">Skip to content</span>
-        </a>
-        <div class="flex items-center text-sm">
-          <a class="text-gray-500 hover:bg-gold-100 hover:text-gold-800" href="/" title="I&#039;m a crayon home">
-            I'm a crayon
-          </a>
-          <div class="flex flex-1 justify-end items-center">
-             <nav class="flex items-center justify-end space-x-6">
-   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/pictures">
-  Pictures
-</a>
- 
-   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/about">
-  About
-</a>
- 
-</nav>
- 
-          </div>
-        </div>
-      </div>
-    </header>
-    <main id="main">
-      <div class="pt-12">
-  <article class="mx-auto px-4 max-w-2xl">
-    <div class="space-y-2">
-      <h1 class="text-2xl sm:text-3xl font-medium break-words">An Inline SVG Component Using Vue &amp; Laravel Mix</h1>
-      <div class="grid sm:grid-cols-2 gap-1">
-        <div>
-           <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2019-08-25T14:24:00+00:00">
-  August 25, 2019
-</time>
- 
-        </div>
-                  <div class="text-xs uppercase tracking-widest flex justify-end">
-            <div>
-                              <a href="/words/categories/vue" class="hover:text-gold-800 focus:text-gold-800 hover:bg-gold-100 focus:bg-gold-100">vue</a>,                               <a href="/words/categories/laravel" class="hover:text-gold-800 focus:text-gold-800 hover:bg-gold-100 focus:bg-gold-100">laravel</a>,                               <a href="/words/categories/php" class="hover:text-gold-800 focus:text-gold-800 hover:bg-gold-100 focus:bg-gold-100">php</a>,                               <a href="/words/categories/svg" class="hover:text-gold-800 focus:text-gold-800 hover:bg-gold-100 focus:bg-gold-100">svg</a>                          </div>
-          </div>
-              </div>
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre::-moz-selection,
+pre ::-moz-selection,
+code::-moz-selection,
+code ::-moz-selection {
+  background: var(--code-highlight);
+}
+
+pre::selection,
+pre ::selection,
+code::selection,
+code ::selection {
+  background: var(--code-highlight);
+}
+
+code,
+pre {
+  background: var(--code-bg);
+}
+
+:not(pre)>code {
+  padding: 0.1em;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: var(--code-gray);
+}
+
+/* @media (max-width: 768px) { */
+
+.token.delimiter,
+.token.boolean,
+.token.keyword,
+.token.important {
+  color: var(--code-red);
+}
+
+.token.atrule {
+  color: var(--code-purple);
+}
+
+.token.atrule .token.rule {
+  color: var(--code-red);
+}
+
+.token.atrule .token.property {
+  color: var(--code-aqua);
+}
+
+.token.selector {
+  color: var(--code-green);
+}
+
+.token.operator {
+  color: var(--code-aqua);
+}
+
+.token.punctuation {
+  color: var(--code-fg4);
+}
+
+.token.tag {
+  color: var(--code-aqua);
+}
+
+.token.tag .punctuation {
+  color: var(--code-blue);
+}
+
+.token.attr-name {
+  color: var(--code-yellow);
+}
+
+.token.doctype,
+.token.class-name-definition,
+.token.builtin {
+  color: var(--code-yellow);
+}
+
+.token.constant,
+.token.entity,
+.token.number,
+.token.symbol {
+  color: var(--code-purple);
+}
+
+.token.property {
+  color: var(--code-orange);
+}
+
+.token.variable,
+.token.key {
+  color: var(--code-blue);
+}
+
+.token.string,
+.token.char {
+  color: var(--code-green);
+}
+
+.token.attr-value {
+  color: var(--code-green);
+}
+
+.token.url {
+  color: var(--code-green);
+  text-decoration: underline;
+}
+
+.token.function {
+  color: var(--code-yellow);
+}
+
+.token.function-definition {
+  color: var(--code-fg);
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.language-css .token.function {
+  color: var(--code-red);
+}
+
+.language-js,
+.language-json .token.property {
+  color: var(--code-blue);
+}
+
+.language-yml {
+  color: var(--code-green);
+}
+
+.wm_9pyfkg{display:block;margin-block-start:1.171rem}.wm_9pyfkg li>div{display:flex;align-items:center}.wm_9pyfkg img{width:32px;height:32px;border-radius:32px;border:2px solid var(--black);background:var(--black);color:var(--primary);margin-inline-end:.5rem;flex-shrink:0}.wm_9pyfkg h3{font-size:1rem;font-weight:normal}.wm_9pyfkg h3 a:first-child{font-weight:700}
+.w-bzgnsoz{display:block;position:relative;border-block:2px solid var(--black)}.w-bzgnsoz:before{content:"";height:100%;width:2px;background:var(--black);position:absolute;left:50%;top:0;transform:translateX(-50%)}.w-bzgnsoz ul{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.w-bzgnsoz li{position:relative}.w-bzgnsoz li:last-child{text-align:right}.w-bzgnsoz li:last-child span{justify-content:end}.w-bzgnsoz li:focus-within{outline:2px solid var(--black);outline-offset:.5rem}.w-bzgnsoz span{font-size:.717rem;font-family:var(--font-mono);display:block;margin-block-end:.25em;text-decoration:underline}.w-bzgnsoz a{padding:0;font-size:1rem;text-decoration:none;font-weight:700}.w-bzgnsoz a::before{content:"";position:absolute;inset:.5rem}.w-bzgnsoz a:focus,.w-bzgnsoz a:hover{outline:none;text-decoration:underline;text-decoration-thickness:1px}
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-400.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-400-italic.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-700.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: italic;
+      font-weight: 700;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-700-italic.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-800.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: italic;
+      font-weight: 800;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-800-italic.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'IBM Plex Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: local(''), url('/fonts/ibm-plex-mono/ibm-plex-mono-400.woff2') format('woff2');
+    }
+
+  </style>
+  <script></script>
+</head>
+
+<body>
+  <a href="#main">Skip to content</a>
+  <header>
+    <nav aria-label="Site" class="center">
+      <ul role="list">
+        <li><a href="/" aria-current>Home</a></li>
+        <li><a href="/words" aria-current>Words</a></li>
+        <li><a href="/pictures" aria-current>Pictures</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+
+<article>
+  <header>
+    <div class="center stack" style="--gap: .5rem">
+      <h1>An Inline SVG Component Using Vue &amp; Laravel Mix</h1>
+      <time datetime="2019-08-25">25 Aug 2019</time>
     </div>
-
-    <div class="mt-10 prose max-w-full">
-      <p>I wanted a Vue component that could pull any SVG from a file and inline it onto the page. <a href="https://gist.github.com/imacrayon/f72ce5e40ec30d047b5eda0ae6ea0e39">View a gist of the full code here</a>.</p>
-
+  </header>
+  <div class="center stack prose"><p>I wanted a Vue component that could pull any SVG from a file and inline it onto the page. <a href="https://gist.github.com/imacrayon/f72ce5e40ec30d047b5eda0ae6ea0e39">View a gist of the full code here</a>.</p>
 <p><a href="https://laracasts.com/series/practical-vue-components/episodes/6">Jeffery Way</a> and <a href="https://calebporzio.com/using-inline-svgs-in-vue-compoments/">Caleb Porzio</a> have already tackled this problem. However, their solutions wrapped the SVG output in a <code>&lt;div&gt;</code> tag. Extra elements like this feel gross to me, so I modified their work and came up with a solution that outputs clean SVGs instead.</p>
-
-<h2>The Webpack Config</h2>
-
+<h2 id="the-webpack-config" tabindex="-1">The Webpack Config <a class="direct-link" href="#the-webpack-config" aria-hidden="true">#</a></h2>
 <p>First, Webpack needs to be configured to handle SVG paths with <a href="https://github.com/webpack-contrib/html-loader">HTML Loader</a>. By default Laravel Mix is configured to use File Loader, you can override this config with the code below:</p>
-
-<pre><code class="language-javascript">mix.override(config =&gt; {
-    config.module.rules.find(rule =&gt; rule.test.test('.svg')).exclude = /\.svg$/
-
-    config.module.rules.push({
-        test: /\.svg$/,
-        use: [{ loader: 'html-loader' }],
-    })
-})
-</code></pre>
-
-<h2>The Vue Component</h2>
-
+<pre class="language-js"><code class="language-js">mix<span class="token punctuation">.</span><span class="token function">override</span><span class="token punctuation">(</span><span class="token parameter">config</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    config<span class="token punctuation">.</span>module<span class="token punctuation">.</span>rules<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">rule</span> <span class="token operator">=></span> rule<span class="token punctuation">.</span>test<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'.svg'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>exclude <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.svg$</span><span class="token regex-delimiter">/</span></span><br><br>    config<span class="token punctuation">.</span>module<span class="token punctuation">.</span>rules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.svg$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span><br>        <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">'html-loader'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br>    <span class="token punctuation">}</span><span class="token punctuation">)</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<h2 id="the-vue-component" tabindex="-1">The Vue Component <a class="direct-link" href="#the-vue-component" aria-hidden="true">#</a></h2>
 <p>The Vue component should accept an SVG file name as a prop and then output the SVG onto the page, like this:</p>
-
-<pre><code class="language-html">&lt;icon name="user" /&gt;
-</code></pre>
-
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <p>Here's the basic Vue component structure:</p>
-
-<pre><code class="language-vue">&lt;template&gt;
-    &lt;!-- &lt;svg&gt; element will eventually render here --&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-export default {
-    props: ['name'],
-}
-&lt;/script&gt;
-</code></pre>
-
+<pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>template<span class="token operator">></span><br>    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>svg<span class="token operator">></span> element will eventually render here <span class="token operator">--</span><span class="token operator">></span><br><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span><br><br><span class="token operator">&lt;</span>script<span class="token operator">></span><br><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><br>    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br><span class="token punctuation">}</span><br><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
 <p>Next, we will pull the SVG file and transform it into a DOM Node. Using a DOM node we can work with our SVG more easily than trying to parse the raw SVG code as a string. I've added a <code>created</code> hook that will do this below:</p>
-
-<pre><code class="language-vue">&lt;template&gt;
-    &lt;!-- &lt;svg&gt; element will eventually render here --&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-export default {
-    props: ['name'],
-
-    created() {
-        const div = document.createElement('div')
-        // Adjust the path below to point to your own SVG directory
-        div.innerHTML = require('../../' + this.name + '.svg')
-
-        const fragment = document.createDocumentFragment()
-        fragment.appendChild(div)
-
-        const svg = fragment.querySelector('svg')
-    },
-}
-&lt;/script&gt;
-</code></pre>
-
+<pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>template<span class="token operator">></span><br>    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>svg<span class="token operator">></span> element will eventually render here <span class="token operator">--</span><span class="token operator">></span><br><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span><br><br><span class="token operator">&lt;</span>script<span class="token operator">></span><br><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><br>    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br><br>    <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>        <span class="token keyword">const</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><br>        <span class="token comment">// Adjust the path below to point to your own SVG directory</span><br>        div<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'.svg'</span><span class="token punctuation">)</span><br><br>        <span class="token keyword">const</span> fragment <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createDocumentFragment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><br>        fragment<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>div<span class="token punctuation">)</span><br><br>        <span class="token keyword">const</span> svg <span class="token operator">=</span> fragment<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><br>    <span class="token punctuation">}</span><span class="token punctuation">,</span><br><span class="token punctuation">}</span><br><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
 <p>As soon as our Vue component is created, we create a <code>&lt;div&gt;</code> and set its <code>innerHTML</code> to the SVG file's HTML. Then we place the <code>&lt;div&gt;</code> inside of a document fragment and query for the SVG node inside. Building a document fragment in this way lets us use the Vue DOM API without having to actually insert any elements into our webpage's real DOM.</p>
-
 <p>Finally, now that we have our <code>svg</code> node we can finish off the <code>&lt;template&gt;</code> code that will render the SVG onto the page.</p>
-
-<pre><code class="language-vue">&lt;template&gt;
-    &lt;svg v-bind="attributes" v-html="html"&gt;&lt;/svg&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-export default {
-    props: ['name'],
-
-    data: () =&gt; ({
-        attributes: {},
-        html: '',
-    }),
-
-    created() {
-        const div = document.createElement('div')
-        div.innerHTML = require('../../' + this.name + '.svg')
-
-        const fragment = document.createDocumentFragment()
-        fragment.appendChild(div)
-
-        const svg = fragment.querySelector('svg')
-
-        const attributes = Array.from(svg.attributes).reduce((attrs, attr) =&gt; {
-            attrs[attr.name] = attr.value
-
-            return attrs
-        }, {})
-
-        this.attributes = Object.assign(attributes, this.$attrs)
-
-        this.html = svg.innerHTML
-    },
-}
-&lt;/script&gt;
-</code></pre>
-
+<pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>template<span class="token operator">></span><br>    <span class="token operator">&lt;</span>svg v<span class="token operator">-</span>bind<span class="token operator">=</span><span class="token string">"attributes"</span> v<span class="token operator">-</span>html<span class="token operator">=</span><span class="token string">"html"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>svg<span class="token operator">></span><br><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span><br><br><span class="token operator">&lt;</span>script<span class="token operator">></span><br><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><br>    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br><br>    <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span><br>        <span class="token literal-property property">attributes</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><br>        <span class="token literal-property property">html</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span><br>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br><br>    <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>        <span class="token keyword">const</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><br>        div<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'.svg'</span><span class="token punctuation">)</span><br><br>        <span class="token keyword">const</span> fragment <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createDocumentFragment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><br>        fragment<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>div<span class="token punctuation">)</span><br><br>        <span class="token keyword">const</span> svg <span class="token operator">=</span> fragment<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><br><br>        <span class="token keyword">const</span> attributes <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>svg<span class="token punctuation">.</span>attributes<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">attrs<span class="token punctuation">,</span> attr</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>            attrs<span class="token punctuation">[</span>attr<span class="token punctuation">.</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> attr<span class="token punctuation">.</span>value<br><br>            <span class="token keyword">return</span> attrs<br>        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><br><br>        <span class="token keyword">this</span><span class="token punctuation">.</span>attributes <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>attributes<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$attrs<span class="token punctuation">)</span><br><br>        <span class="token keyword">this</span><span class="token punctuation">.</span>html <span class="token operator">=</span> svg<span class="token punctuation">.</span>innerHTML<br>    <span class="token punctuation">}</span><span class="token punctuation">,</span><br><span class="token punctuation">}</span><br><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
 <p>In the code above, we grab all of the SVG node's attributes and merge them with any attributes that might exist on our Vue component (contained in <code>$attrs</code>). Then we copy over the <code>innerHTML</code> from our SVG node and output in our Vue template using the <code>v-html</code> directive.</p>
-
 <p><strong>And we're done!</strong> Now we have a super flexible inline SVG component: Any attributes applied to the component will be inherited by the SVG.</p>
-
-<pre><code class="language-html">&lt;icon name="user" width="16px" height="16px" fill="red"&gt;&lt;/icon&gt;
-</code></pre>
-    </div>
-
-    <nav class="my-12 border-t border-gray-200 grid sm:grid-cols-2 sm:border-0 sm:gap-8">
-              <a class="group border-b border-gray-200 flex hover:bg-gold-50 hover:text-gold-800" href="https://imacrayon.com/words/mobile-friendly-tables" title="Older Post: Mobile Friendly Tables">
-          <span class="flex-shrink-0 flex items-center group-hover:bg-gold-100">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" class="h-6 w-6 text-gray-400 group-hover:text-gold-400" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-          </span>
-          <span class="flex-1 py-3 px-6 flex items-center justify-end text-right">
-            <span class="space-y-1">
-              <span class="font-medium">Mobile Friendly Tables</span>
-               <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2019-07-14T17:13:00+00:00">
-  July 14, 2019
-</time>
- 
-            </span>
-          </span>
-        </a>
-                    <a class="group border-b border-gray-200 flex hover:bg-gold-50 hover:text-gold-800" href="https://imacrayon.com/words/dotfiles" title="Newer Post: A Clean Start With Dotfiles">
-          <span class="flex-1 py-3 px-6 flex items-center">
-            <span class="space-y-1">
-              <span class="font-medium">A Clean Start With Dotfiles</span>
-               <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2020-01-28T17:54:00+00:00">
-  January 28, 2020
-</time>
- 
-            </span>
-          </span>
-          <span class="flex-shrink-0 flex items-center group-hover:bg-gold-100">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" class="h-6 w-6 text-gray-400 group-hover:text-gold-400" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </span>
-        </a>
-          </nav>
-
-    <div id="mentions" class="space-y-8 mb-12">
-      <h2 class="text-2xl sm:text-3xl font-medium">Mentions</h2>
-              <p class="italic text-gray-500">Nothing.</p>
-          </div>
-  </article>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>16px<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>16px<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>red<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>icon</span><span class="token punctuation">></span></span></code></pre>
 </div>
-    </main>
-    <footer class="mb-12 text-sm flex justify-center">
-       <nav class="flex items-center justify-end space-x-6">
-   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/pictures">
-  Pictures
-</a>
- 
-   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/about">
-  About
-</a>
- 
-</nav>
- 
-    </footer>
-  </body>
+</article>
+<pagination class="w-bzgnsoz"><nav aria-label="Words" class="center"><ul role="list"><li>
+      <a href="/words/dotfiles/">
+        <span>Previous</span>
+        A Clean Start With&nbsp;Dotfiles
+      </a>
+    </li><li>
+      <a href="/words/mobile-friendly-tables/">
+        <span>Next</span>
+        Mobile Friendly&nbsp;Tables
+      </a>
+    </li></ul></nav>
+
+
+</pagination>
+<section aria-labelledby="webmentions">
+  <div class="center">
+    <h2 id="webmentions">Webmentions</h2>
+    <webmentions class="wm_9pyfkg"><p><em>No webmentions posted.</em></p>
+
+
+</webmentions>
+  </div>
+</section>
+</main>
+
+
+
+</body>
 </html>

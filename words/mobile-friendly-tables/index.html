@@ -1,92 +1,303 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="referrer" content="always">
-    <link rel="canonical" href="https://imacrayon.com/words/mobile-friendly-tables">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Friendly Tables</title>
+  <meta name="description" content="An easy way to build mobile friendly tables with only CSS">
+  <meta name="generator" content="Eleventy v2.0.0">
+  <link rel="icon" href="/img/favicon.svg">
 
-    <title>Mobile Friendly Tables | I&#039;m a crayon</title>
-    <meta name="description" content="An easy way to build mobile friendly tables with only CSS">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mobile Friendly Tables">
+  <meta property="og:description" content="An easy way to build mobile friendly tables with only CSS">
+  <meta property="og:url" content="/words/mobile-friendly-tables/">
+  <meta property="og:locale">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@ima_crayon">
+  <meta name="twitter:creator" content="@ima_crayon">
 
-    <link rel="icon" href="/favicon.svg">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#AA8C2C">
+  <link rel="me" href="https://twitter.com/ima_crayon">
+  <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention">
+  <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc">
 
-    <meta property="og:title" content="Mobile Friendly Tables | I&#039;m a crayon"/>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://imacrayon.com/words/mobile-friendly-tables"/>
-    <meta property="og:description" content="Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS." />
+  <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="I'm a crayon">
+  <link rel="alternate" href="/feed/feed.json" type="application/json" title="I'm a crayon">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@ima_crayon">
-    <meta name="twitter:creator" content="@ima_crayon">
+  <link rel="stylesheet" href="/css/main.css?id=115607463">
 
-    
-    <link href="https://twitter.com/ima_crayon" rel="me">
+  
+  <style>/**
+ * Gruvbox dark theme
+ *
+ * Adapted from a theme based on:
+ * Vim Gruvbox dark Theme (https://github.com/morhetz/gruvbox)
+ *
+ * @author Azat S. <to@azat.io>
+ * @version 1.0
+ */
 
-    
-    <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention" />
-    <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc" />
+:root {
+  /* Changed from #1d2021 for accessible contrast */
+  --code-fg: #ebdbb2;
+  --code-fg4: #a89984;
+  --code-bg: #1C1C1C;
+  --code-highlight: rgba(104, 157, 106, 0.5);
+  --code-gray: #928374;
+  --code-green: #b8bb26;
+  --code-red: #fb4934;
+  --code-aqua: #8ec07c;
+  --code-yellow: #fabd2f;
+  --code-orange: #fe8019;
+  --code-blue: #83a598;
+  --code-purple: #d3869b;
+}
 
-    <link href="/feed.atom" type="application/atom+xml" rel="alternate" title="I&#039;m a crayon Atom Feed">
+code,
+pre {
+  color: var(--code-fg);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 2;
 
-    <link rel="stylesheet" href="/assets/css/main.css?id=04e600291c4a9453082a11c3f2e48b4b">
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
 
-    <script src="/assets/js/webmention.js" data-page-url="https://imacrayon.com/pictures/" async></script>
-  </head>
-  <body class="text-gray-700 font-sans antialiased">
-    <header role="banner" class="mt-12">
-      <div class="mx-auto px-4 max-w-2xl">
-        <a class="sr-only block bg-black text-white text-lg text-center font-medium focus:not-sr-only" href="#main">
-          <span class="block p-4">Skip to content</span>
-        </a>
-        <div class="flex items-center text-sm">
-          <a class="text-gray-500 hover:bg-gold-100 hover:text-gold-800" href="/" title="I&#039;m a crayon home">
-            I'm a crayon
-          </a>
-          <div class="flex flex-1 justify-end items-center">
-             <nav class="flex items-center justify-end space-x-6">
-   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/pictures">
-  Pictures
-</a>
- 
-   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/about">
-  About
-</a>
- 
-</nav>
- 
-          </div>
-        </div>
-      </div>
-    </header>
-    <main id="main">
-      <div class="pt-12">
-  <article class="mx-auto px-4 max-w-2xl">
-    <div class="space-y-2">
-      <h1 class="text-2xl sm:text-3xl font-medium break-words">Mobile Friendly Tables</h1>
-      <div class="grid sm:grid-cols-2 gap-1">
-        <div>
-           <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2019-07-14T17:13:00+00:00">
-  July 14, 2019
-</time>
- 
-        </div>
-                  <div class="text-xs uppercase tracking-widest flex justify-end">
-            <div>
-                              <a href="/words/categories/css" class="hover:text-gold-800 focus:text-gold-800 hover:bg-gold-100 focus:bg-gold-100">css</a>                          </div>
-          </div>
-              </div>
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre::-moz-selection,
+pre ::-moz-selection,
+code::-moz-selection,
+code ::-moz-selection {
+  background: var(--code-highlight);
+}
+
+pre::selection,
+pre ::selection,
+code::selection,
+code ::selection {
+  background: var(--code-highlight);
+}
+
+code,
+pre {
+  background: var(--code-bg);
+}
+
+:not(pre)>code {
+  padding: 0.1em;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: var(--code-gray);
+}
+
+/* @media (max-width: 768px) { */
+
+.token.delimiter,
+.token.boolean,
+.token.keyword,
+.token.important {
+  color: var(--code-red);
+}
+
+.token.atrule {
+  color: var(--code-purple);
+}
+
+.token.atrule .token.rule {
+  color: var(--code-red);
+}
+
+.token.atrule .token.property {
+  color: var(--code-aqua);
+}
+
+.token.selector {
+  color: var(--code-green);
+}
+
+.token.operator {
+  color: var(--code-aqua);
+}
+
+.token.punctuation {
+  color: var(--code-fg4);
+}
+
+.token.tag {
+  color: var(--code-aqua);
+}
+
+.token.tag .punctuation {
+  color: var(--code-blue);
+}
+
+.token.attr-name {
+  color: var(--code-yellow);
+}
+
+.token.doctype,
+.token.class-name-definition,
+.token.builtin {
+  color: var(--code-yellow);
+}
+
+.token.constant,
+.token.entity,
+.token.number,
+.token.symbol {
+  color: var(--code-purple);
+}
+
+.token.property {
+  color: var(--code-orange);
+}
+
+.token.variable,
+.token.key {
+  color: var(--code-blue);
+}
+
+.token.string,
+.token.char {
+  color: var(--code-green);
+}
+
+.token.attr-value {
+  color: var(--code-green);
+}
+
+.token.url {
+  color: var(--code-green);
+  text-decoration: underline;
+}
+
+.token.function {
+  color: var(--code-yellow);
+}
+
+.token.function-definition {
+  color: var(--code-fg);
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.language-css .token.function {
+  color: var(--code-red);
+}
+
+.language-js,
+.language-json .token.property {
+  color: var(--code-blue);
+}
+
+.language-yml {
+  color: var(--code-green);
+}
+
+.wm_9pyfkg{display:block;margin-block-start:1.171rem}.wm_9pyfkg li>div{display:flex;align-items:center}.wm_9pyfkg img{width:32px;height:32px;border-radius:32px;border:2px solid var(--black);background:var(--black);color:var(--primary);margin-inline-end:.5rem;flex-shrink:0}.wm_9pyfkg h3{font-size:1rem;font-weight:normal}.wm_9pyfkg h3 a:first-child{font-weight:700}
+.w-bzgnsoz{display:block;position:relative;border-block:2px solid var(--black)}.w-bzgnsoz:before{content:"";height:100%;width:2px;background:var(--black);position:absolute;left:50%;top:0;transform:translateX(-50%)}.w-bzgnsoz ul{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.w-bzgnsoz li{position:relative}.w-bzgnsoz li:last-child{text-align:right}.w-bzgnsoz li:last-child span{justify-content:end}.w-bzgnsoz li:focus-within{outline:2px solid var(--black);outline-offset:.5rem}.w-bzgnsoz span{font-size:.717rem;font-family:var(--font-mono);display:block;margin-block-end:.25em;text-decoration:underline}.w-bzgnsoz a{padding:0;font-size:1rem;text-decoration:none;font-weight:700}.w-bzgnsoz a::before{content:"";position:absolute;inset:.5rem}.w-bzgnsoz a:focus,.w-bzgnsoz a:hover{outline:none;text-decoration:underline;text-decoration-thickness:1px}
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-400.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-400-italic.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-700.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: italic;
+      font-weight: 700;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-700-italic.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-800.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Wonder Unit Sans';
+      font-style: italic;
+      font-weight: 800;
+      font-display: swap;
+      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-800-italic.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'IBM Plex Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: local(''), url('/fonts/ibm-plex-mono/ibm-plex-mono-400.woff2') format('woff2');
+    }
+
+  </style>
+  <script></script>
+</head>
+
+<body>
+  <a href="#main">Skip to content</a>
+  <header>
+    <nav aria-label="Site" class="center">
+      <ul role="list">
+        <li><a href="/" aria-current>Home</a></li>
+        <li><a href="/words" aria-current>Words</a></li>
+        <li><a href="/pictures" aria-current>Pictures</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+
+<article>
+  <header>
+    <div class="center stack" style="--gap: .5rem">
+      <h1>Mobile Friendly Tables</h1>
+      <time datetime="2019-07-14">14 Jul 2019</time>
     </div>
-
-    <div class="mt-10 prose max-w-full">
-      <p>Building a table that works well on smaller screens is tricky, but I've come up with a simple CSS-only approach that works well for the 80% use case.</p>
-
-<h2>An Example</h2>
-
+  </header>
+  <div class="center stack prose"><p>Building a table that works well on smaller screens is tricky, but I've come up with a simple CSS-only approach that works well for the 80% use case.</p>
+<h2 id="an-example" tabindex="-1">An Example <a class="direct-link" href="#an-example" aria-hidden="true">#</a></h2>
 <p>Check out the example below by resizing your browser window:</p>
-
 <style>
     table > caption {
         padding: .5rem;
@@ -150,7 +361,6 @@
         }
     }
     </style>
-
 <table class="table-collapse">
   <caption>My Most Played Songs of 2018</caption>
   <thead>
@@ -236,162 +446,49 @@
     </tr>
   </tbody>
 </table>
-
-<h2>How It's Done</h2>
-
-<p>The first step to creating a good table is to ask yourself <em>"Do I actually need to use a table?"</em>. Many times there's better ways to present tabular data than just a boring table, <a href="https://www.steveschoger.com/">Steve Schoger</a> has some <a href="https://twitter.com/steveschoger/status/997125312411570176">great tips on organizing tabular data</a>.</p>
-
+<h2 id="how-it's-done" tabindex="-1">How It's Done <a class="direct-link" href="#how-it's-done" aria-hidden="true">#</a></h2>
+<p>The first step to creating a good table is to ask yourself <em>&quot;Do I actually need to use a table?&quot;</em>. Many times there's better ways to present tabular data than just a boring table, <a href="https://www.steveschoger.com/">Steve Schoger</a> has some <a href="https://twitter.com/steveschoger/status/997125312411570176">great tips on organizing tabular data</a>.</p>
 <p>If it turns out you <em>really</em> do need a table, check out the code in the next section.</p>
-
-<h2>The Code</h2>
-
+<h2 id="the-code" tabindex="-1">The Code <a class="direct-link" href="#the-code" aria-hidden="true">#</a></h2>
 <p>First, let's take a look at the markup:</p>
-
-<pre><code class="language-html">&lt;table class="table-collapse"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Title&lt;/th&gt;
-      &lt;th&gt;Artist&lt;/th&gt;
-      &lt;th&gt;Album&lt;/th&gt;
-      &lt;th class="text-right"&gt;Release Date&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td data-heading="Title"&gt;Our Song&lt;/td&gt;
-      &lt;td data-heading="Artist"&gt;Radiator Hospital&lt;/td&gt;
-      &lt;td data-heading="Album"&gt;Something Wild&lt;/td&gt;
-      &lt;td data-heading="Release Date" class="text-right"&gt;2013&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</code></pre>
-
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table-collapse<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span><br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span><br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Artist<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span><br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Album<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span><br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Release Date<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span><br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">data-heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Our Song<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span><br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">data-heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Artist<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Radiator Hospital<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span><br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">data-heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Album<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Something Wild<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span><br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">data-heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Release Date<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>2013<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span></code></pre>
 <p>There's two important thing to note in the markup above:</p>
-
 <ol>
 <li>The <code>table-collapse</code> class will apply the collapsible behavior to the table.</li>
 <li>The <code>data-heading</code> attribute on each <code>&lt;td&gt;</code> element should describe the table cell data.</li>
 </ol>
-
 <p>Now, for the CSS:</p>
-
-<pre><code class="language-css">@media (max-width: 768px) {
-  .table-collapse {
-    width: 100%;
-  }
-  .table-collapse &gt; tfoot,
-  .table-collapse &gt; thead {
-    display: none;
-  }
-  .table-collapse &gt; tbody,
-  .table-collapse &gt; tbody &gt; tr,
-  .table-collapse &gt; tbody &gt; tr &gt; td,
-  .table-collapse &gt; tbody &gt; tr &gt; th {
-    display: block;
-    width: auto;
-  }
-  .table-collapse &gt; tbody &gt; tr {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    border-top: 1px solid theme('colors.gray.200');
-  }
-  .table-collapse &gt; tbody &gt; tr &gt; th {
-    border: none !important;
-    padding: 0.25em 0.5em;
-    text-align: left !important;
-  }
-  .table-collapse &gt; tbody &gt; tr &gt; th:first-child {
-    padding-left: 0.5em;
-  }
-  .table-collapse &gt; tbody &gt; tr &gt; th:last-child {
-    padding-right: 0.5em;
-  }
-  .table-collapse &gt; tbody &gt; tr &gt; td {
-    border: none !important;
-    padding: 0.25em 0.5em 0.25em 35%;
-    box-shadow: none !important;
-    text-align: left !important;
-    position: relative;
-  }
-  .table-collapse &gt; tbody &gt; tr &gt; td:first-child {
-    padding-left: 35%;
-  }
-  .table-collapse &gt; tbody &gt; tr &gt; td:last-child {
-    padding-right: 0.5em;
-  }
-  .table-collapse &gt; tbody &gt; tr &gt; td::before {
-    content: attr(data-heading);
-    position: absolute;
-    top: 0.25em;
-    left: 0.5em;
-    width: 35%;
-    padding-right: 0.25em;
-    white-space: nowrap;
-    z-index: 1;
-  }
-}
-</code></pre>
-
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span><br>  <span class="token selector">.table-collapse</span> <span class="token punctuation">{</span><br>    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.table-collapse > tfoot,<br>  .table-collapse > thead</span> <span class="token punctuation">{</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.table-collapse > tbody,<br>  .table-collapse > tbody > tr,<br>  .table-collapse > tbody > tr > td,<br>  .table-collapse > tbody > tr > th</span> <span class="token punctuation">{</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span><br>    <span class="token property">width</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.table-collapse > tbody > tr</span> <span class="token punctuation">{</span><br>    <span class="token property">padding-top</span><span class="token punctuation">:</span> 0.5em<span class="token punctuation">;</span><br>    <span class="token property">padding-bottom</span><span class="token punctuation">:</span> 0.5em<span class="token punctuation">;</span><br>    <span class="token property">border-top</span><span class="token punctuation">:</span> 1px solid <span class="token function">theme</span><span class="token punctuation">(</span><span class="token string">'colors.gray.200'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.table-collapse > tbody > tr > th</span> <span class="token punctuation">{</span><br>    <span class="token property">border</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span><br>    <span class="token property">padding</span><span class="token punctuation">:</span> 0.25em 0.5em<span class="token punctuation">;</span><br>    <span class="token property">text-align</span><span class="token punctuation">:</span> left <span class="token important">!important</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.table-collapse > tbody > tr > th:first-child</span> <span class="token punctuation">{</span><br>    <span class="token property">padding-left</span><span class="token punctuation">:</span> 0.5em<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.table-collapse > tbody > tr > th:last-child</span> <span class="token punctuation">{</span><br>    <span class="token property">padding-right</span><span class="token punctuation">:</span> 0.5em<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.table-collapse > tbody > tr > td</span> <span class="token punctuation">{</span><br>    <span class="token property">border</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span><br>    <span class="token property">padding</span><span class="token punctuation">:</span> 0.25em 0.5em 0.25em 35%<span class="token punctuation">;</span><br>    <span class="token property">box-shadow</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span><br>    <span class="token property">text-align</span><span class="token punctuation">:</span> left <span class="token important">!important</span><span class="token punctuation">;</span><br>    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.table-collapse > tbody > tr > td:first-child</span> <span class="token punctuation">{</span><br>    <span class="token property">padding-left</span><span class="token punctuation">:</span> 35%<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.table-collapse > tbody > tr > td:last-child</span> <span class="token punctuation">{</span><br>    <span class="token property">padding-right</span><span class="token punctuation">:</span> 0.5em<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.table-collapse > tbody > tr > td::before</span> <span class="token punctuation">{</span><br>    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token function">attr</span><span class="token punctuation">(</span>data-heading<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span><br>    <span class="token property">top</span><span class="token punctuation">:</span> 0.25em<span class="token punctuation">;</span><br>    <span class="token property">left</span><span class="token punctuation">:</span> 0.5em<span class="token punctuation">;</span><br>    <span class="token property">width</span><span class="token punctuation">:</span> 35%<span class="token punctuation">;</span><br>    <span class="token property">padding-right</span><span class="token punctuation">:</span> 0.25em<span class="token punctuation">;</span><br>    <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span><br>    <span class="token property">z-index</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
 <p><a href="https://gist.github.com/imacrayon/ffab2dfb5f0f143f6e2110aea8b11212">View the code for this table as a gist</a>.</p>
-
 <p>Thanks to the media query in the first line above these styles are applied when the browser window is <strong>less than or equal to</strong> <code>768px</code> wide. The table's header and footer are hidden and the cells in each row stack vertically using <code>display: block</code>. Each of the table cells also have <code>padding-left: 35%</code> which allows a healthy amount of space for the <code>::before</code> pseudo element to sit to the left of the cell's data using <code>position: absolute</code>. The <code>content: attr(data-heading)</code> line dynamically pulls text from the <code>data-heading</code> attribute in the HTML and uses that text as a new label for the cell. The best part is the CSS <code>attr()</code> function has support all the way back to IE 8 when used as a <code>content</code> value.</p>
-    </div>
-
-    <nav class="my-12 border-t border-gray-200 grid sm:grid-cols-2 sm:border-0 sm:gap-8">
-              <a class="group border-b border-gray-200 flex hover:bg-gold-50 hover:text-gold-800" href="https://imacrayon.com/words/expressive-syncing-in-laravel" title="Older Post: Expressive Syncing in Laravel">
-          <span class="flex-shrink-0 flex items-center group-hover:bg-gold-100">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" class="h-6 w-6 text-gray-400 group-hover:text-gold-400" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-          </span>
-          <span class="flex-1 py-3 px-6 flex items-center justify-end text-right">
-            <span class="space-y-1">
-              <span class="font-medium">Expressive Syncing in Laravel</span>
-               <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2019-07-06T14:49:00+00:00">
-  July 6, 2019
-</time>
- 
-            </span>
-          </span>
-        </a>
-                    <a class="group border-b border-gray-200 flex hover:bg-gold-50 hover:text-gold-800" href="https://imacrayon.com/words/an-inline-svg-component-using-vue-and-laravel-mix" title="Newer Post: An Inline SVG Component Using Vue &amp; Laravel Mix">
-          <span class="flex-1 py-3 px-6 flex items-center">
-            <span class="space-y-1">
-              <span class="font-medium">An Inline SVG Component Using Vue &amp; Laravel Mix</span>
-               <time class="block text-gray-500 text-xs uppercase tracking-widest" datetime="2019-08-25T14:24:00+00:00">
-  August 25, 2019
-</time>
- 
-            </span>
-          </span>
-          <span class="flex-shrink-0 flex items-center group-hover:bg-gold-100">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" class="h-6 w-6 text-gray-400 group-hover:text-gold-400" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </span>
-        </a>
-          </nav>
-
-    <div id="mentions" class="space-y-8 mb-12">
-      <h2 class="text-2xl sm:text-3xl font-medium">Mentions</h2>
-              <p class="italic text-gray-500">Nothing.</p>
-          </div>
-  </article>
 </div>
-    </main>
-    <footer class="mb-12 text-sm flex justify-center">
-       <nav class="flex items-center justify-end space-x-6">
-   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/pictures">
-  Pictures
-</a>
- 
-   <a class="inline-flex items-center hover:bg-gold-100 hover:text-gold-800" href="/about">
-  About
-</a>
- 
-</nav>
- 
-    </footer>
-  </body>
+</article>
+<pagination class="w-bzgnsoz"><nav aria-label="Words" class="center"><ul role="list"><li>
+      <a href="/words/an-inline-svg-component-using-vue-and-laravel-mix/">
+        <span>Previous</span>
+        An Inline SVG Component Using Vue &amp; Laravel&nbsp;Mix
+      </a>
+    </li><li>
+      <a href="/words/expressive-syncing-in-laravel/">
+        <span>Next</span>
+        Expressive Syncing in&nbsp;Laravel
+      </a>
+    </li></ul></nav>
+
+
+</pagination>
+<section aria-labelledby="webmentions">
+  <div class="center">
+    <h2 id="webmentions">Webmentions</h2>
+    <webmentions class="wm_9pyfkg"><p><em>No webmentions posted.</em></p>
+
+
+</webmentions>
+  </div>
+</section>
+</main>
+
+
+
+</body>
 </html>

@@ -1,0 +1,17 @@
+# humans.txt
+
+[The humans responsible & technology colophon](http://humanstxt.org/)
+
+## TEAM
+
+Christian Taylor -- @ima_crayon
+
+## TECHNOLOGY COLOPHON
+
+### Workflow
+
+ * Eleventy
+ * WebC
+ * Prism.js Syntax Highlighter
+
+More at https://github.com/imacrayon/imacrayon.com
