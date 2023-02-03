@@ -1,0 +1,51 @@
+---
+layout: layout.webc
+---
+
+<header>
+  <div class="center picture">
+    <responsive-image :src="src" :alt="alt"></responsive-image>
+  </div>
+</header>
+<cantilever>
+  <div class="details">
+    <h1 @text="title"></h1>
+    <dl>
+      <div>
+        <dt class="sr-only">Year</dt>
+        <dd @text="year(date)"></dd>
+      </div>
+      <div>
+        <dt class="sr-only">Media</dt>
+        <dd @text="media"></dd>
+      </div>
+      <div>
+        <dt class="sr-only">Dimensions</dt>
+        <dd @text="dimentions"></dd>
+      </div>
+      <div webc:if="owner">
+        <dt class="sr-only">Owner</dt>
+        <dd @text="`Collection of ${owner}`"></dd>
+      </div>
+    </dl>
+  </div>
+</cantilever>
+<div class="center stack" @raw="content"></div>
+<pagination @collection="pictures" @aria-label="Pictures"></pagination>
+
+<style>
+  dl {
+    font-size: .875em;
+  }
+
+  dt {
+    display: block;
+    font-weight: 700;
+  }
+
+  dd {
+    display: block;
+    margin-top: .25em;
+  }
+
+</style>

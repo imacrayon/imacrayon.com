@@ -1,0 +1,50 @@
+<script webc:type="js" webc:is="template">
+  let webmentions = helpers.webmentions(page).map(webmention => {
+    return `<li>
+      <div>
+        <img loading="lazy" src="${webmention.author.photo}" alt="">
+        <h3>
+          <a href="${webmention.author.url}">${webmention.author.name}</a>
+          <a href="${webmention.url}">${webmention.verb}</a>
+          <span>on ${helpers.readableDate(webmention.date)}</span>
+        </h3>
+      </div>
+      ${webmention.text ? `<div class="mt-2">${webmention.text}</div>` : ''}
+    </li>`
+  })
+
+  webmentions.length ? `<ul role="list" class="stack">${webmentions.join('')}</ul>` : '<p><em>No webmentions posted.</em></p>'
+</script>
+
+<style webc:scoped>
+  :host {
+    display: block;
+    margin-block-start: 1.171rem;
+  }
+
+  :host li>div {
+    display: flex;
+    align-items: center;
+  }
+
+  :host img {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    border: 2px solid var(--black);
+    background: var(--black);
+    color: var(--primary);
+    margin-inline-end: .5rem;
+    flex-shrink: 0;
+  }
+
+  :host h3 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  :host h3 a:first-child {
+    font-weight: 700;
+  }
+
+</style>

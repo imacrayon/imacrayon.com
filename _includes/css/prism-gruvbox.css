@@ -1,0 +1,184 @@
+/**
+ * Gruvbox dark theme
+ *
+ * Adapted from a theme based on:
+ * Vim Gruvbox dark Theme (https://github.com/morhetz/gruvbox)
+ *
+ * @author Azat S. <to@azat.io>
+ * @version 1.0
+ */
+
+:root {
+  /* Changed from #1d2021 for accessible contrast */
+  --code-fg: #ebdbb2;
+  --code-fg4: #a89984;
+  --code-bg: #1C1C1C;
+  --code-highlight: rgba(104, 157, 106, 0.5);
+  --code-gray: #928374;
+  --code-green: #b8bb26;
+  --code-red: #fb4934;
+  --code-aqua: #8ec07c;
+  --code-yellow: #fabd2f;
+  --code-orange: #fe8019;
+  --code-blue: #83a598;
+  --code-purple: #d3869b;
+}
+
+code,
+pre {
+  color: var(--code-fg);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 2;
+
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre::-moz-selection,
+pre ::-moz-selection,
+code::-moz-selection,
+code ::-moz-selection {
+  background: var(--code-highlight);
+}
+
+pre::selection,
+pre ::selection,
+code::selection,
+code ::selection {
+  background: var(--code-highlight);
+}
+
+code,
+pre {
+  background: var(--code-bg);
+}
+
+:not(pre)>code {
+  padding: 0.1em;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: var(--code-gray);
+}
+
+/* @media (max-width: 768px) { */
+
+.token.delimiter,
+.token.boolean,
+.token.keyword,
+.token.important {
+  color: var(--code-red);
+}
+
+.token.atrule {
+  color: var(--code-purple);
+}
+
+.token.atrule .token.rule {
+  color: var(--code-red);
+}
+
+.token.atrule .token.property {
+  color: var(--code-aqua);
+}
+
+.token.selector {
+  color: var(--code-green);
+}
+
+.token.operator {
+  color: var(--code-aqua);
+}
+
+.token.punctuation {
+  color: var(--code-fg4);
+}
+
+.token.tag {
+  color: var(--code-aqua);
+}
+
+.token.tag .punctuation {
+  color: var(--code-blue);
+}
+
+.token.attr-name {
+  color: var(--code-yellow);
+}
+
+.token.doctype,
+.token.class-name-definition,
+.token.builtin {
+  color: var(--code-yellow);
+}
+
+.token.constant,
+.token.entity,
+.token.number,
+.token.symbol {
+  color: var(--code-purple);
+}
+
+.token.property {
+  color: var(--code-orange);
+}
+
+.token.variable,
+.token.key {
+  color: var(--code-blue);
+}
+
+.token.string,
+.token.char {
+  color: var(--code-green);
+}
+
+.token.attr-value {
+  color: var(--code-green);
+}
+
+.token.url {
+  color: var(--code-green);
+  text-decoration: underline;
+}
+
+.token.function {
+  color: var(--code-yellow);
+}
+
+.token.function-definition {
+  color: var(--code-fg);
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.language-css .token.function {
+  color: var(--code-red);
+}
+
+.language-js,
+.language-json .token.property {
+  color: var(--code-blue);
+}
+
+.language-yml {
+  color: var(--code-green);
+}

@@ -1,0 +1,43 @@
+<figure>
+  <img src="/img/christian-taylor.jpg" alt="Christian Taylor's mug shot" width="64" height="64">
+  <figcaption>
+    <h1>Christian Taylor</h1>
+    <p>Co-Founder of Moonbase Labs</p>
+  </figcaption>
+</figure>
+<p>I’m a full stack developer with an eye for design and an appreciation for practical, accessible solutions.</p>
+
+<style>
+  intro {
+    display: block;
+    padding-block: 2.5vh;
+  }
+
+  intro figure {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  intro figcaption h1 {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  intro figcaption p {
+    font-size: .717rem;
+    font-family: var(--font-mono);
+  }
+
+  intro img {
+    border-radius: 100%;
+  }
+
+  intro>p {
+    margin-block-start: 1em;
+    font-size: 1.717rem;
+    line-height: 1.25;
+  }
+
+</style>

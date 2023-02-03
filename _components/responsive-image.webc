@@ -1,0 +1,3 @@
+<script webc:type="js" webc:is="template">
+  helpers.responsiveImage(src, alt, widths)
+</script>

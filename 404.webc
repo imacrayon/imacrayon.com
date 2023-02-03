@@ -1,0 +1,7 @@
+---
+layout: layout.webc
+title: Page Not Found
+---
+
+<h1>Page not found.</h1>
+<a href="/">Start over</a>.

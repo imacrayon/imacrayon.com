@@ -8,19 +8,19 @@ jobs:
   webmentions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 18.x
 
-      - name: Fetch webmentions
+      - name: Fetch Webmentions
         env:
           WEBMENTIONS_TOKEN: ${{ secrets.WEBMENTIONS_TOKEN }}
         run: node ./webmentions.js
 
-      - name: Commit to repository
+      - name: Commit
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"

@@ -1,0 +1,100 @@
+<script webc:type="js" webc:is="template">
+  let links = []
+  let previousPost = helpers.getPreviousCollectionItem(collections[collection], page, 'en')
+  if (previousPost) {
+    links.push(`<li>
+      <a href="${previousPost.url}">
+        <span>Previous</span>
+        ${helpers.widont(previousPost.data.title)}
+      </a>
+    </li>`)
+  } else {
+    links.push(`<li></li>`)
+  }
+  let nextPost = helpers.getNextCollectionItem(collections[collection], page, 'en')
+  if (nextPost) {
+    links.push(`<li>
+      <a href="${nextPost.url}">
+        <span>Next</span>
+        ${helpers.widont(nextPost.data.title)}
+      </a>
+    </li>`)
+  } else {
+    links.push(`<li></li>`)
+  }
+
+  links.length ? `<nav aria-label="${ariaLabel}" class="center"><ul role="list">${links.join('')}</ul></nav>` : ''
+</script>
+
+<style webc:scoped>
+  :host {
+    display: block;
+    position: relative;
+    border-block: 2px solid var(--black);
+  }
+
+  :host:before {
+    content: '';
+    height: 100%;
+    width: 2px;
+    background: var(--black);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  :host ul {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  :host li {
+    position: relative;
+  }
+
+  :host li:last-child {
+    text-align: right;
+  }
+
+  :host li:last-child span {
+    justify-content: end;
+  }
+
+  :host li:focus-within {
+    outline: 2px solid var(--black);
+    outline-offset: .5rem;
+  }
+
+  :host span {
+    font-size: .717rem;
+    font-family: var(--font-mono);
+    display: block;
+    margin-block-end: .25em;
+    text-decoration: underline;
+  }
+
+  :host a {
+    padding: 0;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  :host a::before {
+    content: '';
+    position: absolute;
+    inset: .5rem;
+  }
+
+
+  :host a:focus,
+  :host a:hover {
+    outline: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+</style>
