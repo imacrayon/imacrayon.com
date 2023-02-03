@@ -1,10 +1,11 @@
 ---
-extends: _layouts.post
-section: content
+layout: post.webc
 title: Expressive Syncing in Laravel
 date: 2019-07-06 14:49:00
 description: How to make your many to many relationships more expressive
-categories: [laravel, php]
+tags:
+  - laravel
+  - php
 ---
 
 `sync` accepts a second parameter that prevents a model from detaching any associations.

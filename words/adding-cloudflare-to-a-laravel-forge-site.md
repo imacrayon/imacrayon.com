@@ -1,9 +1,10 @@
 ---
-extends: _layouts.post
+layout: post.webc
 title: Adding Cloudflare to a Laravel Forge Site
 date: 2022-02-23 19:15:00
 description: The steps I took to put Cloudflare in front of a website managed on Laravel Forge
-categories: [tooling]
+tags:
+  - tooling
 ---
 
 I manage several websites hosted on [Digital Ocean](https://digitalocean.com) through [Laravel Forge](https://forge.laravel.com). Recently some unusual traffic on one of these websites prompted me to setup some [Cloudflare](https://cloudflare.com) security features. Cloudflare required that I migrate my website's DNS from Digital Ocean onto their platform, and this required some additional tweaks to settings within Laravel Forge and Digital Ocean. I'm going to document my migration process here for future me.

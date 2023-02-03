@@ -1,19 +1,23 @@
 ---
-extends: _layouts.post
-section: content
+layout: post.webc
 title: Subdomain Redirects in Laravel Forge
 date: 2021-02-04 21:28:00
 description: How to redirect a subdomain to another domain in Laravel Forge.
-categories: [tooling]
+tags:
+  - tooling
 ---
 
 I had to go through some trial and error to get this working so I'm writing it down. My goal was to permanently redirect a domain like `beta.imacrayon.com` to `imacrayon.com` in Laravel Forge.
 
-In order to properly redirect `https://beta.imacrayon.com`. I generated a new LetsEncrypt certificate with the following domains: `imacrayon.com,www.imacrayon.com,beta.imacrayon.com`.
+In order to properly redirect `https://beta.imacrayon.com`. I generated a new LetsEncrypt certificate with the following domains:
+
+```shell
+imacrayon.com,www.imacrayon.com,beta.imacrayon.com
+```
 
 Next I added two new server blocks to the top of my nginx config:
 
-```bash
+```nginx
 server {
     listen 80;
     listen [::]:80;
@@ -34,13 +38,13 @@ server {
 
 The second server block requires you to add the SSL directives for the LetsEncrypt certificate generated in the first step. You should be able to find these directives inside your existing nginx config. They’ll probably be labeled with a comment like `# FORGE SSL (DO NOT REMOVE!)` and look like this:
 
-```bash
+```nginx
     # FORGE SSL (DO NOT REMOVE!)
     ssl_certificate /etc/nginx/ssl/imacrayon.com/xxx/server.crt;
     ssl_certificate_key /etc/nginx/ssl/imacrayon.com/xxx/server.key;
 
     ssl_protocols TLSv1.2;
-    ssl_ciphers …
+    ssl_ciphers ...;
     ssl_prefer_server_ciphers on;
     ssl_dhparam /etc/nginx/dhparams.pem;
 ```

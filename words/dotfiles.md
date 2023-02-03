@@ -1,10 +1,10 @@
 ---
-extends: _layouts.post
-section: content
+layout: post.webc
 title: A Clean Start With Dotfiles
 date: 2020-01-28 17:54:00
 description: New year new computer. What dotfiles are and how to use them.
-categories: [tooling]
+tags:
+  - tooling
 ---
 
 ## New Year, New Computer

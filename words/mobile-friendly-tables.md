@@ -1,10 +1,10 @@
 ---
-extends: _layouts.post
-section: content
+layout: post.webc
 title: Mobile Friendly Tables
 date: 2019-07-14 17:13:00
 description: An easy way to build mobile friendly tables with only CSS
-categories: [css]
+tags:
+   - css
 ---
 
 Building a table that works well on smaller screens is tricky, but I've come up with a simple CSS-only approach that works well for the 80% use case.

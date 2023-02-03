@@ -1,10 +1,13 @@
 ---
-extends: _layouts.post
-section: content
+layout: post.webc
 title: An Inline SVG Component Using Vue & Laravel Mix
 date: 2019-08-25 14:24:00
 description: Building an SVG icon Vue component
-categories: [vue, laravel, php, svg]
+tags:
+  - vue
+  - laravel
+  - php
+  - svg
 ---
 
 I wanted a Vue component that could pull any SVG from a file and inline it onto the page. [View a gist of the full code here](https://gist.github.com/imacrayon/f72ce5e40ec30d047b5eda0ae6ea0e39).
@@ -15,7 +18,7 @@ I wanted a Vue component that could pull any SVG from a file and inline it onto 
 
 First, Webpack needs to be configured to handle SVG paths with [HTML Loader](https://github.com/webpack-contrib/html-loader). By default Laravel Mix is configured to use File Loader, you can override this config with the code below:
 
-```javascript
+```js
 mix.override(config => {
     config.module.rules.find(rule => rule.test.test('.svg')).exclude = /\.svg$/
 
@@ -36,7 +39,7 @@ The Vue component should accept an SVG file name as a prop and then output the S
 
 Here's the basic Vue component structure:
 
-```vue
+```js
 <template>
     <!-- <svg> element will eventually render here -->
 </template>
@@ -50,7 +53,7 @@ export default {
 
 Next, we will pull the SVG file and transform it into a DOM Node. Using a DOM node we can work with our SVG more easily than trying to parse the raw SVG code as a string. I've added a `created` hook that will do this below:
 
-```vue
+```js
 <template>
     <!-- <svg> element will eventually render here -->
 </template>
@@ -77,7 +80,7 @@ As soon as our Vue component is created, we create a `<div>` and set its `innerH
 
 Finally, now that we have our `svg` node we can finish off the `<template>` code that will render the SVG onto the page.
 
-```vue
+```js
 <template>
     <svg v-bind="attributes" v-html="html"></svg>
 </template>

@@ -1,10 +1,10 @@
 ---
-extends: _layouts.post
-section: content
+layout: post.webc
 title: CSS Scroll Padding
 date: 2020-04-19 22:30:00
 description: The CSS scroll-padding property
-categories: [css]
+tags:
+  - css
 ---
 
 This weekend I ran across I hot tip by [Jeffrey Yasskin](https://twitter.com/jyasskin) which highlighted a CSS property I hadn't encountered before, `scroll-padding-top`:
@@ -15,7 +15,7 @@ I promptly added this new property to a project I'm currently working on, and no
 
 In my case the height of my app's sticky header is different between the mobile and desktop view, so I took advantage of CSS custom properties:
 
-```
+```css
 html {
     --navbar-height: 57px;
     scroll-padding-top: calc(var(--navbar-height) + 47px);

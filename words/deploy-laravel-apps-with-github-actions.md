@@ -1,10 +1,12 @@
 ---
-extends: _layouts.post
-section: content
+layout: post.webc
 title: Deploy Laravel Apps with Github Actions
 date: 2020-06-06 20:26:00
 description: How I deploy Laravel Apps using Github Actions
-categories: [php, laravel, tooling]
+tags:
+  - php
+  - laravel
+  - tooling
 ---
 
 I deployed my first Laravel project using [Github Actions](https://github.com/features/actions) today, these articles and resources were a big help in doing so:
@@ -15,7 +17,7 @@ I deployed my first Laravel project using [Github Actions](https://github.com/fe
 
 Here's the workflow config I landed on:
 
-```
+```yml
 name: Tests
 
 on:
@@ -36,7 +38,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.composer/cache/files
-          key: dependencies-composer-${{ hashFiles('composer.lock') }}
+          key: dependencies-composer-${% raw %}{{ hashFiles('composer.lock') }}{% endraw %}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -77,7 +79,7 @@ Here's a summary of the steps and some required configuration:
 
 In order for PHPUnit to work your Laravel app must have an `APP_KEY` set. The easiest way to do this is to modify the `phpunit.xml` file in your project and hardcode an app key:
 
-```
+```xml
 <phpunit>
     <php>
         ...

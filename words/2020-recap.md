@@ -1,5 +1,5 @@
 ---
-extends: _layouts.post
+layout: post.webc
 title: 2020 Recap
 date: 2020-12-31 13:41:00
 description: My 2020 end of year recap

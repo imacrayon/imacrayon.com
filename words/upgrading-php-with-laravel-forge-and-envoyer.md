@@ -1,17 +1,19 @@
 ---
-extends: _layouts.post
-section: content
+layout: post.webc
 title: Upgrading PHP with Laravel Forge and Envoyer
 date: 2020-02-12 21:24:00
 description: I ran into a hiccup to day upgrading the PHP version on my Laravel Forge server today.
-categories: [php, laravel, tooling]
+tags:
+  - php
+  - laravel
+  - tooling
 ---
 
 Laravel Forge makes it dead simple switch PHP versions. It's literally just a one button click and you're good to go. However, today I ran into a hiccup with Forge and Envoyer after upgrading from PHP 7.3 to 7.4.
 
 First, after upgrading, I had to manually change the PHP FPM version in my Nginx config:
 
-```
+```nginx
 fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
 ```
 
