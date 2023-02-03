@@ -4,11 +4,16 @@ const fs = require('fs')
 const path = require('path')
 const https = require('https')
 
+const DIRECTORY = `_includes/webmentions`
+const DOMAIN = 'imacrayon.com'
+const FEED = 'https://webmention.io/api/mentions.jf2'
+const TOKEN = process.env.WEBMENTIONS_TOKEN
+
 fetchWebmentions().then(webmentions => {
   webmentions.forEach(webmention => {
-    const filePath = webmention['wm-target'].replace('https://imacrayon.com/', '').replace(/\/$/, '')
+    const filePath = webmention['wm-target'].replace(`https://${DOMAIN}/`, '').replace(/\/$/, '') || 'index'
 
-    const filename = `${__dirname}/webmentions/${filePath}.json`
+    const filename = `${DIRECTORY}/${filePath}.json`
 
     if (!fs.existsSync(filename)) {
       fs.mkdirSync(path.dirname(filename), { recursive: true })
@@ -27,17 +32,9 @@ fetchWebmentions().then(webmentions => {
 })
 
 function fetchWebmentions() {
-  const token = process.env.WEBMENTIONS_TOKEN
-
-  const since = new Date()
-  since.setDate(since.getDate() - 3)
-
-  const url =
-    'https://webmention.io/api/mentions.jf2' +
-    '?domain=imacrayon.com' +
-    `&token=${token}` +
-    `&since=${since.toISOString()}` +
-    '&per-page=100'
+  const since = '2019-06-01T10:00:00-0700' // new Date()
+  // since.setDate(since.getDate() - 3)
+  const url = `${FEED}?domain=${DOMAIN}&token=${TOKEN}&since=${since}&per-page=100`
 
   return new Promise((resolve, reject) => {
     https.get(url, res => {
@@ -57,7 +54,6 @@ function fetchWebmentions() {
     })
   }).then(response => {
     if (!('children' in response)) {
-      console.log(response)
       throw new Error('Invalid webmention.io response.')
     }
 
@@ -66,5 +62,8 @@ function fetchWebmentions() {
 }
 
 function latestReceivedDate(a, b) {
-  return (a['wm-received'] < b['wm-received']) ? -1 : ((a['wm-received'] > b['wm-received']) ? 1 : 0)
+  let dateA = a.published || a['wm-received'];
+  let dateB = b.published || b['wm-received'];
+  // Newest first
+  return (dateA < dateB) ? -1 : ((dateA > dateB) ? 1 : 0)
 }
