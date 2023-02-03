@@ -1,6 +1,10 @@
 name: Webmentions
 
 on:
+  workflow_run:
+    workflows: [Publish]
+    types:
+      - completed
   schedule:
     - cron: "0 */6 * * *"
 
