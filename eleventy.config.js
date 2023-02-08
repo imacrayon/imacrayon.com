@@ -1,6 +1,7 @@
 const p = require("path");
 const fs = require("fs");
 const { DateTime } = require("luxon");
+const markdownItFigures = require('markdown-it-image-figures');
 const markdownItAnchor = require("markdown-it-anchor");
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 
@@ -131,15 +132,20 @@ module.exports = function (eleventyConfig) {
       const token = tokens[idx]
       let src = image.path(token.attrGet('src'))
       const alt = token.content
-      // const title = token.attrGet('title')
 
       pluginImage(src, image.options)
       const metadata = pluginImage.statsSync(src, image.options)
       return pluginImage.generateHTML(metadata, {
         alt,
         ...image.attrs
+      }, {
+        whitespaceMode: "inline"
       })
     }
+
+    markdown.use(markdownItFigures, {
+      figcaption: 'title',
+    })
 
     markdown.use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.ariaHidden({
