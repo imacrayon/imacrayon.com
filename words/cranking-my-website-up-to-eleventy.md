@@ -11,7 +11,7 @@ tags:
 
 At about the same time I started a design refresh on this website, [Zach Leatherman launched WebC](https://www.zachleat.com/twitter/1568270015094464512/), it's a small compiler used to author websites with single file components. I'd been feeling NPM-dependency-hell-burnout lately and was looking for a way to simplify my website's tech stack and return to good 'ol plain HTML & CSS; [Eleventy](https://11ty.dev) paired with [WebC](https://www.11ty.dev/docs/languages/webc/) felt like just enough abstraction without straying to far away from the web platform. So I did what many (all?) developers do with their personal site: I went all-in, scrapped everything, and rebuilt it all from scratch. I cranked my website up to Eleventy!
 
-![The &quot;up to eleven&quot; volume knobs from the film This Is Spinal Tap](/img/words/2023/11ty.jpg "The numbers all go to eleven...It's not ten. You, see most blokes will be playing at ten.")
+![The &quot;up to eleven&quot; volume knobs from the film This Is Spinal Tap](/img/words/2023/11ty.jpg "The numbers all go to eleven...It's not ten. You see, most blokes will be playing at ten.")
 
 ## Eleventy is fast and light
 
