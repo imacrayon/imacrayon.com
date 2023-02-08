@@ -122,7 +122,6 @@ pre {
   color: #fff;
   overflow-x: auto;
   white-space: pre-wrap;
-  max-width: 100%;
 }
 
 hr {
@@ -246,6 +245,7 @@ nav [aria-current="page"] {
 
 .prose pre {
   margin-inline: -1rem;
+  max-width: calc(100% + 2rem);
 }
 
 .prose code {
