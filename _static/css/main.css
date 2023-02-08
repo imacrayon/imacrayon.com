@@ -121,7 +121,8 @@ pre {
   background-color: #000;
   color: #fff;
   overflow-x: auto;
-  white-space: pre-wrap
+  white-space: pre-wrap;
+  max-width: 100%;
 }
 
 hr {
@@ -222,6 +223,7 @@ nav [aria-current="page"] {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .stack>* {
