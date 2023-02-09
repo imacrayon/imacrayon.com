@@ -1,37 +1,63 @@
 <div>
-  <img src="" alt="" width="64" height="64">
-  <div>
-    <p>Fetching track...</p>
-    <p>Fetching artist...</p>
+  <div class="track">
+    <img src="" alt="" width="64" height="64">
+    <div>
+      <p>Fetching track...</p>
+      <p>Fetching artist...</p>
+    </div>
   </div>
+  <details>
+    <summary>Recently played</summary>
+    Fetching playlist...
+  </details>
 </div>
 
 <style webc:scoped>
-  :host>* {
+  :host .track {
     display: flex;
     text-decoration: none;
     gap: 1rem;
   }
 
-  :host>*> :last-child {
+  :host .track :last-child {
     color: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  :host>*> :last-child> :first-child {
+  :host .track :last-child> :first-child {
     font-weight: 700;
   }
 
-  :host>*> :last-child> :last-child {
-    font-size: .717rem;
+  :host .track :last-child> :last-child {
+    font-size: var(--text-sm);
     font-family: var(--font-mono);
   }
 
-  :host img {
+  :host .track img {
     border: none;
     background-color: var(--black);
+  }
+
+  :host details {
+    margin-block-start: 1rem;
+    margin-block-end: -1rem;
+    font-size: var(--text-sm);
+  }
+
+  :host summary {
+    font-size: .625rem;
+    font-family: var(--font-mono);
+  }
+
+  :host ul {
+    margin-block-start: .5rem;
+  }
+
+  :host li {
+    display: block;
+    margin-block-start: 1px;
   }
 
 </style>

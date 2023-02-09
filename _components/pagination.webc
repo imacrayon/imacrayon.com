@@ -69,7 +69,7 @@
   }
 
   :host span {
-    font-size: .717rem;
+    font-size: var(--text-sm);
     font-family: var(--font-mono);
     display: block;
     margin-block-end: .25em;

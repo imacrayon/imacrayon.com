@@ -4,7 +4,7 @@
   --font-sans: "Wonder Unit Sans", sans-serif;
   --black: #1D2021;
   --primary: #F4E6D9;
-  --text-sm: .83em;
+  --text-sm: .717em;
   font-size: clamp(1.00rem, calc(0.60rem + 1.67vw), 1.41rem);
   font-family: var(--font-sans);
   line-height: 1.414;

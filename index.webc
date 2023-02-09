@@ -61,7 +61,7 @@ title: I'm a crayon
 
   .posts time {
     color: var(--black);
-    font-size: .717rem;
+    font-size: var(--text-sm);
     font-family: var(--font-mono);
   }
 
