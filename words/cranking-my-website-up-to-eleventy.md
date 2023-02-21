@@ -53,3 +53,7 @@ WebC provides is a simple way to co-locate your HTML, CSS, and JavaScript. Here'
 Notice the `webc:scoped` attribute on the `<style>` tag, it instructs the WebC parser to replace `:host` with a randomly generated CSS class so that all the styles are scoped to only the elements within the component.
 
 As another bonus, all of the `<style>` and `<script>` tags in all of the components on the page are bundled, minified, and injected right into the `<head>` of the page, so your website is optimized with critical CSS out of the box.
+
+## View the source
+
+You can view all the [source code for this site on GitHub](https://github.com/imacrayon/imacrayon.com).
