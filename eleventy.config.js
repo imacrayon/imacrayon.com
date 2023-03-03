@@ -17,7 +17,7 @@ const image = {
     outputDir: './_site/img'
   },
   attrs: {
-    sizes: '(min-width: 820px) 788px, 100vw',
+    sizes: 'calc(100vw - 2rem)',
     loading: 'lazy',
     decoding: 'async'
   }
