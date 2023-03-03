@@ -239,10 +239,15 @@ pre {
     margin-top: 1em;
   }
 
+  .prose ul,
+  .prose ol {
+    padding-inline-start: 2em;
+  }
+
   .prose :where(ul, ol)>li+li,
   .prose :where(ul ul, ul ol, ol ul, ol ol),
   .prose :where(ul, ol) p {
-    margin-block-start: 1em;
+    margin-block-start: .414em;
   }
 
   .prose pre {
@@ -371,7 +376,12 @@ pre {
 <p>You can view all the <a href="https://github.com/imacrayon/imacrayon.com">source code for this site on GitHub</a>.</p>
 </div>
 </article>
-<pagination class="wnfhxxvce"><nav aria-label="Words" class="center"><ul role="list"><li></li><li>
+<pagination class="wnfhxxvce"><nav aria-label="Words" class="center"><ul role="list"><li>
+      <a href="/words/reponsive-images-in-eleventy-markdown/">
+        <span>Previous</span>
+        Responsive Images in Eleventy&nbsp;Markdown
+      </a>
+    </li><li>
       <a href="/words/adding-cloudflare-to-a-laravel-forge-site/">
         <span>Next</span>
         Adding Cloudflare to a Laravel Forge&nbsp;Site

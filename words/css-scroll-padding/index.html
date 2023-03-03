@@ -239,10 +239,15 @@ pre {
     margin-top: 1em;
   }
 
+  .prose ul,
+  .prose ol {
+    padding-inline-start: 2em;
+  }
+
   .prose :where(ul, ol)>li+li,
   .prose :where(ul ul, ul ol, ol ul, ol ol),
   .prose :where(ul, ol) p {
-    margin-block-start: 1em;
+    margin-block-start: .414em;
   }
 
   .prose pre {
