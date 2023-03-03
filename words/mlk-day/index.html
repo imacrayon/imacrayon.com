@@ -24,7 +24,7 @@
   <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="I'm a crayon">
   <link rel="alternate" href="/feed/feed.json" type="application/json" title="I'm a crayon">
 
-  <link rel="stylesheet" href="/css/main.css?id=796842126">
+  <link rel="stylesheet" href="/css/main.css?id=-1328759834">
 
   
   <style>/**
@@ -93,7 +93,7 @@ pre {
 }
 
 :not(pre)>code {
-  padding: 0.1em;
+  padding: 0.1em 0.414em;
 }
 
 .token.comment,
@@ -213,70 +213,103 @@ pre {
 }
 
 
-  figure {
+  header time {
+    font-size: var(--text-sm);
+    font-family: var(--font-mono);
+  }
+
+  .prose :where(h1, h2, h3, h4, h5, h6),
+  .prose figure,
+  .prose blockquote,
+  .prose table,
+  .prose video,
+  .prose pre {
+    margin-block-start: 1.414em;
+  }
+
+  .prose p,
+  .prose ul,
+  .prose ol,
+  .prose dl {
+    margin-top: 1em;
+  }
+
+  .prose :where(ul, ol)>li+li,
+  .prose :where(ul ul, ul ol, ol ul, ol ol),
+  .prose :where(ul, ol) p {
+    margin-block-start: 1em;
+  }
+
+  .prose pre {
+    margin-inline: -1rem;
+    max-width: calc(100% + 2rem);
+  }
+
+  .prose code {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
+
+  .prose figure {
+    display: table;
     border: 2px solid var(--black);
   }
 
-  figcaption {
-    width: 0px;
-    min-width: 100%;
+  .prose figcaption {
+    display: table-caption;
+    caption-side: bottom;
     color: var(--primary);
+    font-family: var(--font-mono);
     background: var(--black);
     font-size: var(--text-sm);
     padding: .25rem .5rem;
     margin: 0;
   }
 
+  .prose blockquote {
+    border-inline-start: 2px solid var(--black);
+    padding-inline-start: 1em;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+  }
+
+  .prose blockquote>cite {
+    display: block;
+    font-style: italic;
+    margin-block-start: 1.125em;
+    padding: 0.5em 1.25em;
+    background: var(--black);
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    margin-inline-start: -1.25em;
+  }
+
+  .prose> :first-child {
+    margin-block-start: 0;
+  }
+
+  .prose> :last-child {
+    margin-block-end: 0;
+  }
+
 
 .wm_9pyfkg{display:block;margin-block-start:1.171rem}.wm_9pyfkg li>div{display:flex;align-items:center}.wm_9pyfkg img{width:32px;height:32px;border-radius:32px;border:2px solid var(--black);background:var(--black);color:var(--primary);margin-inline-end:.5rem;flex-shrink:0}.wm_9pyfkg h3{font-size:1rem;font-weight:normal}.wm_9pyfkg h3 a:first-child{font-weight:700}
-.ws5psdr83{display:block;position:relative;border-block:2px solid var(--black)}.ws5psdr83:before{content:"";height:100%;width:2px;background:var(--black);position:absolute;left:50%;top:0;transform:translateX(-50%)}.ws5psdr83 ul{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.ws5psdr83 li{position:relative}.ws5psdr83 li:last-child{text-align:right}.ws5psdr83 li:last-child span{justify-content:end}.ws5psdr83 li:focus-within{outline:2px solid var(--black);outline-offset:.5rem}.ws5psdr83 span{font-size:var(--text-sm);font-family:var(--font-mono);display:block;margin-block-end:.25em;text-decoration:underline}.ws5psdr83 a{padding:0;font-size:1rem;text-decoration:none;font-weight:700}.ws5psdr83 a::before{content:"";position:absolute;inset:.5rem}.ws5psdr83 a:focus,.ws5psdr83 a:hover{outline:none;text-decoration:underline;text-decoration-thickness:1px}
+.wnfhxxvce{display:block;position:relative;border-block:2px solid var(--black)}.wnfhxxvce:before{content:"";height:100%;width:2px;background:var(--black);position:absolute;left:50%;top:0;transform:translateX(-50%)}.wnfhxxvce ul{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.wnfhxxvce li{position:relative}.wnfhxxvce li:last-child{text-align:right}.wnfhxxvce li:last-child span{justify-content:end}.wnfhxxvce li:focus-within{outline:2px solid var(--black);outline-offset:.5rem}.wnfhxxvce span{font-size:var(--text-sm);font-family:var(--font-mono);display:block;margin-block-end:.875em;text-decoration:underline}.wnfhxxvce a{padding:0;font-size:1rem;text-decoration:none;font-weight:700;line-height:1.13}.wnfhxxvce a::before{content:"";position:absolute;inset:.5rem}.wnfhxxvce a:focus,.wnfhxxvce a:hover{outline:none;text-decoration:underline;text-decoration-thickness:1px}
 
     @font-face {
-      font-family: 'Wonder Unit Sans';
+      font-family: 'General Sans';
       font-style: normal;
-      font-weight: 400;
+      font-weight: 200 700;
       font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-400.woff2') format('woff2');
+      src: local(''), url('../fonts/general-sans/general-sans-variable.woff2') format('woff2');
     }
 
     @font-face {
-      font-family: 'Wonder Unit Sans';
+      font-family: 'General Sans';
       font-style: italic;
-      font-weight: 400;
+      font-weight: 200 700;
       font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-400-italic.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'Wonder Unit Sans';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-700.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'Wonder Unit Sans';
-      font-style: italic;
-      font-weight: 700;
-      font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-700-italic.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'Wonder Unit Sans';
-      font-style: normal;
-      font-weight: 800;
-      font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-800.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'Wonder Unit Sans';
-      font-style: italic;
-      font-weight: 800;
-      font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-800-italic.woff2') format('woff2');
+      src: local(''), url('/fonts/general-sans/general-sans-variable-italic.woff2') format('woff2');
     }
 
     @font-face {
@@ -319,20 +352,18 @@ pre {
       <time datetime="2021-01-18">18 Jan 2021</time>
     </div>
   </header>
-  <div class="center stack prose"><p>I came across a speech Dr. Martin Luther King Jr. gave at an annual conference for the American Psychological Association in 1967. I was struck by just how relevant this passage is right now:</p>
-<figure>
+  <div class="center prose"><p>I came across a speech Dr. Martin Luther King Jr. gave at an annual conference for the American Psychological Association in 1967. I was struck by just how relevant this passage is right now:</p>
 <blockquote cite="https://www.apa.org/monitor/features/king-challenge">
 <p>Urban riots must now be recognized as durable social phenomena. They may be deplored, but they are there and should be understood. Urban riots are a special form of violence. They are not insurrections. The rioters are not seeking to seize territory or to attain control of institutions. They are mainly intended to shock the white community. They are a distorted form of social protest. The looting which is their principal feature serves many functions. It enables the most enraged and deprived Negro to take hold of consumer goods with the ease the white man does by using his purse. Often the Negro does not even want what he takes; he wants the experience of taking. But most of all, alienated from society and knowing that this society cherishes property above people, he is shocking it by abusing property rights. There are thus elements of emotional catharsis in the violent act. This may explain why most cities in which riots have occurred have not had a repetition, even though the causative conditions remain. It is also noteworthy that the amount of physical harm done to white people other than police is infinitesimal and in Detroit whites and Negroes looted in unity.</p>
 <p>A profound judgment of today's riots was expressed by Victor Hugo a century ago. He said, 'If a soul is left in the darkness, sins will be committed. The guilty one is not he who commits the sin, but he who causes the darkness.'</p>
 <p>The policymakers of the white society have caused the darkness; they create discrimination; they structured slums; and they perpetuate unemployment, ignorance and poverty. It is incontestable and deplorable that Negroes have committed crimes; but they are derivative crimes. They are born of the greater crimes of the white society. When we ask Negroes to abide by the law, let us also demand that the white man abide by law in the ghettos. Day-in and day-out he violates welfare laws to deprive the poor of their meager allotments; he flagrantly violates building codes and regulations; his police make a mockery of law; and he violates laws on equal employment and education and the provisions for civic services. The slums are the handiwork of a vicious system of the white society; Negroes live in them but do not make them any more than a prisoner makes a prison. Let us say boldly that if the violations of law by the white man in the slums over the years were calculated and compared with the law-breaking of a few days of riots, the hardened criminal would be the white man. These are often difficult things to say but I have come to see more and more that it is necessary to utter the truth in order to deal with the great problems that we face in our society.</p>
+<cite>Dr. Martin Luther King Jr., 1967</cite>
 </blockquote>
-<figcaption>— <cite>Dr. Martin Luther King Jr., 1967</cite></figcaption>
-</figure>
 <p>This week I'm reminding myself to take time to stop and listen.</p>
 <p><a href="https://www.apa.org/monitor/features/king-challenge">You can read the full speech here</a>.</p>
 </div>
 </article>
-<pagination class="ws5psdr83"><nav aria-label="Words" class="center"><ul role="list"><li>
+<pagination class="wnfhxxvce"><nav aria-label="Words" class="center"><ul role="list"><li>
       <a href="/words/subdomain-redirects-in-laravel-forge/">
         <span>Previous</span>
         Subdomain Redirects in Laravel&nbsp;Forge

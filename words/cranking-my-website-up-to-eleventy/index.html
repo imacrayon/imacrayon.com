@@ -24,7 +24,7 @@
   <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="I'm a crayon">
   <link rel="alternate" href="/feed/feed.json" type="application/json" title="I'm a crayon">
 
-  <link rel="stylesheet" href="/css/main.css?id=796842126">
+  <link rel="stylesheet" href="/css/main.css?id=-1328759834">
 
   
   <style>/**
@@ -93,7 +93,7 @@ pre {
 }
 
 :not(pre)>code {
-  padding: 0.1em;
+  padding: 0.1em 0.414em;
 }
 
 .token.comment,
@@ -213,70 +213,103 @@ pre {
 }
 
 
-  figure {
+  header time {
+    font-size: var(--text-sm);
+    font-family: var(--font-mono);
+  }
+
+  .prose :where(h1, h2, h3, h4, h5, h6),
+  .prose figure,
+  .prose blockquote,
+  .prose table,
+  .prose video,
+  .prose pre {
+    margin-block-start: 1.414em;
+  }
+
+  .prose p,
+  .prose ul,
+  .prose ol,
+  .prose dl {
+    margin-top: 1em;
+  }
+
+  .prose :where(ul, ol)>li+li,
+  .prose :where(ul ul, ul ol, ol ul, ol ol),
+  .prose :where(ul, ol) p {
+    margin-block-start: 1em;
+  }
+
+  .prose pre {
+    margin-inline: -1rem;
+    max-width: calc(100% + 2rem);
+  }
+
+  .prose code {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
+
+  .prose figure {
+    display: table;
     border: 2px solid var(--black);
   }
 
-  figcaption {
-    width: 0px;
-    min-width: 100%;
+  .prose figcaption {
+    display: table-caption;
+    caption-side: bottom;
     color: var(--primary);
+    font-family: var(--font-mono);
     background: var(--black);
     font-size: var(--text-sm);
     padding: .25rem .5rem;
     margin: 0;
   }
 
+  .prose blockquote {
+    border-inline-start: 2px solid var(--black);
+    padding-inline-start: 1em;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+  }
+
+  .prose blockquote>cite {
+    display: block;
+    font-style: italic;
+    margin-block-start: 1.125em;
+    padding: 0.5em 1.25em;
+    background: var(--black);
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    margin-inline-start: -1.25em;
+  }
+
+  .prose> :first-child {
+    margin-block-start: 0;
+  }
+
+  .prose> :last-child {
+    margin-block-end: 0;
+  }
+
 
 .wm_9pyfkg{display:block;margin-block-start:1.171rem}.wm_9pyfkg li>div{display:flex;align-items:center}.wm_9pyfkg img{width:32px;height:32px;border-radius:32px;border:2px solid var(--black);background:var(--black);color:var(--primary);margin-inline-end:.5rem;flex-shrink:0}.wm_9pyfkg h3{font-size:1rem;font-weight:normal}.wm_9pyfkg h3 a:first-child{font-weight:700}
-.ws5psdr83{display:block;position:relative;border-block:2px solid var(--black)}.ws5psdr83:before{content:"";height:100%;width:2px;background:var(--black);position:absolute;left:50%;top:0;transform:translateX(-50%)}.ws5psdr83 ul{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.ws5psdr83 li{position:relative}.ws5psdr83 li:last-child{text-align:right}.ws5psdr83 li:last-child span{justify-content:end}.ws5psdr83 li:focus-within{outline:2px solid var(--black);outline-offset:.5rem}.ws5psdr83 span{font-size:var(--text-sm);font-family:var(--font-mono);display:block;margin-block-end:.25em;text-decoration:underline}.ws5psdr83 a{padding:0;font-size:1rem;text-decoration:none;font-weight:700}.ws5psdr83 a::before{content:"";position:absolute;inset:.5rem}.ws5psdr83 a:focus,.ws5psdr83 a:hover{outline:none;text-decoration:underline;text-decoration-thickness:1px}
+.wnfhxxvce{display:block;position:relative;border-block:2px solid var(--black)}.wnfhxxvce:before{content:"";height:100%;width:2px;background:var(--black);position:absolute;left:50%;top:0;transform:translateX(-50%)}.wnfhxxvce ul{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.wnfhxxvce li{position:relative}.wnfhxxvce li:last-child{text-align:right}.wnfhxxvce li:last-child span{justify-content:end}.wnfhxxvce li:focus-within{outline:2px solid var(--black);outline-offset:.5rem}.wnfhxxvce span{font-size:var(--text-sm);font-family:var(--font-mono);display:block;margin-block-end:.875em;text-decoration:underline}.wnfhxxvce a{padding:0;font-size:1rem;text-decoration:none;font-weight:700;line-height:1.13}.wnfhxxvce a::before{content:"";position:absolute;inset:.5rem}.wnfhxxvce a:focus,.wnfhxxvce a:hover{outline:none;text-decoration:underline;text-decoration-thickness:1px}
 
     @font-face {
-      font-family: 'Wonder Unit Sans';
+      font-family: 'General Sans';
       font-style: normal;
-      font-weight: 400;
+      font-weight: 200 700;
       font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-400.woff2') format('woff2');
+      src: local(''), url('../fonts/general-sans/general-sans-variable.woff2') format('woff2');
     }
 
     @font-face {
-      font-family: 'Wonder Unit Sans';
+      font-family: 'General Sans';
       font-style: italic;
-      font-weight: 400;
+      font-weight: 200 700;
       font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-400-italic.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'Wonder Unit Sans';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-700.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'Wonder Unit Sans';
-      font-style: italic;
-      font-weight: 700;
-      font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-700-italic.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'Wonder Unit Sans';
-      font-style: normal;
-      font-weight: 800;
-      font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-800.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'Wonder Unit Sans';
-      font-style: italic;
-      font-weight: 800;
-      font-display: swap;
-      src: local(''), url('/fonts/wonder-unit-sans/wonder-unit-sans-800-italic.woff2') format('woff2');
+      src: local(''), url('/fonts/general-sans/general-sans-variable-italic.woff2') format('woff2');
     }
 
     @font-face {
@@ -319,7 +352,7 @@ pre {
       <time datetime="2023-02-04">04 Feb 2023</time>
     </div>
   </header>
-  <div class="center stack prose"><p>At about the same time I started a design refresh on this website, <a href="https://www.zachleat.com/twitter/1568270015094464512/">Zach Leatherman launched WebC</a>, it's a small compiler used to author websites with single file components. I'd been feeling NPM-dependency-hell-burnout lately and was looking for a way to simplify my website's tech stack and return to good 'ol plain HTML &amp; CSS; <a href="https://11ty.dev">Eleventy</a> paired with <a href="https://www.11ty.dev/docs/languages/webc/">WebC</a> felt like just enough abstraction without straying to far away from the web platform. So I did what many (all?) developers do with their personal site: I went all-in, scrapped everything, and rebuilt it all from scratch. I cranked my website up to Eleventy!</p>
+  <div class="center prose"><p>At about the same time I started a design refresh on this website, <a href="https://www.zachleat.com/twitter/1568270015094464512/">Zach Leatherman launched WebC</a>, it's a small compiler used to author websites with single file components. I'd been feeling NPM-dependency-hell-burnout lately and was looking for a way to simplify my website's tech stack and return to good 'ol plain HTML &amp; CSS; <a href="https://11ty.dev">Eleventy</a> paired with <a href="https://www.11ty.dev/docs/languages/webc/">WebC</a> felt like just enough abstraction without straying to far away from the web platform. So I did what many (all?) developers do with their personal site: I went all-in, scrapped everything, and rebuilt it all from scratch. I cranked my website up to Eleventy!</p>
 <figure><picture><source type="image/avif" srcset="/img/IO_DbCN7ca-430.avif 430w" sizes="(min-width: 820px) 788px, 100vw"><img alt="The &quot;up to eleven&quot; volume knobs from the film This Is Spinal Tap" loading="lazy" decoding="async" src="/img/IO_DbCN7ca-430.jpeg" width="430" height="231"></picture><figcaption>The numbers all go to eleven...It's not ten. You see, most blokes will be playing at ten.</figcaption></figure>
 <h2 id="eleventy-is-fast-and-light" tabindex="-1">Eleventy is fast and light <a class="direct-link" href="#eleventy-is-fast-and-light" aria-hidden="true">#</a></h2>
 <p>Eleventy has a small footprint, currently the <code>node_modules</code> folder for this website, including four plugins, totals 34MB. Before now I wasn't convinced a Node project could be that small. In comparison, the <code>node_modules</code> for my old <a href="https://jigsaw.tighten.com">Jigsaw</a>-powered blog weighed in at 190MB. Similarly, Next.js and Gatsby base installs start at a chonky 230MB and 368MB respectively.</p>
@@ -333,7 +366,7 @@ pre {
 <p>You can view all the <a href="https://github.com/imacrayon/imacrayon.com">source code for this site on GitHub</a>.</p>
 </div>
 </article>
-<pagination class="ws5psdr83"><nav aria-label="Words" class="center"><ul role="list"><li></li><li>
+<pagination class="wnfhxxvce"><nav aria-label="Words" class="center"><ul role="list"><li></li><li>
       <a href="/words/adding-cloudflare-to-a-laravel-forge-site/">
         <span>Next</span>
         Adding Cloudflare to a Laravel Forge&nbsp;Site
