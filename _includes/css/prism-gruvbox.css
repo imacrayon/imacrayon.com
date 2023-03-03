@@ -64,7 +64,7 @@ pre {
 }
 
 :not(pre)>code {
-  padding: 0.1em;
+  padding: 0.1em 0.414em;
 }
 
 .token.comment,

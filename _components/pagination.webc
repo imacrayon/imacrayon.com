@@ -72,7 +72,7 @@
     font-size: var(--text-sm);
     font-family: var(--font-mono);
     display: block;
-    margin-block-end: .25em;
+    margin-block-end: .875em;
     text-decoration: underline;
   }
 
@@ -81,6 +81,7 @@
     font-size: 1rem;
     text-decoration: none;
     font-weight: 700;
+    line-height: 1.13;
   }
 
   :host a::before {
