@@ -27,7 +27,7 @@
   }
 
   :host .track :last-child> :first-child {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   :host .track :last-child> :last-child {
