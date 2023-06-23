@@ -1,0 +1,67 @@
+---
+layout: layout.webc
+title: I'm a crayon
+---
+
+<header>
+  <intro class="center"></intro>
+</header>
+<cantilever>
+  <h2>Now Playing</h2>
+  <now-playing></now-playing>
+</cantilever>
+<section aria-labelledby="latest">
+  <div class="center">
+    <h2 id="latest">Latest</h2>
+    <ul role="list" class="posts stack" style="--gap:1rem;">
+      <script webc:type="js" webc:is="template">
+        collections.latest.slice(0, 5).map(post => {
+          return `<li>
+            <strong><a href="${post.url}">${helpers.widont(post.data.title)}</a></strong>
+            <time datetime="${helpers.htmlDate(post.date)}">${helpers.readableDate(post.date)}</time>
+        </li>`
+        }).join('')
+      </script>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .posts {
+    margin-block-start: 1.171rem;
+  }
+
+  .posts li {
+    position: relative;
+  }
+
+  .posts li:focus-within {
+    outline: 2px solid var(--black);
+    outline-offset: .5rem;
+  }
+
+  .posts a {
+    display: block;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .posts a::before {
+    content: '';
+    position: absolute;
+    inset: .5rem;
+  }
+
+  .posts a:focus,
+  .posts a:hover {
+    outline: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  .posts time {
+    color: var(--black);
+    font-size: var(--text-sm);
+    font-family: var(--font-mono);
+  }
+</style>

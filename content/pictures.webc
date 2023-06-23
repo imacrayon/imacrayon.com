@@ -1,0 +1,57 @@
+---
+layout: layout.webc
+title: Pictures
+---
+
+<header>
+  <div class="center">
+    <h1>Pictures</h1>
+  </div>
+</header>
+<div class="center">
+  <ul role="list" class="pictures stack" style="--gap:4rem;">
+    <script webc:type="js">
+      collections.pictures.reverse().map(picture => {
+        return `<li>
+          <responsive-image src="${picture.data.src}" alt="${picture.data.alt}"></responsive-image>
+          <strong><a href="${picture.url}">${picture.data.title}</a></strong>
+        </li>`
+      }).join('')
+    </script>
+  </ul>
+</div>
+
+<style>
+  .pictures li {
+    position: relative;
+  }
+
+  .pictures li:focus-within {
+    outline: 2px solid var(--black);
+    outline-offset: .5rem;
+  }
+
+  .pictures a {
+    display: block;
+    font-size: 1rem;
+    margin-block-start: .25rem;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  .pictures a::before {
+    content: '';
+    position: absolute;
+    inset: .5rem;
+  }
+
+  .pictures a:focus,
+  .pictures a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  .pictures a:focus {
+    outline: none;
+  }
+</style>
