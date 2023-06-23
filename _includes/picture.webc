@@ -25,13 +25,13 @@ layout: layout.webc
       </div>
       <div webc:if="owner">
         <dt class="sr-only">Owner</dt>
-        <dd @text="`Collection of ${owner}`"></dd>
+        <dd @text="`collection of ${owner}`"></dd>
       </div>
     </dl>
   </div>
 </cantilever>
 <div class="center stack" @raw="content"></div>
-<pagination @collection="pictures" @aria-label="Pictures"></pagination>
+<pagination :@collection="collections.pictures" @aria-label="Pictures"></pagination>
 
 <style>
   dl {
@@ -47,5 +47,4 @@ layout: layout.webc
     display: block;
     margin-top: .25em;
   }
-
 </style>

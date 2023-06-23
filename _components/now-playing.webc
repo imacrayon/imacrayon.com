@@ -59,10 +59,9 @@
     display: block;
     margin-block-start: 1px;
   }
-
 </style>
 
-<script webc:if="metadata.environment === 'production'">
+<script webc:if="$data.metadata.environment === 'production'">
   window.customElements.define('now-playing', class extends HTMLElement {
     connectedCallback() {
       fetch(`https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-0b7427a5-8f26-4ce6-8b1b-0c5197b404ac/default/now-playing`)

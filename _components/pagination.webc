@@ -1,6 +1,6 @@
-<script webc:type="js" webc:is="template">
+<script webc:type="js">
   let links = []
-  let previousPost = helpers.getPreviousCollectionItem(collections[collection], page, 'en')
+  let previousPost = helpers.getPreviousCollectionItem(collection, page, 'en')
   if (previousPost) {
     links.push(`<li>
       <a href="${previousPost.url}">
@@ -11,7 +11,7 @@
   } else {
     links.push(`<li></li>`)
   }
-  let nextPost = helpers.getNextCollectionItem(collections[collection], page, 'en')
+  let nextPost = helpers.getNextCollectionItem(collection, page, 'en')
   if (nextPost) {
     links.push(`<li>
       <a href="${nextPost.url}">
@@ -97,5 +97,4 @@
     text-decoration: underline;
     text-decoration-thickness: 1px;
   }
-
 </style>

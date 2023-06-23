@@ -1,4 +1,4 @@
-<script webc:type="js" webc:is="template">
+<script webc:type="js">
   let webmentions = helpers.webmentions(page).map(webmention => {
     return `<li>
       <div>
@@ -46,5 +46,4 @@
   :host h3 a:first-child {
     font-weight: 700;
   }
-
 </style>
