@@ -6,31 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title @text="title || metadata.title"></title>
 
-  <meta name="author" content="Christian Taylor">
-  <meta name="description" :content="description || metadata.description">
-  <meta name="generator" :content="eleventy.generator">
-
-  <link rel="icon" href="/img/favicon.svg">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" :content="title || metadata.title">
-  <meta property="og:description" :content="description || metadata.description">
-  <meta property="og:url" :content="metadata.url + page.url">
-  <meta property="og:locale" :content="en_US">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@ima_crayon">
-  <meta name="twitter:creator" content="@ima_crayon">
-
-  <link rel="canonical" :href="metadata.url + page.url">
-
-  <link rel="alternate" :href="metadata.feed.path" type="application/atom+xml" :title="metadata.title">
-  <link rel="alternate" :href="metadata.jsonfeed.path" type="application/json" :title="metadata.title">
-
-  <link rel="stylesheet" :href="version('/css/main.css')" webc:keep>
-
-  <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention" />
-  <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc" />
-  <link rel="me" href="https://twitter.com/ima_crayon">
+  <link rel="stylesheet" href="/css/main.css" webc:keep>
 
   <style>
     @font-face {
@@ -38,7 +14,7 @@
       font-style: normal;
       font-weight: 200 700;
       font-display: swap;
-      src: local(''), url('../fonts/general-sans/general-sans-variable.woff2') format('woff2');
+      src: local(''), url('/fonts/general-sans/general-sans-variable.woff2') format('woff2');
     }
 
     @font-face {
@@ -56,10 +32,30 @@
       font-display: swap;
       src: local(''), url('/fonts/ibm-plex-mono/ibm-plex-mono-400.woff2') format('woff2');
     }
-
   </style>
   <style @raw="getCss(page.url)" webc:keep></style>
   <script @raw="getJs(page.url)" webc:keep></script>
+
+  <link rel="icon" href="/img/favicon.svg">
+  <link rel="me" href="https://twitter.com/ima_crayon">
+  <link rel="canonical" :href="metadata.url + page.url">
+  <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention" />
+  <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc" />
+  <link rel="alternate" :href="metadata.feed.path" type="application/atom+xml" :title="metadata.title">
+  <link rel="alternate" :href="metadata.jsonfeed.path" type="application/json" :title="metadata.title">
+
+  <meta name="author" content="Christian Taylor">
+  <meta name="description" :content="description || metadata.description">
+  <meta name="generator" :content="eleventy.generator">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" :content="title || metadata.title">
+  <meta property="og:description" :content="description || metadata.description">
+  <meta property="og:url" :content="metadata.url + page.url">
+  <meta property="og:locale" :content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@ima_crayon">
+  <meta name="twitter:creator" content="@ima_crayon">
 </head>
 
 <body>
