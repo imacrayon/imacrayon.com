@@ -5,34 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>An Inline SVG Component Using Vue &amp; Laravel Mix</title>
 
-  <meta name="author" content="Christian Taylor">
-  <meta name="description" content="Building an SVG icon Vue component">
-  <meta name="generator" content="Eleventy v2.0.0">
-
-  <link rel="icon" href="/img/favicon.svg">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="An Inline SVG Component Using Vue &amp; Laravel Mix">
-  <meta property="og:description" content="Building an SVG icon Vue component">
-  <meta property="og:url" content="https://imacrayon.com/words/an-inline-svg-component-using-vue-and-laravel-mix/">
-  <meta property="og:locale">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@ima_crayon">
-  <meta name="twitter:creator" content="@ima_crayon">
-
-  <link rel="canonical" href="https://imacrayon.com/words/an-inline-svg-component-using-vue-and-laravel-mix/">
-
-  <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="I'm a crayon">
-  <link rel="alternate" href="/feed/feed.json" type="application/json" title="I'm a crayon">
-
-  <link rel="stylesheet" href="/css/main.css?id=-1328759834">
-
-  <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention">
-  <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc">
-  <link rel="me" href="https://twitter.com/ima_crayon">
+  <link rel="stylesheet" href="/css/main.css">
 
   
-  <style>/**
+  <style>.wzsqa_lzd{display:block;position:relative;border-block:2px solid var(--black)}.wzsqa_lzd:before{content:"";height:100%;width:2px;background:var(--black);position:absolute;left:50%;top:0;transform:translateX(-50%)}.wzsqa_lzd ul{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.wzsqa_lzd li{position:relative}.wzsqa_lzd li:last-child{text-align:right}.wzsqa_lzd li:last-child span{justify-content:end}.wzsqa_lzd li:focus-within{outline:2px solid var(--black);outline-offset:.5rem}.wzsqa_lzd span{font-size:var(--text-sm);font-family:var(--font-mono);display:block;margin-block-end:.875em;text-decoration:underline}.wzsqa_lzd a{padding:0;font-size:1rem;text-decoration:none;font-weight:700;line-height:1.13}.wzsqa_lzd a::before{content:"";position:absolute;inset:.5rem}.wzsqa_lzd a:focus,.wzsqa_lzd a:hover{outline:none;text-decoration:underline;text-decoration-thickness:1px}
+.w6ecv2zmm{display:block;margin-block-start:1.171rem}.w6ecv2zmm li>div{display:flex;align-items:center}.w6ecv2zmm img{width:32px;height:32px;border-radius:32px;border:2px solid var(--black);background:var(--black);color:var(--primary);margin-inline-end:.5rem;flex-shrink:0}.w6ecv2zmm h3{font-size:1rem;font-weight:normal}.w6ecv2zmm h3 a:first-child{font-weight:700}
+/**
  * Gruvbox dark theme
  *
  * Adapted from a theme based on:
@@ -216,9 +194,7 @@ pre {
 .language-yml {
   color: var(--code-green);
 }
-
-
-  header time {
+header time {
     font-size: var(--text-sm);
     font-family: var(--font-mono);
   }
@@ -301,17 +277,12 @@ pre {
   .prose> :last-child {
     margin-block-end: 0;
   }
-
-
-.wm_9pyfkg{display:block;margin-block-start:1.171rem}.wm_9pyfkg li>div{display:flex;align-items:center}.wm_9pyfkg img{width:32px;height:32px;border-radius:32px;border:2px solid var(--black);background:var(--black);color:var(--primary);margin-inline-end:.5rem;flex-shrink:0}.wm_9pyfkg h3{font-size:1rem;font-weight:normal}.wm_9pyfkg h3 a:first-child{font-weight:700}
-.wnfhxxvce{display:block;position:relative;border-block:2px solid var(--black)}.wnfhxxvce:before{content:"";height:100%;width:2px;background:var(--black);position:absolute;left:50%;top:0;transform:translateX(-50%)}.wnfhxxvce ul{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.wnfhxxvce li{position:relative}.wnfhxxvce li:last-child{text-align:right}.wnfhxxvce li:last-child span{justify-content:end}.wnfhxxvce li:focus-within{outline:2px solid var(--black);outline-offset:.5rem}.wnfhxxvce span{font-size:var(--text-sm);font-family:var(--font-mono);display:block;margin-block-end:.875em;text-decoration:underline}.wnfhxxvce a{padding:0;font-size:1rem;text-decoration:none;font-weight:700;line-height:1.13}.wnfhxxvce a::before{content:"";position:absolute;inset:.5rem}.wnfhxxvce a:focus,.wnfhxxvce a:hover{outline:none;text-decoration:underline;text-decoration-thickness:1px}
-
-    @font-face {
+@font-face {
       font-family: 'General Sans';
       font-style: normal;
       font-weight: 200 700;
       font-display: swap;
-      src: local(''), url('../fonts/general-sans/general-sans-variable.woff2') format('woff2');
+      src: local(''), url('/fonts/general-sans/general-sans-variable.woff2') format('woff2');
     }
 
     @font-face {
@@ -328,10 +299,29 @@ pre {
       font-weight: 400;
       font-display: swap;
       src: local(''), url('/fonts/ibm-plex-mono/ibm-plex-mono-400.woff2') format('woff2');
-    }
-
-  </style>
+    }</style>
   <script></script>
+
+  <link rel="icon" href="/img/favicon.svg">
+  <link rel="me" href="https://twitter.com/ima_crayon">
+  <link rel="canonical" href="https://imacrayon.com/words/an-inline-svg-component-using-vue-and-laravel-mix/">
+  <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention">
+  <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc">
+  <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="I'm a crayon">
+  <link rel="alternate" href="/feed/feed.json" type="application/json" title="I'm a crayon">
+
+  <meta name="author" content="Christian Taylor">
+  <meta name="description" content="Building an SVG icon Vue component">
+  <meta name="generator" content="Eleventy v2.0.1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="An Inline SVG Component Using Vue &amp; Laravel Mix">
+  <meta property="og:description" content="Building an SVG icon Vue component">
+  <meta property="og:url" content="https://imacrayon.com/words/an-inline-svg-component-using-vue-and-laravel-mix/">
+  <meta property="og:locale">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@ima_crayon">
+  <meta name="twitter:creator" content="@ima_crayon">
 </head>
 
 <body>
@@ -357,17 +347,17 @@ pre {
 
 <article>
   <header>
-    <div class="center stack" style="--gap: .5rem">
+    <div style="--gap: .5rem" class="center stack">
       <h1>An Inline SVG Component Using Vue &amp; Laravel Mix</h1>
       <time datetime="2019-08-25">25 Aug 2019</time>
     </div>
   </header>
   <div class="center prose"><p>I wanted a Vue component that could pull any SVG from a file and inline it onto the page. <a href="https://gist.github.com/imacrayon/f72ce5e40ec30d047b5eda0ae6ea0e39">View a gist of the full code here</a>.</p>
 <p><a href="https://laracasts.com/series/practical-vue-components/episodes/6">Jeffery Way</a> and <a href="https://calebporzio.com/using-inline-svgs-in-vue-compoments/">Caleb Porzio</a> have already tackled this problem. However, their solutions wrapped the SVG output in a <code>&lt;div&gt;</code> tag. Extra elements like this feel gross to me, so I modified their work and came up with a solution that outputs clean SVGs instead.</p>
-<h2 id="the-webpack-config" tabindex="-1">The Webpack Config <a class="direct-link" href="#the-webpack-config" aria-hidden="true">#</a></h2>
+<h2 id="the-webpack-config" tabindex="-1">The Webpack Config <a class="direct-link" href="#the-webpack-config">#</a></h2>
 <p>First, Webpack needs to be configured to handle SVG paths with <a href="https://github.com/webpack-contrib/html-loader">HTML Loader</a>. By default Laravel Mix is configured to use File Loader, you can override this config with the code below:</p>
 <pre class="language-js"><code class="language-js">mix<span class="token punctuation">.</span><span class="token function">override</span><span class="token punctuation">(</span><span class="token parameter">config</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    config<span class="token punctuation">.</span>module<span class="token punctuation">.</span>rules<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">rule</span> <span class="token operator">=></span> rule<span class="token punctuation">.</span>test<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'.svg'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>exclude <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.svg$</span><span class="token regex-delimiter">/</span></span><br><br>    config<span class="token punctuation">.</span>module<span class="token punctuation">.</span>rules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.svg$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span><br>        <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">'html-loader'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br>    <span class="token punctuation">}</span><span class="token punctuation">)</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-<h2 id="the-vue-component" tabindex="-1">The Vue Component <a class="direct-link" href="#the-vue-component" aria-hidden="true">#</a></h2>
+<h2 id="the-vue-component" tabindex="-1">The Vue Component <a class="direct-link" href="#the-vue-component">#</a></h2>
 <p>The Vue component should accept an SVG file name as a prop and then output the SVG onto the page, like this:</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <p>Here's the basic Vue component structure:</p>
@@ -382,15 +372,15 @@ pre {
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>16px<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>16px<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>red<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>icon</span><span class="token punctuation">></span></span></code></pre>
 </div>
 </article>
-<pagination class="wnfhxxvce"><nav aria-label="Words" class="center"><ul role="list"><li>
-      <a href="/words/dotfiles/">
+<pagination class="wzsqa_lzd"><nav aria-label="Words" class="center"><ul role="list"><li>
+      <a href="/words/hosting-a-jigsaw-site-on-github-pages/">
         <span>Previous</span>
-        A Clean Start With&nbsp;Dotfiles
+        Hosting a Jigsaw Site on GitHub&nbsp;Pages
       </a>
     </li><li>
-      <a href="/words/mobile-friendly-tables/">
+      <a href="/words/dotfiles/">
         <span>Next</span>
-        Mobile Friendly&nbsp;Tables
+        A Clean Start With&nbsp;Dotfiles
       </a>
     </li></ul></nav>
 
@@ -399,7 +389,7 @@ pre {
 <section aria-labelledby="webmentions">
   <div class="center">
     <h2 id="webmentions">Webmentions</h2>
-    <webmentions class="wm_9pyfkg"><p><em>No webmentions posted.</em></p>
+    <webmentions class="w6ecv2zmm"><p><em>No webmentions posted.</em></p>
 
 
 </webmentions>
