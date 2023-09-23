@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>An Instant Search UI using Alpine AJAX &amp; Laravel</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  
+  <style>.wzsqa_lzd{display:block;position:relative;border-block:2px solid var(--black)}.wzsqa_lzd:before{content:"";height:100%;width:2px;background:var(--black);position:absolute;left:50%;top:0;transform:translateX(-50%)}.wzsqa_lzd ul{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.wzsqa_lzd li{position:relative}.wzsqa_lzd li:last-child{text-align:right}.wzsqa_lzd li:last-child span{justify-content:end}.wzsqa_lzd li:focus-within{outline:2px solid var(--black);outline-offset:.5rem}.wzsqa_lzd span{font-size:var(--text-sm);font-family:var(--font-mono);display:block;margin-block-end:.875em;text-decoration:underline}.wzsqa_lzd a{padding:0;font-size:1rem;text-decoration:none;font-weight:700;line-height:1.13}.wzsqa_lzd a::before{content:"";position:absolute;inset:.5rem}.wzsqa_lzd a:focus,.wzsqa_lzd a:hover{outline:none;text-decoration:underline;text-decoration-thickness:1px}
+.w6ecv2zmm{display:block;margin-block-start:1.171rem}.w6ecv2zmm li>div{display:flex;align-items:center}.w6ecv2zmm img{width:32px;height:32px;border-radius:32px;border:2px solid var(--black);background:var(--black);color:var(--primary);margin-inline-end:.5rem;flex-shrink:0}.w6ecv2zmm h3{font-size:1rem;font-weight:normal}.w6ecv2zmm h3 a:first-child{font-weight:700}
+/**
+ * Gruvbox dark theme
+ *
+ * Adapted from a theme based on:
+ * Vim Gruvbox dark Theme (https://github.com/morhetz/gruvbox)
+ *
+ * @author Azat S. <to@azat.io>
+ * @version 1.0
+ */
+
+:root {
+  /* Changed from #1d2021 for accessible contrast */
+  --code-fg: #ebdbb2;
+  --code-fg4: #a89984;
+  --code-bg: #1C1C1C;
+  --code-highlight: rgba(104, 157, 106, 0.5);
+  --code-gray: #928374;
+  --code-green: #b8bb26;
+  --code-red: #fb4934;
+  --code-aqua: #8ec07c;
+  --code-yellow: #fabd2f;
+  --code-orange: #fe8019;
+  --code-blue: #83a598;
+  --code-purple: #d3869b;
+}
+
+code,
+pre {
+  color: var(--code-fg);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 2;
+
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre::-moz-selection,
+pre ::-moz-selection,
+code::-moz-selection,
+code ::-moz-selection {
+  background: var(--code-highlight);
+}
+
+pre::selection,
+pre ::selection,
+code::selection,
+code ::selection {
+  background: var(--code-highlight);
+}
+
+code,
+pre {
+  background: var(--code-bg);
+}
+
+:not(pre)>code {
+  padding: 0.1em 0.414em;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: var(--code-gray);
+}
+
+/* @media (max-width: 768px) { */
+
+.token.delimiter,
+.token.boolean,
+.token.keyword,
+.token.important {
+  color: var(--code-red);
+}
+
+.token.atrule {
+  color: var(--code-purple);
+}
+
+.token.atrule .token.rule {
+  color: var(--code-red);
+}
+
+.token.atrule .token.property {
+  color: var(--code-aqua);
+}
+
+.token.selector {
+  color: var(--code-green);
+}
+
+.token.operator {
+  color: var(--code-aqua);
+}
+
+.token.punctuation {
+  color: var(--code-fg4);
+}
+
+.token.tag {
+  color: var(--code-aqua);
+}
+
+.token.tag .punctuation {
+  color: var(--code-blue);
+}
+
+.token.attr-name {
+  color: var(--code-yellow);
+}
+
+.token.doctype,
+.token.class-name-definition,
+.token.builtin {
+  color: var(--code-yellow);
+}
+
+.token.constant,
+.token.entity,
+.token.number,
+.token.symbol {
+  color: var(--code-purple);
+}
+
+.token.property {
+  color: var(--code-orange);
+}
+
+.token.variable,
+.token.key {
+  color: var(--code-blue);
+}
+
+.token.string,
+.token.char {
+  color: var(--code-green);
+}
+
+.token.attr-value {
+  color: var(--code-green);
+}
+
+.token.url {
+  color: var(--code-green);
+  text-decoration: underline;
+}
+
+.token.function {
+  color: var(--code-yellow);
+}
+
+.token.function-definition {
+  color: var(--code-fg);
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.language-css .token.function {
+  color: var(--code-red);
+}
+
+.language-js,
+.language-json .token.property {
+  color: var(--code-blue);
+}
+
+.language-yml {
+  color: var(--code-green);
+}
+header time {
+    font-size: var(--text-sm);
+    font-family: var(--font-mono);
+  }
+
+  .prose :where(h1, h2, h3, h4, h5, h6),
+  .prose figure,
+  .prose blockquote,
+  .prose table,
+  .prose video,
+  .prose pre {
+    margin-block-start: 1.414em;
+  }
+
+  .prose p,
+  .prose ul,
+  .prose ol,
+  .prose dl {
+    margin-top: 1em;
+  }
+
+  .prose ul,
+  .prose ol {
+    padding-inline-start: 2em;
+  }
+
+  .prose :where(ul, ol)>li+li,
+  .prose :where(ul ul, ul ol, ol ul, ol ol),
+  .prose :where(ul, ol) p {
+    margin-block-start: .414em;
+  }
+
+  .prose pre {
+    margin-inline: -1rem;
+    max-width: calc(100% + 2rem);
+  }
+
+  .prose code {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
+
+  .prose figure {
+    display: table;
+    border: 2px solid var(--black);
+  }
+
+  .prose figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    color: var(--primary);
+    font-family: var(--font-mono);
+    background: var(--black);
+    font-size: var(--text-sm);
+    padding: .25rem .5rem;
+    margin: 0;
+  }
+
+  .prose blockquote {
+    border-inline-start: 2px solid var(--black);
+    padding-inline-start: 1em;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+  }
+
+  .prose blockquote>cite {
+    display: block;
+    font-style: italic;
+    margin-block-start: 1.125em;
+    padding: 0.5em 1.25em;
+    background: var(--black);
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    margin-inline-start: -1.25em;
+  }
+
+  .prose> :first-child {
+    margin-block-start: 0;
+  }
+
+  .prose> :last-child {
+    margin-block-end: 0;
+  }
+@font-face {
+      font-family: 'General Sans';
+      font-style: normal;
+      font-weight: 200 700;
+      font-display: swap;
+      src: local(''), url('/fonts/general-sans/general-sans-variable.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'General Sans';
+      font-style: italic;
+      font-weight: 200 700;
+      font-display: swap;
+      src: local(''), url('/fonts/general-sans/general-sans-variable-italic.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'IBM Plex Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: local(''), url('/fonts/ibm-plex-mono/ibm-plex-mono-400.woff2') format('woff2');
+    }</style>
+  <script></script>
+
+  <link rel="icon" href="/img/favicon.svg">
+  <link rel="me" href="https://twitter.com/ima_crayon">
+  <link rel="canonical" href="https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/">
+  <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention">
+  <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc">
+  <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="I'm a crayon">
+  <link rel="alternate" href="/feed/feed.json" type="application/json" title="I'm a crayon">
+
+  <meta name="author" content="Christian Taylor">
+  <meta name="description" content="How to build an instant search filter using Alpine AJAX &amp; Laravel">
+  <meta name="generator" content="Eleventy v2.0.1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="An Instant Search UI using Alpine AJAX &amp; Laravel">
+  <meta property="og:description" content="How to build an instant search filter using Alpine AJAX &amp; Laravel">
+  <meta property="og:url" content="https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/">
+  <meta property="og:locale">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@ima_crayon">
+  <meta name="twitter:creator" content="@ima_crayon">
+</head>
+
+<body>
+  <a href="#main">Skip to content</a>
+  <header>
+    <nav aria-label="Site" class="center">
+      <ul role="list">
+        <li><a href="/" aria-current>Home</a></li>
+        <li><a href="/words" aria-current>Words</a></li>
+        <li><a href="/pictures" aria-current>Pictures</a></li>
+        <li>
+          <a href="/feed/feed.xml">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="16" width="16" style="width:1rem; height:1rem">
+              <path fill="currentColor" d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64"></path>
+            </svg>
+            <span class="sr-only">RSS</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+
+<article>
+  <header>
+    <div style="--gap: .5rem" class="center stack">
+      <h1>An Instant Search UI using Alpine AJAX &amp; Laravel</h1>
+      <time datetime="2023-09-23">23 Sep 2023</time>
+    </div>
+  </header>
+  <div class="center prose"><p>I’m going to walk you through how to easily add an instant search filter in your Laravel apps. This UI pattern is one of my favorite examples that demonstrates the power and simplicity of the <a href="https://alpine-ajax.js.org">Alpine AJAX</a> library. When I say “instant search” I mean a text input that filters a list of results as you type. In this example we’ll build out a simple contact list and then allow a user to search for a contact within the list by typing part of the contact’s name or email.</p>
+<h2 id="the-data" tabindex="-1">The Data <a class="direct-link" href="#the-data">#</a></h2>
+<p>You can start with a fresh Laravel install, get a database ready to go, then run <code>php artisan migrate</code> in the terminal to generate the “users” table. To ensure that you’ve got user data to work with, you can run <code>php artisan tinker</code> to enter the Tinker CLI, then <code>User::factory()-&gt;count(20)-&gt;create();</code> to generate 20 users in your database.</p>
+<h2 id="the-route" tabindex="-1">The Route <a class="direct-link" href="#the-route">#</a></h2>
+<p>Next, we’ll build out a route to view our list of contacts:</p>
+<pre class="language-php"><code class="language-php"><span class="token comment">// routes/web.php</span><br><br><span class="token keyword">use</span> <span class="token package">App<span class="token punctuation">\</span>Models<span class="token punctuation">\</span>User</span><span class="token punctuation">;</span><br><span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Support<span class="token punctuation">\</span>Facades<span class="token punctuation">\</span>Route</span><span class="token punctuation">;</span><br><br><span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/contacts'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'contacts'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><br>        <span class="token string single-quoted-string">'contacts'</span> <span class="token operator">=></span> <span class="token class-name static-context">User</span><span class="token operator">::</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br>    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2 id="the-view" tabindex="-1">The View <a class="direct-link" href="#the-view">#</a></h2>
+<p>The route we just created requires a view file at <code>resources/views/contacts.blade.php</code>, so we’ll add that. It’s going to be a basic page with a search form followed by a list of contacts. I’m leaving CSS styling out of this walkthrough so that we can focus on the markup, style things however you’d like:</p>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- resources/views/contacts.blade.php --></span><br><br><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Contact<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Contacts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>term<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Search<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>term<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>term<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>Submit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Contacts<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span><br>    @foreach($contacts as $contact)<br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>{{ $contact->name }} – {{ $contact->email }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><br>    @endforeach<br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="the-logic" tabindex="-1">The Logic <a class="direct-link" href="#the-logic">#</a></h2>
+<p>Alright, at this point we should be able to visit <code>/contacts</code> in the browser and see our search form and contact list. Now we need to get our form returning search results, so we’ll add some new logic to our route:</p>
+<pre class="language-php"><code class="language-php"><span class="token comment">// routes/web.php</span><br><br><span class="token keyword">use</span> <span class="token package">App<span class="token punctuation">\</span>Models<span class="token punctuation">\</span>User</span><span class="token punctuation">;</span><br><span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Http<span class="token punctuation">\</span>Request</span><span class="token punctuation">;</span><br><span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Support<span class="token punctuation">\</span>Facades<span class="token punctuation">\</span>Route</span><span class="token punctuation">;</span><br><br><span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/contacts'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token variable">$contacts</span> <span class="token operator">=</span> <span class="token class-name static-context">User</span><span class="token operator">::</span><span class="token function">when</span><span class="token punctuation">(</span><span class="token variable">$request</span><span class="token operator">-></span><span class="token property">term</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$term</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>        <span class="token variable">$query</span><span class="token operator">-></span><span class="token function">where</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span><span class="token variable">$term</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>            <span class="token variable">$query</span><span class="token operator">-></span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'name'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'like'</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"%<span class="token interpolation"><span class="token punctuation">{</span><span class="token variable">$term</span><span class="token punctuation">}</span></span>%"</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token function">orWhere</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'email'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'like'</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"%<span class="token interpolation"><span class="token punctuation">{</span><span class="token variable">$term</span><span class="token punctuation">}</span></span>%"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'contacts'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><br>        <span class="token string single-quoted-string">'contacts'</span> <span class="token operator">=></span> <span class="token variable">$contacts</span><span class="token punctuation">,</span><br>    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>With this change our search form should be working now: When the HTTP request contains a value for <strong>“term”</strong> in the query string, we’ll query the “users” table for a record with a <strong>“name”</strong> or <strong>“email”</strong> that contains the search term. Note that this is a simple search implementation just for demonstration purposes, you’d probably be better off using something like <a href="https://laravel.com/docs/10.x/scout">Laravel Scout</a> for database searches, but that’s beyond the scope of this walkthrough.</p>
+<h2 id="the-interaction" tabindex="-1">The Interaction <a class="direct-link" href="#the-interaction">#</a></h2>
+<p>Now it’s time to enhance our interface so that we get instant results as we type. This is where Alpine AJAX shines. Alpine AJAX is a small <a href="https://alpinejs.dev">Alpine.js</a> plugin that provides an easy way to make AJAX requests and render content on the page.</p>
+<p>First, we’ll get Alpine and Alpine AJAX installed. We’ll add two script tags in the page <code>&lt;head&gt;</code>, but you can also <a href="https://alpine-ajax.js.org/reference/#via-npm">install these libraries through NPM</a> if you’d like:</p>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- resources/views/contacts.blade.php --></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Contact<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">defer</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/@imacrayon/alpine-ajax@0.3.0/dist/cdn.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">defer</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></code></pre>
+<p>Next, let’s add a few attributes to our search elements:</p>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- resources/views/contacts.blade.php --></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Contacts<span class="token punctuation">"</span></span> <span class="token attr-name">x-init</span> <span class="token attr-name">x-target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>contacts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>term<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Search<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>term<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>term<span class="token punctuation">"</span></span> <span class="token attr-name">@input.debounce</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$el.form.requestSubmit()<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">x-show</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Submit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Contacts<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>contacts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>  @foreach($contacts as $contact)<br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>{{ $contact->name }} – {{ $contact->email }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><br>  @endforeach<br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span></code></pre>
+<p><code>x-init</code> on the <code>&lt;form&gt;</code> initializes our Alpine component. The <code>@input.debounce</code> attribute on the <code>&lt;input&gt;</code> submits the search form when the value of the input is changed. Since the search form has a <code>x-target=&quot;contacts&quot;</code> attribute, a normal form submission does <strong>not</strong> take place. Instead our form is submitted via an AJAX request and the <code>&lt;ul id=&quot;contacts&quot;&gt;</code> rendered in the response replaces the existing contact list on the page. Finally, we’ve added <code>x-show=&quot;false&quot;</code> to the search form’s submit button. This is a small progressive enhancement that will ensure the search form stays usable with or without JavaScript. When JavaScript is loaded, the button is hidden, but if JavaScript fails to load, the button stays on the page and provides a way for the user to manually submit a search term.</p>
+<p>With the new markup in place, refresh the page, and make sure to clear out the <code>?term</code> query string in the URL. And that’s it! You should see the contact list update as you type now.</p>
+<p>Check out the <a href="https://alpine-ajax.js.org/examples">Alpine AJAX examples</a> page to see more UI examples in action. It’s wild to see all the things you can accomplish with such a small JavaScript library.</p>
+</div>
+</article>
+<pagination class="wzsqa_lzd"><nav aria-label="Words" class="center"><ul role="list"><li></li><li>
+      <a href="/words/reponsive-images-in-eleventy-markdown/">
+        <span>Next</span>
+        Responsive Images in Eleventy&nbsp;Markdown
+      </a>
+    </li></ul></nav>
+
+
+</pagination>
+<section aria-labelledby="webmentions">
+  <div class="center">
+    <h2 id="webmentions">Webmentions</h2>
+    <webmentions class="w6ecv2zmm"><p><em>No webmentions posted.</em></p>
+
+
+</webmentions>
+  </div>
+</section>
+
+
+</main>
+
+
+
+</body>
+</html>
