@@ -52,8 +52,8 @@
   <meta property="og:title" :content="title || metadata.title">
   <meta property="og:description" :content="description || metadata.description">
   <meta property="og:url" :content="metadata.url + page.url">
-  <meta property="og:locale" :content="en_US">
   <meta name="twitter:card" content="summary">
+  <meta property="og:locale" content="en_US">
   <meta name="twitter:site" content="@ima_crayon">
   <meta name="twitter:creator" content="@ima_crayon">
 </head>
