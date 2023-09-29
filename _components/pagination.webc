@@ -1,27 +1,24 @@
 <script webc:type="js">
   let links = []
-  let previousPost = helpers.getPreviousCollectionItem(collection, page, 'en')
-  if (previousPost) {
-    links.push(`<li>
-      <a href="${previousPost.url}">
+  let link = ''
+
+  let previousPost = helpers.getPreviousCollectionItem(collection, page)
+  link = previousPost
+    ? `<a href="${previousPost.url}">
         <span>Previous</span>
         ${helpers.widont(previousPost.data.title)}
-      </a>
-    </li>`)
-  } else {
-    links.push(`<li></li>`)
-  }
-  let nextPost = helpers.getNextCollectionItem(collection, page, 'en')
-  if (nextPost) {
-    links.push(`<li>
-      <a href="${nextPost.url}">
+      </a>`
+    : ''
+  links.push(`<li>${link}</li>`)
+
+  let nextPost = helpers.getNextCollectionItem(collection, page)
+  link = nextPost
+    ? `<a href="${nextPost.url}">
         <span>Next</span>
         ${helpers.widont(nextPost.data.title)}
-      </a>
-    </li>`)
-  } else {
-    links.push(`<li></li>`)
-  }
+      </a>`
+    : ''
+  links.push(`<li>${link}</li>`)
 
   links.length ? `<nav aria-label="${ariaLabel}" class="center"><ul role="list">${links.join('')}</ul></nav>` : ''
 </script>

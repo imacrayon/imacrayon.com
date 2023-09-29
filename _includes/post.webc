@@ -13,7 +13,7 @@ layout: layout.webc
   </header>
   <div class="center prose" @raw="content"></div>
 </article>
-<pagination :@collection="collections.words" @aria-label="Words"></pagination>
+<pagination :@collection="collections.words" :@page="page" @aria-label="Words"></pagination>
 <section aria-labelledby="webmentions">
   <div class="center">
     <h2 id="webmentions">Webmentions</h2>
