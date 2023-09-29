@@ -68,7 +68,7 @@ Route::get('/contacts', function (Request $request) {
 });
 ```
 
-Note that this is a simple search implementation just for demonstration purposes, you’d probably be better off using something like [Laravel Scout](https://laravel.com/docs/10.x/scout) for database searches, but that’s beyond the scope of this walkthrough.
+Note that this is a simple search implementation just for demonstration purposes. You’d probably be better off using something like [Laravel Scout](https://laravel.com/docs/10.x/scout) for database searches, but that’s beyond the scope of this walkthrough.
 
 At this point you should be able to navigate to `/contacts` in your browser, submit the search form, and see that the page reloads with an updated list of contacts. We've got our basic search form working! Now we can layer on extra features to make it feel really good to use.
 
