@@ -15,7 +15,7 @@ You can start with a fresh Laravel install, get a database ready to go, then run
 
 ## The View
 
-Since we're focusing on the user interface, let's start with the view so we can get a sense of how things will look and feel. We'll create a Blade template at `resources/views/contacts.blade.php`. It’s going to be a basic page with a search form followed by a list of contacts. I’m leaving CSS styling out of this walkthrough so that we can focus on writing good markup, style things however you’d like.
+Since we're focusing on the user interface, let's start with the view so we can get a sense of how things will look and feel. We'll create a Blade template at `resources/views/contacts.blade.php`. It’s going to be a basic page with a search form followed by a list of contacts. I’m leaving CSS styling out of this tutorial so that we can focus on writing good markup, style things however you’d like.
 
 ```html{% raw %}
 <!-- resources/views/contacts.blade.php -->
@@ -68,7 +68,7 @@ Route::get('/contacts', function (Request $request) {
 });
 ```
 
-Note that this is a simple search implementation just for demonstration purposes. You’d probably be better off using something like [Laravel Scout](https://laravel.com/docs/10.x/scout) for database searches, but that’s beyond the scope of this walkthrough.
+Note that this is a simple search implementation just for demonstration purposes. You’d probably be better off using something like [Laravel Scout](https://laravel.com/docs/10.x/scout) for database searches, but that’s beyond the scope of this tutorial.
 
 At this point you should be able to navigate to `/contacts` in your browser, submit the search form, and see that the page reloads with an updated list of contacts. We've got our basic search form working! Now we can layer on extra features to make it feel really good to use.
 
