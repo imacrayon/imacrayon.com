@@ -7,7 +7,7 @@ tags:
   - alpine-ajax
 ---
 
-I’m going to walk you through how to easily add an instant search filter in your Laravel apps. This UI pattern is one of my favorite examples to demonstrate the power and simplicity of the [Alpine AJAX](https://alpine-ajax.js.org) library. When I say “instant search” I mean a text input that filters a list of results as you type. In this tutorial we’ll build out a simple contact list and then allow a user to search for a contact within the list by typing part of the contact’s name or email.
+I’m going to walk you through how to easily add an instant search filter in your Laravel apps. When I say “instant search” I mean a text input that filters a list of results as you type. In this tutorial we’ll build out a basic contact list and then allow a user to search for a contact by name or email. We'll build the "search as you type" behavior, without writing any JavaScript, using the [Alpine AJAX](https://alpine-ajax.js.org) library. This UI pattern is one of my favorite examples that demonstrates the power and simplicity of Alpine AJAX.
 
 ## The Data
 
