@@ -5,7 +5,7 @@
   
   <link href="https://imacrayon.com/feed/feed.xml" rel="self" />
   <link href="https://imacrayon.com" />
-  <updated>2023-10-03T18:06:12Z</updated>
+  <updated>2023-10-03T18:32:15Z</updated>
   <id>https://imacrayon.com</id>
   <author>
     <name>Christian</name>
@@ -14,7 +14,7 @@
   <entry>
     <title>An Instant Search UI using Alpine AJAX &amp; Laravel</title>
     <link href="https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/" />
-    <updated>2023-10-03T18:05:52Z</updated>
+    <updated>2023-10-03T18:31:52Z</updated>
     <id>https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/</id>
     <content type="html">&lt;p&gt;I’m going to walk you through how to easily add an instant search filter in your Laravel apps. When I say “instant search” I mean a text input that filters a list of results as you type. In this tutorial we’ll build out a basic contact list and then allow a user to search for a contact by name or email. We&#39;ll build the &amp;quot;search as you type&amp;quot; behavior, without writing any JavaScript, using the &lt;a href=&quot;https://alpine-ajax.js.org/&quot;&gt;Alpine AJAX&lt;/a&gt; library. This UI pattern is one of my favorite examples that demonstrates the power and simplicity of Alpine AJAX.&lt;/p&gt;
 &lt;h2 id=&quot;the-data&quot; tabindex=&quot;-1&quot;&gt;The Data &lt;a class=&quot;direct-link&quot; href=&quot;https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/#the-data&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
