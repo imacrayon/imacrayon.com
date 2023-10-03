@@ -1,6 +1,6 @@
 function eleventyComputedPermalink() {
   return (data) => {
-    if (data.draft && process.env.PRODUCTION) {
+    if (data.draft && !process.env.BUILD_DRAFTS) {
       return false;
     }
 
@@ -11,7 +11,7 @@ function eleventyComputedPermalink() {
 function eleventyComputedExcludeFromCollections() {
   return (data) => {
     // Always exclude from non-watch/serve builds
-    if (data.draft && process.env.PRODUCTION) {
+    if (data.draft && !process.env.BUILD_DRAFTS) {
       return true;
     }
 
