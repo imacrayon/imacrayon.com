@@ -37,6 +37,7 @@
   <script @raw="getJs(page.url)" webc:keep></script>
 
   <link rel="icon" href="/img/favicon.svg">
+  <link rel="me" href="https://github.com/imacrayon">
   <link rel="me" href="https://twitter.com/ima_crayon">
   <link rel="canonical" :href="metadata.url + page.url">
   <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention" />
