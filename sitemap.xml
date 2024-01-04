@@ -147,6 +147,11 @@
   </url>
   
   <url>
+    <loc>https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/</loc>
+    <lastmod>2023-09-23</lastmod>
+  </url>
+  
+  <url>
     <loc>https://imacrayon.com/words/2023-recap/</loc>
     <lastmod>2023-12-31</lastmod>
   </url>
@@ -173,11 +178,6 @@
   
   <url>
     <loc>https://imacrayon.com/words/</loc>
-    <lastmod>2024-01-04</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/</loc>
     <lastmod>2024-01-04</lastmod>
   </url>
 </urlset>

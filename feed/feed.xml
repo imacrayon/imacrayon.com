@@ -5,16 +5,41 @@
   
   <link href="https://imacrayon.com/feed/feed.xml" rel="self" />
   <link href="https://imacrayon.com" />
-  <updated>2024-01-04T16:06:50Z</updated>
+  <updated>2024-01-04T16:29:27Z</updated>
   <id>https://imacrayon.com</id>
   <author>
     <name>Christian</name>
   </author>
   
   <entry>
+    <title>2023 Recap</title>
+    <link href="https://imacrayon.com/words/2023-recap/" />
+    <updated>2023-12-31T10:05:00Z</updated>
+    <id>https://imacrayon.com/words/2023-recap/</id>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Moonbase Labs stuck around for another year, work was steady.&lt;/li&gt;
+&lt;li&gt;This was my first year in a while that I&#39;ve only worked for a single organization. Last year Friendship Lamps by Filimin sold to new owners and it felt like a good time to sunset my work on that project.&lt;/li&gt;
+&lt;li&gt;I built an &lt;a href=&quot;https://fleet.lightningemotors.com/&quot;&gt;electric vehicle fleet management tool&lt;/a&gt; for &lt;a href=&quot;https://lightningemotors.com/&quot;&gt;Lightning eMotors&lt;/a&gt;, we&#39;ve already seen a few competitors in the industry copy the same look and feel.&lt;/li&gt;
+&lt;li&gt;I mostly stayed off social media again except Twitter, I&#39;m probably too addicted to Twitter right now.&lt;/li&gt;
+&lt;li&gt;I wrote 3 blog posts. That&#39;s better than last year, but still bad.&lt;/li&gt;
+&lt;li&gt;I started talking about &lt;a href=&quot;https://github.com/imacrayon/alpine-ajax&quot;&gt;Alpine AJAX&lt;/a&gt;; I even designed and built a &lt;a href=&quot;https://alpine-ajax.js.org/&quot;&gt;documentation site for it&lt;/a&gt;. The repository now has &lt;a href=&quot;https://github.com/imacrayon/alpine-ajax/stargazers&quot;&gt;about 160 stars&lt;/a&gt; and it&#39;s &lt;a href=&quot;https://x.com/htmx_org/status/1737856532770074986&quot;&gt;getting some recognition on Twitter&lt;/a&gt; and in the Django community.&lt;/li&gt;
+&lt;li&gt;I maintained a vegetarian diet.&lt;/li&gt;
+&lt;li&gt;I worked out regularly all year and gained another 10 pounds.&lt;/li&gt;
+&lt;li&gt;I attended &lt;a href=&quot;https://tek.phparch.com/&quot;&gt;PHP[tek]&lt;/a&gt; in Chicago, IL; my very first tech conference.&lt;/li&gt;
+&lt;li&gt;I visited Nashville, TN for the first time while attending &lt;a href=&quot;https://laracon.us/&quot;&gt;Laracon US&lt;/a&gt;; also my first Laracon.&lt;/li&gt;
+&lt;li&gt;I met some of my web development heros.&lt;/li&gt;
+&lt;li&gt;I listened to a lot of &lt;a href=&quot;https://last.fm/music/ratboy&quot;&gt;Ratboys&lt;/a&gt; and &lt;a href=&quot;https://last.fm/music/the+weakerthans&quot;&gt;The Weakerthans&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I discovered music by &lt;a href=&quot;https://last.fm/music/imani+graham&quot;&gt;Imani Graham&lt;/a&gt;, &lt;a href=&quot;https://last.fm/music/jungle&quot;&gt;Jungle&lt;/a&gt;, &lt;a href=&quot;https://www.last.fm/music/+noredirect/petey&quot;&gt;Petey&lt;/a&gt;, &lt;a href=&quot;https://last.fm/music/sampha&quot;&gt;Sampha&lt;/a&gt;, and &lt;a href=&quot;https://last.fm/music/samia&quot;&gt;Samia&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I saw &lt;a href=&quot;https://last.fm/jeff-rosenstock&quot;&gt;Jeff Rosenstock&lt;/a&gt; live for the first time in Tulsa, OK.&lt;/li&gt;
+&lt;li&gt;I proposed to Carmen in the Flint Hills on Christmas Eve Eve.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
     <title>Build a Quick &amp; Easy Instant Search User Interface using Alpine AJAX &amp; Laravel</title>
     <link href="https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/" />
-    <updated>2024-01-04T16:06:35Z</updated>
+    <updated>2023-09-23T17:12:00Z</updated>
     <id>https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/</id>
     <content type="html">&lt;p&gt;I’m going to walk you through how to easily add an instant search filter in your Laravel apps. When I say “instant search” I mean a text input that filters a list of results as you type. In this tutorial we’ll build out a basic contact list and then allow a user to search for a contact by name or email. We&#39;ll build the &amp;quot;search as you type&amp;quot; behavior, without writing any JavaScript, using the &lt;a href=&quot;https://alpine-ajax.js.org/&quot;&gt;Alpine AJAX&lt;/a&gt; library. This UI pattern is one of my favorite examples that demonstrates the power and simplicity of Alpine AJAX.&lt;/p&gt;
 &lt;h2 id=&quot;the-data&quot; tabindex=&quot;-1&quot;&gt;The Data &lt;a class=&quot;direct-link&quot; href=&quot;https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/#the-data&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -44,31 +69,6 @@
 &lt;/ol&gt;
 &lt;p&gt;That’s it! With the new Blade markup in place, refresh the page (make sure to clear out the &lt;code&gt;?term&lt;/code&gt; query string in the URL if it&#39;s there). Now you should see the contact list magically update as you type.&lt;/p&gt;
 &lt;p&gt;Check out the &lt;a href=&quot;https://alpine-ajax.js.org/examples&quot;&gt;Alpine AJAX examples&lt;/a&gt; page to see more UI examples in action. It’s wild to see all the things you can accomplish with such a small JavaScript library.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>2023 Recap</title>
-    <link href="https://imacrayon.com/words/2023-recap/" />
-    <updated>2023-12-31T10:05:00Z</updated>
-    <id>https://imacrayon.com/words/2023-recap/</id>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;Moonbase Labs stuck around for another year, work was steady.&lt;/li&gt;
-&lt;li&gt;This was my first year in a while that I&#39;ve only worked for a single organization. Last year Friendship Lamps by Filimin sold to new owners and it felt like a good time to sunset my work on that project.&lt;/li&gt;
-&lt;li&gt;I built an &lt;a href=&quot;https://fleet.lightningemotors.com/&quot;&gt;electric vehicle fleet management tool&lt;/a&gt; for &lt;a href=&quot;https://lightningemotors.com/&quot;&gt;Lightning eMotors&lt;/a&gt;, we&#39;ve already seen a few competitors in the industry copy the same look and feel.&lt;/li&gt;
-&lt;li&gt;I mostly stayed off social media again except Twitter, I&#39;m probably too addicted to Twitter right now.&lt;/li&gt;
-&lt;li&gt;I wrote 3 blog posts. That&#39;s better than last year, but still bad.&lt;/li&gt;
-&lt;li&gt;I started talking about &lt;a href=&quot;https://github.com/imacrayon/alpine-ajax&quot;&gt;Alpine AJAX&lt;/a&gt;; I even designed and built a &lt;a href=&quot;https://alpine-ajax.js.org/&quot;&gt;documentation site for it&lt;/a&gt;. The repository now has &lt;a href=&quot;https://github.com/imacrayon/alpine-ajax/stargazers&quot;&gt;about 160 stars&lt;/a&gt; and it&#39;s &lt;a href=&quot;https://x.com/htmx_org/status/1737856532770074986&quot;&gt;getting some recognition on Twitter&lt;/a&gt; and in the Django community.&lt;/li&gt;
-&lt;li&gt;I maintained a vegetarian diet.&lt;/li&gt;
-&lt;li&gt;I worked out regularly all year and gained another 10 pounds.&lt;/li&gt;
-&lt;li&gt;I attended &lt;a href=&quot;https://tek.phparch.com/&quot;&gt;PHP[tek]&lt;/a&gt; in Chicago, IL; my very first tech conference.&lt;/li&gt;
-&lt;li&gt;I visited Nashville, TN for the first time while attending &lt;a href=&quot;https://laracon.us/&quot;&gt;Laracon US&lt;/a&gt;; also my first Laracon.&lt;/li&gt;
-&lt;li&gt;I met some of my web development heros.&lt;/li&gt;
-&lt;li&gt;I listened to a lot of &lt;a href=&quot;https://last.fm/music/ratboy&quot;&gt;Ratboys&lt;/a&gt; and &lt;a href=&quot;https://last.fm/music/the+weakerthans&quot;&gt;The Weakerthans&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;I discovered music by &lt;a href=&quot;https://last.fm/music/imani+graham&quot;&gt;Imani Graham&lt;/a&gt;, &lt;a href=&quot;https://last.fm/music/jungle&quot;&gt;Jungle&lt;/a&gt;, &lt;a href=&quot;https://www.last.fm/music/+noredirect/petey&quot;&gt;Petey&lt;/a&gt;, &lt;a href=&quot;https://last.fm/music/sampha&quot;&gt;Sampha&lt;/a&gt;, and &lt;a href=&quot;https://last.fm/music/samia&quot;&gt;Samia&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;I saw &lt;a href=&quot;https://last.fm/jeff-rosenstock&quot;&gt;Jeff Rosenstock&lt;/a&gt; live for the first time in Tulsa, OK.&lt;/li&gt;
-&lt;li&gt;I proposed to Carmen in the Flint Hills on Christmas Eve Eve.&lt;/li&gt;
-&lt;/ul&gt;
 </content>
   </entry>
   
