@@ -1,6 +1,7 @@
 ---
 title: Build a Quick & Easy Instant Search User Interface using Alpine AJAX & Laravel
 description: How to build an instant search filter using Alpine AJAX & Laravel
+date: 2023-09-23 17:12:00
 tags:
   - laravel
   - alpine
