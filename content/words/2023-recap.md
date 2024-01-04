@@ -17,5 +17,5 @@ description: My 2023 end of year recap
 * I met some of my web development heros.
 * I listened to a lot of [Ratboys](https://last.fm/music/ratboy) and [The Weakerthans](https://last.fm/music/the+weakerthans).
 * I discovered music by [Imani Graham](https://last.fm/music/imani+graham), [Jungle](https://last.fm/music/jungle), [Petey](https://www.last.fm/music/+noredirect/petey), [Sampha](https://last.fm/music/sampha), and [Samia](https://last.fm/music/samia).
-* I saw [Jeff Rosenstock](https://last.fm/jeff-rosenstock) live for the first time in Tulsa, OK.
+* I saw [Jeff Rosenstock](https://www.last.fm/music/jeff+rosenstock) live for the first time in Tulsa, OK.
 * I proposed to Carmen in the Flint Hills on Christmas Eve Eve.
