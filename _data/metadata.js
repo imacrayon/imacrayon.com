@@ -1,4 +1,4 @@
-module.exports = function () {
+export default function () {
   return {
     "environment": process.env.SITE_ENVIRONMENT || "development",
     "title": "I'm a crayon",

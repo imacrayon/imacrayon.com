@@ -1,10 +1,10 @@
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginDrafts = require("./eleventy.config.drafts.js");
-const pluginImages = require("./eleventy.config.images.js");
-const pluginDates = require("./eleventy.config.dates.js");
-const pluginWebmentions = require("./eleventy.config.webmentions.js");
+const pluginDrafts = require("./eleventy.config.drafts.cjs");
+const pluginImages = require("./eleventy.config.images.cjs");
+const pluginDates = require("./eleventy.config.dates.cjs");
+const pluginWebmentions = require("./eleventy.config.webmentions.cjs");
 
 const markdownItFigures = require('markdown-it-image-figures');
 const markdownItAnchor = require("markdown-it-anchor");
@@ -15,7 +15,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('fonts');
   eleventyConfig.addPassthroughCopy('humans.txt');
 
-  eleventyConfig.addPlugin(pluginDrafts);
+  // TODO: Enabled drafts once webc supports them
+  // https://github.com/11ty/eleventy-plugin-webc/pull/93
+  // Replace `eleventyExcludeFromCollections` with `draft`
+  // eleventyConfig.addPlugin(pluginDrafts);
   eleventyConfig.addPlugin(pluginImages);
   eleventyConfig.addPlugin(pluginDates);
   eleventyConfig.addPlugin(pluginWebmentions);

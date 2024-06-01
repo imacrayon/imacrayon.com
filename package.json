@@ -1,5 +1,6 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "SITE_ENVIRONMENT=production npx @11ty/eleventy",
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
@@ -7,8 +8,9 @@
     "debug": "DEBUG=* npx @11ty/eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "^2.0.0-canary.30",
+    "@11ty/eleventy": "^3.0.0-alpha.10",
     "@11ty/eleventy-img": "^2.0.1",
+    "@11ty/eleventy-plugin-bundle": "^2.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@11ty/eleventy-plugin-webc": "^0.11.0",

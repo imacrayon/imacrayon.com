@@ -1,7 +1,7 @@
 function eleventyComputedPermalink() {
   return (data) => {
     if (data.draft && !process.env.BUILD_DRAFTS) {
-      return false;
+      return null;
     }
 
     return data.permalink;
