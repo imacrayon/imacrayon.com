@@ -5,7 +5,7 @@
   
   <link href="https://imacrayon.com/feed/feed.xml" rel="self" />
   <link href="https://imacrayon.com" />
-  <updated>2024-01-04T16:31:58Z</updated>
+  <updated>2024-06-01T02:40:34Z</updated>
   <id>https://imacrayon.com</id>
   <author>
     <name>Christian</name>
@@ -33,6 +33,23 @@
 &lt;li&gt;I saw &lt;a href=&quot;https://www.last.fm/music/jeff+rosenstock&quot;&gt;Jeff Rosenstock&lt;/a&gt; live for the first time in Tulsa, OK.&lt;/li&gt;
 &lt;li&gt;I proposed to Carmen in the Flint Hills on Christmas Eve Eve.&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Shine</title>
+    <link href="https://imacrayon.com/pictures/shine/" />
+    <updated>2023-10-15T00:00:00Z</updated>
+    <id>https://imacrayon.com/pictures/shine/</id>
+    <content type="html">&lt;div style=&quot;display:grid; gap:1px; grid-template-columns: repeat(2, minmax(0, 1fr));&quot;&gt;
+&lt;img loading=&quot;lazy&quot; src=&quot;https://imacrayon.com/img/pictures/shine/shine-detail-01.jpg&quot; style=&quot;grid-column: span 2&quot; /&gt;
+&lt;img loading=&quot;lazy&quot; src=&quot;https://imacrayon.com/img/pictures/shine/shine-detail-02.jpg&quot; style=&quot;grid-column: span 2&quot; /&gt;
+&lt;img loading=&quot;lazy&quot; src=&quot;https://imacrayon.com/img/pictures/shine/shine-detail-03.jpg&quot; style=&quot;grid-column: span 2&quot; /&gt;
+&lt;img loading=&quot;lazy&quot; src=&quot;https://imacrayon.com/img/pictures/shine/shine-detail-04.jpg&quot; style=&quot;grid-column: span 2&quot; /&gt;
+&lt;img loading=&quot;lazy&quot; src=&quot;https://imacrayon.com/img/pictures/shine/shine-detail-05.jpg&quot; style=&quot;grid-column: span 2&quot; /&gt;
+&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;&quot; src=&quot;https://imacrayon.com/img/pictures/shine/shine-detail-06.jpg&quot; /&gt;
+&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;&quot; src=&quot;https://imacrayon.com/img/pictures/shine/shine-detail-07.jpg&quot; /&gt;
+&lt;/div&gt;
 </content>
   </entry>
   
@@ -547,7 +564,7 @@
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;how-it-s-done&quot; tabindex=&quot;-1&quot;&gt;How It&#39;s Done &lt;a class=&quot;direct-link&quot; href=&quot;https://imacrayon.com/words/mobile-friendly-tables/#how-it-s-done&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;how-its-done&quot; tabindex=&quot;-1&quot;&gt;How It&#39;s Done &lt;a class=&quot;direct-link&quot; href=&quot;https://imacrayon.com/words/mobile-friendly-tables/#how-its-done&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The first step to creating a good table is to ask yourself &lt;em&gt;&amp;quot;Do I actually need to use a table?&amp;quot;&lt;/em&gt;. Many times there&#39;s better ways to present tabular data than just a boring table, &lt;a href=&quot;https://www.steveschoger.com/&quot;&gt;Steve Schoger&lt;/a&gt; has some &lt;a href=&quot;https://twitter.com/steveschoger/status/997125312411570176&quot;&gt;great tips on organizing tabular data&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If it turns out you &lt;em&gt;really&lt;/em&gt; do need a table, check out the code in the next section.&lt;/p&gt;
 &lt;h2 id=&quot;the-code&quot; tabindex=&quot;-1&quot;&gt;The Code &lt;a class=&quot;direct-link&quot; href=&quot;https://imacrayon.com/words/mobile-friendly-tables/#the-code&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
