@@ -21,7 +21,12 @@ eleventyExcludeFromCollections: true
     <link href="{{ absoluteEntryUrl }}" />
     <updated>{{ entry.date | rssDate }}</updated>
     <id>{{ absoluteEntryUrl }}</id>
+    {% if 'pictures' in entry.data.tags -%}
+    {%- set html -%}<img src="{{ entry.data.image }}" alt="{{ entry.data.alt }}">{{ entry.templateContent }}{%- endset -%}
+    <content type="html">{{ html | htmlToAbsoluteUrls(absoluteEntryUrl) }}</content>
+    {%- else -%}
     <content type="html">{{ entry.templateContent | htmlToAbsoluteUrls(absoluteEntryUrl) }}</content>
+    {%- endif %}
   </entry>
   {%- endfor %}
 </feed>
