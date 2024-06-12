@@ -1,7 +1,10 @@
 ---
+permalink: /404.html
+eleventyExcludeFromCollections: true
 layout: layout.webc
 title: Page Not Found
 ---
 
-<h1>Page not found.</h1>
-<a href="/">Start over</a>.
+<div class="center stack">
+  <h1>Page not found.</h1>
+</div>
