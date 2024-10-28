@@ -1,6 +1,6 @@
 ---
 title: Adding Cloudflare to a Laravel Forge Site
-date: 2022-02-23 19:15:00
+date: 2022-02-23
 description: The steps I took to put Cloudflare in front of a website managed on Laravel Forge
 tags:
   - tooling

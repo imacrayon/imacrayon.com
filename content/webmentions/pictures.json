@@ -13,6 +13,7 @@
     "wm-id": 985121,
     "wm-source": "https://brid-gy.appspot.com/like/twitter/ima_crayon/1348640699282059264/964237944943988738",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "like-of": "https://imacrayon.com/pictures/",
     "wm-property": "like-of",
     "wm-private": false
@@ -31,6 +32,7 @@
     "wm-id": 985289,
     "wm-source": "https://brid-gy.appspot.com/comment/twitter/ima_crayon/1348640699282059264/1348679367082332169",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "We can't pick a favorite, so don't make us choose. But if you twisted our arm, Space Cat is #1. Ask us tomorrow. We'll have another one we like. Great work, @ima_crayon.\n<a class=\"u-mention\" href=\"https://imacrayon.com/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/ima_crayon\"></a>",
       "text": "We can't pick a favorite, so don't make us choose. But if you twisted our arm, Space Cat is #1. Ask us tomorrow. We'll have another one we like. Great work, @ima_crayon."
@@ -53,6 +55,7 @@
     "wm-id": 985288,
     "wm-source": "https://brid-gy.appspot.com/like/twitter/ima_crayon/1348640699282059264/38456446",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "like-of": "https://imacrayon.com/pictures/",
     "wm-property": "like-of",
     "wm-private": false
@@ -71,6 +74,7 @@
     "wm-id": 985290,
     "wm-source": "https://brid-gy.appspot.com/like/twitter/ima_crayon/1348640699282059264/374366944",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "like-of": "https://imacrayon.com/pictures/",
     "wm-property": "like-of",
     "wm-private": false
@@ -89,6 +93,7 @@
     "wm-id": 985658,
     "wm-source": "https://brid-gy.appspot.com/comment/twitter/ima_crayon/1348640699282059264/1348770279896571912",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "these are astounding! I feel like I was introduced to an entirely new side of you. I loved the \"The Impact.\" I'm also afraid of it. (Which means its good art.)\n<a class=\"u-mention\" href=\"https://imacrayon.com/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/ima_crayon\"></a>",
       "text": "these are astounding! I feel like I was introduced to an entirely new side of you. I loved the \"The Impact.\" I'm also afraid of it. (Which means its good art.)"
@@ -111,6 +116,7 @@
     "wm-id": 985711,
     "wm-source": "https://brid-gy.appspot.com/comment/twitter/ima_crayon/1348640699282059264/1348802271266615299",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "Thanks! It’s why <a href=\"https://twitter.com/itsMeBennyB\">@itsMeBennyB</a> heads design; I’m partial to scary UI as well 🤷🏼‍♂️\n<a class=\"u-mention\" href=\"https://twitter.com/tedkriwiel\"></a>",
       "text": "Thanks! It’s why @itsMeBennyB heads design; I’m partial to scary UI as well 🤷🏼‍♂️"
@@ -133,6 +139,7 @@
     "wm-id": 985710,
     "wm-source": "https://brid-gy.appspot.com/like/twitter/ima_crayon/1348640699282059264/1280722558954999809",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "like-of": "https://imacrayon.com/pictures/",
     "wm-property": "like-of",
     "wm-private": false
@@ -151,6 +158,7 @@
     "wm-id": 985712,
     "wm-source": "https://brid-gy.appspot.com/like/twitter/ima_crayon/1348640699282059264/236272950",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "like-of": "https://imacrayon.com/pictures/",
     "wm-property": "like-of",
     "wm-private": false
@@ -169,6 +177,7 @@
     "wm-id": 985940,
     "wm-source": "https://brid-gy.appspot.com/comment/twitter/ima_crayon/1348640699282059264/1348846346246250497",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "Whoah. I hadn’t seen that one yet either. That image is going to be playing through my head every time I come across some scary UI.\n\nFor real though, I’m amazed by the art you create.\n<a class=\"u-mention\" href=\"https://imacrayon.com/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/ima_crayon\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/tedkriwiel\"></a>",
       "text": "Whoah. I hadn’t seen that one yet either. That image is going to be playing through my head every time I come across some scary UI.\n\nFor real though, I’m amazed by the art you create."
@@ -191,6 +200,7 @@
     "wm-id": 987037,
     "wm-source": "https://brid-gy.appspot.com/like/twitter/ima_crayon/1348640699282059264/1881154279",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "like-of": "https://imacrayon.com/pictures/",
     "wm-property": "like-of",
     "wm-private": false
@@ -209,6 +219,7 @@
     "wm-id": 1052512,
     "wm-source": "https://brid.gy/post/twitter/MoonbaseLabs/1366442862003511306",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "photo": [
       "https://pbs.twimg.com/media/EvZOesCWYAM-Uwf.jpg",
       "https://pbs.twimg.com/media/EvZOeroXEAEI5yQ.jpg"
@@ -235,6 +246,7 @@
     "wm-id": 1052608,
     "wm-source": "https://brid.gy/comment/twitter/MoonbaseLabs/1366442862003511306/1366444747154481159",
     "wm-target": "https://imacrayon.com/pictures/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "“The impact” is soooooooo cool.\n<a class=\"u-mention\" href=\"https://imacrayon.com/pictures/\"></a>\n<a class=\"u-mention\" href=\"https://moonbaselabs.com/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/MoonbaseLabs\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/ima_crayon\"></a>",
       "text": "“The impact” is soooooooo cool."

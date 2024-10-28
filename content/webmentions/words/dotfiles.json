@@ -13,6 +13,7 @@
     "wm-id": 990462,
     "wm-source": "https://brid-gy.appspot.com/like/twitter/ima_crayon/1350182620093689860/101186457",
     "wm-target": "https://imacrayon.com/words/dotfiles/",
+    "wm-protocol": "webmention",
     "like-of": "https://imacrayon.com/words/dotfiles/",
     "wm-property": "like-of",
     "wm-private": false

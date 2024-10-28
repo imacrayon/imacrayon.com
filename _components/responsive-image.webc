@@ -1,3 +1,0 @@
-<script webc:type="js">
-  helpers.image(src, alt, widths)
-</script>

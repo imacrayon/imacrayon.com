@@ -1,6 +1,6 @@
 ---
 title: Make Laravel Tests Easier To Debug With `assertSessionHasNoErrors`
-date: 2020-04-26 20:55:00
+date: 2020-04-26
 description: The `assertSessionHasNoErrors` method in Laravel's test suit is a suprisingly powerful tool.
 tags:
   - laravel

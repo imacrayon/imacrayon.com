@@ -1,6 +1,6 @@
 ---
 title: An Inline SVG Component Using Vue & Laravel Mix
-date: 2019-08-25 14:24:00
+date: 2019-08-25
 description: Building an SVG icon Vue component
 tags:
   - vue

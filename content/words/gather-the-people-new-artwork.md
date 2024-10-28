@@ -1,6 +1,6 @@
 ---
 title: Gather the People; New Artwork
-date: 2021-01-10 13:37:00
+date: 2021-01-10
 description: The first week of 2021
 ---
 

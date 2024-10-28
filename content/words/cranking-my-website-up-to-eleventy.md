@@ -1,6 +1,6 @@
 ---
 title: Cranking My Website Up to Eleventy
-date: 2023-02-04 12:19:00
+date: 2023-02-04
 description: A fresh coat of a paint and a new tech stack.
 tags:
    - eleventy

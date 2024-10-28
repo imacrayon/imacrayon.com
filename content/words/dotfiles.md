@@ -1,6 +1,6 @@
 ---
 title: A Clean Start With Dotfiles
-date: 2020-01-28 17:54:00
+date: 2020-01-28
 description: New year new computer. What dotfiles are and how to use them.
 tags:
   - tooling

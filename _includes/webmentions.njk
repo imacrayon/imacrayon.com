@@ -1,0 +1,56 @@
+{% set webmentions = page | webmentions %}
+<div class="webmentions">
+{%- if webmentions.length %}
+<ul role="list" class="stack">
+{%- for webmention in webmentions  %}
+<li>
+  <div>
+    <img loading="lazy" src="{{ webmention.author.photo }}" alt="">
+    <h3>
+      <a href="{{ webmention.author.url }}">{{ webmention.author.name }}</a>
+      <a href="{{ webmention.url }}">{{ webmention.verb }}</a>
+      <span>on {{ webmention.date | dateformat('long') }}</span>
+    </h3>
+  </div>
+  {%- if webmention.text %}
+  <div class="mt-2">${webmention.text}</div>
+  {%- endif %}
+</li>
+{%- endfor %}
+</ul>
+{%- else %}
+<p><em>No webmentions posted.</em></p>
+{%- endif %}
+</div>
+
+{% css %}
+.webmentions {
+  display: block;
+  margin-block-start: 1.171rem;
+}
+
+.webmentions li>div {
+  display: flex;
+  align-items: center;
+}
+
+.webmentions img {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  border: 2px solid var(--black);
+  background: var(--black);
+  color: var(--primary);
+  margin-inline-end: .5rem;
+  flex-shrink: 0;
+}
+
+.webmentions h3 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.webmentions h3 a:first-child {
+  font-weight: 700;
+}
+{% endcss %}

@@ -1,6 +1,6 @@
 ---
 title: MLK Day
-date: 2021-01-18 09:18:00
+date: 2021-01-18
 description: I came across a speech by Dr. Martin Luther King Jr. very relevant right now.
 ---
 

@@ -1,10 +1,8 @@
-/* Credit to https://sebastiandedeyne.com/webmentions-on-a-static-site-with-github-actions/ */
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { dirname } from 'node:path'
+import { get } from 'node:https'
 
-const fs = require('fs')
-const path = require('path')
-const https = require('https')
-
-const DIRECTORY = `_includes/webmentions`
+const DIRECTORY = `content/webmentions`
 const DOMAIN = 'imacrayon.com'
 const FEED = 'https://webmention.io/api/mentions.jf2'
 const TOKEN = process.env.WEBMENTIONS_TOKEN
@@ -15,19 +13,19 @@ fetchWebmentions().then(webmentions => {
 
     const filename = `${DIRECTORY}/${filePath}.json`
 
-    if (!fs.existsSync(filename)) {
-      fs.mkdirSync(path.dirname(filename), { recursive: true })
-      fs.writeFileSync(filename, JSON.stringify([webmention], null, 2))
+    if (!existsSync(filename)) {
+      mkdirSync(dirname(filename), { recursive: true })
+      writeFileSync(filename, JSON.stringify([webmention], null, 2))
 
       return
     }
 
-    const entries = JSON.parse(fs.readFileSync(filename))
+    const entries = JSON.parse(readFileSync(filename))
       .filter(wm => wm['wm-id'] !== webmention['wm-id'])
       .concat([webmention])
       .sort(latestReceivedDate)
 
-    fs.writeFileSync(filename, JSON.stringify(entries, null, 2))
+    writeFileSync(filename, JSON.stringify(entries, null, 2))
   })
 })
 
@@ -37,7 +35,7 @@ function fetchWebmentions() {
   const url = `${FEED}?domain=${DOMAIN}&token=${TOKEN}&since=${since}&per-page=100`
 
   return new Promise((resolve, reject) => {
-    https.get(url, res => {
+    get(url, res => {
       let body = ''
 
       res.on('data', chunk => { body += chunk })

@@ -1,0 +1,57 @@
+---
+layout: layout.njk
+title: Words
+---
+
+<header>
+  <div class="center">
+    <h1>Words</h1>
+  </div>
+</header>
+<div class="center">
+  <ul role="list" class="posts stack" style="--gap:2rem;">
+    {%- for post in collections.words | reverse %}
+      <li>
+          <strong><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+          <time datetime="{{ page.date | dateformat('iso') }}">{{ page.date | dateformat('long') }}</time>
+      </li>
+    {%- endfor %}
+  </ul>
+</div>
+
+{% css %}
+.posts li {
+  position: relative;
+}
+
+.posts li:focus-within {
+  outline: 2px solid var(--black);
+  outline-offset: .5rem;
+}
+
+.posts a {
+  display: block;
+  font-size: 1rem;
+  text-wrap: balance;
+  text-decoration: none;
+}
+
+.posts a::before {
+  content: '';
+  position: absolute;
+  inset: .5rem;
+}
+
+.posts a:focus,
+.posts a:hover {
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.posts time {
+  color: var(--black);
+  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+}
+{% endcss %}

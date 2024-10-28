@@ -1,6 +1,6 @@
 ---
 title: CSS Scroll Padding
-date: 2020-04-19 22:30:00
+date: 2020-04-19
 description: The CSS scroll-padding property
 tags:
   - css

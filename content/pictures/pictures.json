@@ -1,5 +1,5 @@
 {
-  "layout": "picture.webc",
+  "layout": "picture.njk",
   "tags": [
     "pictures"
   ]

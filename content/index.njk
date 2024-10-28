@@ -1,0 +1,184 @@
+---
+layout: layout.njk
+title: I'm a crayon
+---
+
+<header>
+  <div class="intro center">
+    <figure>
+      <img src="/img/christian-taylor.jpg" alt="Christian Taylor's mug shot">
+      <figcaption>
+        <h1>Christian Taylor</h1>
+        <p>Co-Founder of Moonbase Labs</p>
+      </figcaption>
+    </figure>
+    <p>I’m a full stack developer with an eye for design and an appreciation for practical, accessible solutions.</p>
+  </div>
+</header>
+{% set slot %}
+<h2>Now Playing</h2>
+<now-playing>
+  <div class="track">
+    <img src="" alt="" width="64" height="64">
+    <div>
+      <p>Fetching track...</p>
+      <p>Fetching artist...</p>
+    </div>
+  </div>
+  <details>
+    <summary>Recently played</summary>
+    Fetching playlist...
+  </details>
+</now-playing>
+{% endset %}
+{% include "cantilever.njk" %}
+<section aria-labelledby="latest">
+  <div class="center">
+    <h2 id="latest">Latest</h2>
+    <ul role="list" class="posts stack" style="--gap:1rem;">
+      {%- for entry in collections.feed | reverse | take(5) %}
+        <li>
+            <strong><a href="{{ entry.url }}">{{ entry.data.title }}</a></strong>
+            <time datetime="{{ entry.date | dateformat('iso') }}">{{ entry.date | dateformat('long') }}</time>
+        </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{%- if metadata.mode === 'build' -%}
+{%- js -%}
+window.customElements.define('now-playing', class extends HTMLElement {
+  connectedCallback() {
+    fetch(`https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-0b7427a5-8f26-4ce6-8b1b-0c5197b404ac/default/now-playing`)
+      .then(response => response.text())
+      .then(html => {
+        if (html) {
+          this.innerHTML = html
+        }
+      })
+  }
+})
+{%- endjs -%}
+{%- endif -%}
+
+{% css %}
+.intro {
+  display: block;
+  padding-block: 2.5vh;
+}
+
+.intro figure {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.intro figcaption h1 {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.intro figcaption p {
+  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+}
+
+.intro img {
+  width: 64px;
+  border-radius: 100%;
+}
+
+.intro>p {
+  margin-block-start: 1em;
+  font-size: 1.717rem;
+  line-height: 1.25;
+}
+
+now-playing .track {
+  display: flex;
+  text-decoration: none;
+  gap: 1rem;
+}
+
+now-playing .track :last-child {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+now-playing .track :last-child> :first-child {
+  font-weight: 600;
+}
+
+now-playing .track :last-child> :last-child {
+  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+}
+
+now-playing .track img {
+  border: none;
+  background-color: var(--black);
+}
+
+now-playing details {
+  margin-block-start: 1rem;
+  margin-block-end: -1rem;
+  font-size: var(--text-sm);
+}
+
+now-playing summary {
+  font-size: .625rem;
+  font-family: var(--font-mono);
+}
+
+now-playing ul {
+  margin-block-start: .5rem;
+}
+
+now-playing li {
+  display: block;
+  margin-block-start: 1px;
+}
+
+.posts {
+  margin-block-start: 1.171rem;
+}
+
+.posts li {
+  position: relative;
+}
+
+.posts li:focus-within {
+  outline: 2px solid var(--black);
+  outline-offset: .5rem;
+}
+
+.posts a {
+  display: block;
+  font-size: 1rem;
+  text-wrap: balance;
+  text-decoration: none;
+}
+
+.posts a::before {
+  content: '';
+  position: absolute;
+  inset: .5rem;
+}
+
+.posts a:focus,
+.posts a:hover {
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.posts time {
+  color: var(--black);
+  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+}
+{% endcss %}

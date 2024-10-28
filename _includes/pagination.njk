@@ -1,0 +1,89 @@
+{%- if collection %}
+{%- set previousPost = collection | getPreviousCollectionItem %}
+{%- set nextPost = collection | getNextCollectionItem %}
+<div class="pagination">
+  <nav aria-label="{{ label }}" class="center">
+    <ul role="list">
+      <li>
+        {%- if previousPost %}
+        <a href="{{ previousPost.url }}">
+          <span>Previous</span>
+          <strong>{{ previousPost.data.title }}</strong>
+        </a>
+        {%- endif %}
+      </li>
+      <li>
+        {%- if nextPost %}
+        <a href="{{ nextPost.url}}">
+          <span>Next</span>
+          <strong>{{ nextPost.data.title }}</strong>
+        </a>
+        {%- endif %}
+      </li>
+    </ul>
+  </nav>
+</div>
+{%- endif %}
+
+{% css %}
+.pagination {
+  display: block;
+  position: relative;
+  border-block: 2px solid var(--black);
+}
+.pagination:before {
+  content: '';
+  height: 100%;
+  width: 2px;
+  background: var(--black);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.pagination ul {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+.pagination li {
+  position: relative;
+}
+.pagination li:last-child {
+  text-align: right;
+}
+.pagination li:focus-within {
+  outline: 2px solid var(--black);
+  outline-offset: .5rem;
+}
+.pagination span:first-child {
+  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  display: block;
+  margin-block-end: .875em;
+  text-decoration: underline;
+}
+.pagination strong {
+  display: block;
+  text-wrap: balance;
+  font-weight: 700;
+}
+.pagination a {
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.13;
+  text-decoration: none;
+}
+.pagination a::before {
+  content: '';
+  position: absolute;
+  inset: .5rem;
+}
+.pagination a:focus,
+.pagination a:hover {
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+{% endcss %}

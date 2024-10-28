@@ -1,6 +1,6 @@
 ---
 title: Upgrading PHP with Laravel Forge and Envoyer
-date: 2020-02-12 21:24:00
+date: 2020-02-12
 description: I ran into a hiccup to day upgrading the PHP version on my Laravel Forge server today.
 tags:
   - php

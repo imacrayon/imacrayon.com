@@ -1,6 +1,6 @@
 ---
 title: Rumination on an Anniversary II
-date: 2019-06-14 00:00:00
+date: 2019-06-14
 media: acrylic on canvas
 dimentions: 24" × 24"
 src: /img/pictures/rumination-on-an-anniversary-ii/rumination.jpg
@@ -9,10 +9,10 @@ owner: Stephan Bisaha
 ---
 
 <div style="display:grid; gap:1px; grid-template-columns: repeat(6, minmax(0, 1fr));">
-  <img loading="lazy" decoding="async" alt="" style="grid-column: span 4" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-01.jpg">
-  <img loading="lazy" decoding="async" alt="" style="grid-column: span 2" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-02.jpg">
-  <img loading="lazy" decoding="async" alt="" style="grid-column: span 3" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-03.jpg">
-  <img loading="lazy" decoding="async" alt="" style="grid-column: span 3" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-04.jpg">
-  <img loading="lazy" decoding="async" alt="" style="grid-column: span 3" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-process-01.jpg">
-  <img loading="lazy" decoding="async" alt="" style="grid-column: span 3" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-process-02.jpg">
+  <img eleventy:formats="webp" alt="" style="grid-column: span 4" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-01.jpg">
+  <img eleventy:formats="webp" alt="" style="grid-column: span 2" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-02.jpg">
+  <img eleventy:formats="webp" alt="" style="grid-column: span 3" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-03.jpg">
+  <img eleventy:formats="webp" alt="" style="grid-column: span 3" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-detail-04.jpg">
+  <img eleventy:formats="webp" alt="" style="grid-column: span 3" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-process-01.jpg">
+  <img eleventy:formats="webp" alt="" style="grid-column: span 3" src="/img/pictures/rumination-on-an-anniversary-ii/rumination-process-02.jpg">
 </div>

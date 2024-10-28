@@ -1,6 +1,6 @@
 ---
 title: Mobile Friendly Tables
-date: 2019-07-14 17:13:00
+date: 2019-07-14
 description: An easy way to build mobile friendly tables with only CSS
 tags:
    - css

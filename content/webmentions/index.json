@@ -13,6 +13,7 @@
     "wm-id": 1349272,
     "wm-source": "https://brid.gy/post/twitter/MoonbaseLabs/1491579353020391425",
     "wm-target": "https://imacrayon.com/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "Great talk <a href=\"https://twitter.com/zuzana_kunckova\">@zuzana_kunckova</a> <a href=\"http://imacrayon.com\">imacrayon.com</a> and <a href=\"http://moonbaselabs.com\">moonbaselabs.com</a> are both <a href=\"https://twitter.com/search?q=%23BuiltWithJigsaw\">#BuiltWithJigsaw</a> thanks <a href=\"https://twitter.com/TightenCo\">@TightenCo</a> !\n<a class=\"u-mention\" href=\"http://imacrayon.com/\"></a>\n<a class=\"u-mention\" href=\"http://moonbaselabs.com/\"></a>\n<a class=\"u-mention\" href=\"https://imacrayon.com/\"></a>\n<a class=\"u-mention\" href=\"https://moonbaselabs.com/\"></a>",
       "text": "Great talk @zuzana_kunckova imacrayon.com and moonbaselabs.com are both #BuiltWithJigsaw thanks @TightenCo !"
@@ -35,6 +36,7 @@
     "wm-id": 1349492,
     "wm-source": "https://brid.gy/repost/twitter/ima_crayon/1491579353020391425/1491582909270179851",
     "wm-target": "https://imacrayon.com/",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Great talk @zuzana_kunckova imacrayon.com and moonbaselabs.com are both #BuiltWithJigsaw thanks @TightenCo !"
     },
@@ -56,6 +58,7 @@
     "wm-id": 1349489,
     "wm-source": "https://brid.gy/like/twitter/ima_crayon/1491579353020391425/176742934",
     "wm-target": "https://imacrayon.com/",
+    "wm-protocol": "webmention",
     "like-of": "https://imacrayon.com/",
     "wm-property": "like-of",
     "wm-private": false
@@ -74,6 +77,7 @@
     "wm-id": 1349490,
     "wm-source": "https://brid.gy/like/twitter/ima_crayon/1491579353020391425/376505957",
     "wm-target": "https://imacrayon.com/",
+    "wm-protocol": "webmention",
     "like-of": "https://imacrayon.com/",
     "wm-property": "like-of",
     "wm-private": false
@@ -92,6 +96,7 @@
     "wm-id": 1349491,
     "wm-source": "https://brid.gy/like/twitter/ima_crayon/1491579353020391425/553012338",
     "wm-target": "https://imacrayon.com/",
+    "wm-protocol": "webmention",
     "like-of": "https://imacrayon.com/",
     "wm-property": "like-of",
     "wm-private": false

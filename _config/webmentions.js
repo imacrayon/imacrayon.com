@@ -1,11 +1,11 @@
-const fs = require("fs");
+import { existsSync, readFileSync } from 'node:fs'
 
-module.exports = eleventyConfig => {
-  eleventyConfig.addFilter("webmentions", page => {
-    let file = `_includes/webmentions${page.filePathStem}.json`
-    if (!fs.existsSync(file)) return []
+export default function (eleventyConfig) {
+  eleventyConfig.addFilter("webmentions", (page) => {
+    let file = `content/webmentions${page.filePathStem}.json`
+    if (!existsSync(file)) return []
 
-    let content = fs.readFileSync(file);
+    let content = readFileSync(file);
     const verbs = {
       'in-reply-to': 'replied',
       'like-of': 'liked',

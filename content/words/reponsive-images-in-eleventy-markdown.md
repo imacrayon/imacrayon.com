@@ -1,6 +1,6 @@
 ---
 title: Responsive Images in Eleventy Markdown
-date: 2023-03-03 15:38:00
+date: 2023-03-03
 description: How I added support for responsive images in my Markdown templates
 tags:
    - html

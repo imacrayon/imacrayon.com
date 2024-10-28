@@ -1,6 +1,6 @@
 ---
 title: 2023 Recap
-date: 2023-12-31 10:05:00
+date: 2023-12-31
 description: My 2023 end of year recap
 ---
 

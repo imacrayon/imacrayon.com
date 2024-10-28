@@ -1,6 +1,6 @@
 ---
 title: Expressive Syncing in Laravel
-date: 2019-07-06 14:49:00
+date: 2019-07-06
 description: How to make your many to many relationships more expressive
 tags:
   - laravel

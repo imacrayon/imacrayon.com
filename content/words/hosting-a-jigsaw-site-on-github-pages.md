@@ -1,6 +1,6 @@
 ---
 title: Hosting a Jigsaw Site on GitHub Pages
-date: 2020-04-07 17:36:00
+date: 2020-04-07
 description: How I came to host my Jigsaw static site on GitHub Pages
 tags:
   - php

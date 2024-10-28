@@ -1,0 +1,55 @@
+---
+layout: layout.njk
+---
+
+<header>
+  <div class="center picture">
+    <img src="{{ src }}" alt="{{ alt }}">
+  </div>
+</header>
+{% set slot %}
+<div class="details">
+  <h1>{{ title }}</h1>
+  <dl class=>
+    <div>
+      <dt class="sr-only">Year</dt>
+      <dd>{{ page.date | dateformat('year') }}</dd>
+    </div>
+    <div>
+      <dt class="sr-only">Media</dt>
+      <dd>{{ media }}</dd>
+    </div>
+    <div>
+      <dt class="sr-only">Dimensions</dt>
+      <dd>{{ dimentions }}</dd>
+    </div>
+    {%- if owner %}
+    <div webc:if="owner">
+      <dt class="sr-only">Owner</dt>
+      <dd>collection of {{ owner }}</dd>
+    </div>
+    {%- endif %}
+  </dl>
+</div>
+{% endset %}
+{% include "cantilever.njk" %}
+<div class="center stack">{{ content | safe }}</div>
+{% set collection = collections.pictures %}
+{% set label = "Pictures" %}
+{% include "pagination.njk" %}
+
+{% css %}
+.cantilever dl {
+  font-size: .875em;
+}
+
+.cantilever dt {
+  display: block;
+  font-weight: 700;
+}
+
+.cantilever dd {
+  display: block;
+  margin-top: .25em;
+}
+{% endcss %}

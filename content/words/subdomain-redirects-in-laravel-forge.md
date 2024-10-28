@@ -1,6 +1,6 @@
 ---
 title: Subdomain Redirects in Laravel Forge
-date: 2021-02-04 21:28:00
+date: 2021-02-04
 description: How to redirect a subdomain to another domain in Laravel Forge.
 tags:
   - tooling

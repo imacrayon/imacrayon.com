@@ -1,6 +1,6 @@
 ---
 title: 2020 Recap
-date: 2020-12-31 13:41:00
+date: 2020-12-31
 description: My 2020 end of year recap
 ---
 

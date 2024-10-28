@@ -1,6 +1,6 @@
 ---
 title: Deploy Laravel Apps with Github Actions
-date: 2020-06-06 20:26:00
+date: 2020-06-06
 description: How I deploy Laravel Apps using Github Actions
 tags:
   - php

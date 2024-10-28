@@ -1,6 +1,6 @@
 ---
 title: Get the Most out of Laravel's Test Runner in Visual Studio Code
-date: 2020-04-14 22:29:00
+date: 2020-04-14
 description: How to get the most out of Laravel's new artisan test runner in Visual Studio Code.
 tags:
   - laravel
