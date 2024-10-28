@@ -4,104 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Justin &amp; Jeremy</title>
-
-  <link rel="stylesheet" href="/css/main.css">
-
-  
-  <style>cantilever {
-    position: relative;
-    display: block;
-    padding-block-start: 2rem;
-    padding-block-end: 0;
-  }
-
-  cantilever::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2rem;
-    background: var(--black);
-  }
-
-  cantilever>div {
-    position: relative;
-  }
-
-  cantilever>div::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    background: var(--black);
-    z-index: -1;
-  }
-
-  cantilever>div::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background: var(--primary);
-    z-index: -1;
-    border-block-start: 2px solid var(--black);
-    border-block-end: 2px solid var(--black);
-  }
-
-  cantilever .center>* {
-    position: relative;
-    background: var(--primary);
-    color: var(--black);
-    padding: 2rem;
-    border-block-start: 2px solid var(--black);
-    border-block-end: 2px solid var(--black);
-    border-inline-start: 2px solid var(--black);
-  }
-
-  @media screen and (min-width: 920px) {
-    cantilever .center>* {
-      margin-inline-start: -2rem;
-    }
-  }
-
-  cantilever h1,
-  cantilever h2 {
-    color: var(--primary);
-    font-family: var(--font-mono);
-    font-size: var(--text-sm);
-    padding-block: .25rem;
-    border-block-end: 1px solid var(--black);
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-  }
-.wzsqa_lzd{display:block;position:relative;border-block:2px solid var(--black)}.wzsqa_lzd:before{content:"";height:100%;width:2px;background:var(--black);position:absolute;left:50%;top:0;transform:translateX(-50%)}.wzsqa_lzd ul{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.wzsqa_lzd li{position:relative}.wzsqa_lzd li:last-child{text-align:right}.wzsqa_lzd li:last-child span{justify-content:end}.wzsqa_lzd li:focus-within{outline:2px solid var(--black);outline-offset:.5rem}.wzsqa_lzd span{font-size:var(--text-sm);font-family:var(--font-mono);display:block;margin-block-end:.875em;text-decoration:underline}.wzsqa_lzd a{padding:0;font-size:1rem;text-decoration:none;font-weight:700;line-height:1.13}.wzsqa_lzd a::before{content:"";position:absolute;inset:.5rem}.wzsqa_lzd a:focus,.wzsqa_lzd a:hover{outline:none;text-decoration:underline;text-decoration-thickness:1px}
-dl {
-    font-size: .875em;
-  }
-
-  dt {
-    display: block;
-    font-weight: 700;
-  }
-
-  dd {
-    display: block;
-    margin-top: .25em;
-  }
-@font-face {
+  <style>
+    @font-face {
       font-family: 'General Sans';
       font-style: normal;
       font-weight: 200 700;
       font-display: swap;
       src: local(''), url('/fonts/general-sans/general-sans-variable.woff2') format('woff2');
     }
-
     @font-face {
       font-family: 'General Sans';
       font-style: italic;
@@ -109,24 +19,498 @@ dl {
       font-display: swap;
       src: local(''), url('/fonts/general-sans/general-sans-variable-italic.woff2') format('woff2');
     }
-
     @font-face {
       font-family: 'IBM Plex Mono';
       font-style: normal;
       font-weight: 400;
       font-display: swap;
       src: local(''), url('/fonts/ibm-plex-mono/ibm-plex-mono-400.woff2') format('woff2');
-    }</style>
-  <script></script>
+    }
+  </style>
+  <style>.cantilever {
+  position: relative;
+  display: block;
+  padding-block: 2rem;
+}
 
-  <link rel="icon" href="/img/favicon.svg">
+.cantilever::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  background: var(--black);
+}
+
+.cantilever>div {
+  position: relative;
+}
+
+.cantilever>div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background: var(--black);
+  z-index: -1;
+}
+
+.cantilever>div::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--primary);
+  z-index: -1;
+  border-block-start: 2px solid var(--black);
+  border-block-end: 2px solid var(--black);
+}
+
+.cantilever .center>* {
+  position: relative;
+  background: var(--primary);
+  color: var(--black);
+  padding: 2rem;
+  border-block-start: 2px solid var(--black);
+  border-block-end: 2px solid var(--black);
+  border-inline-start: 2px solid var(--black);
+}
+
+@media screen and (min-width: 920px) {
+  .cantilever .center>* {
+    margin-inline-start: -2rem;
+  }
+}
+
+.cantilever h1,
+.cantilever h2 {
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  padding-block: .25rem;
+  border-block-end: 1px solid var(--black);
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+.pagination {
+  display: block;
+  position: relative;
+  border-block: 2px solid var(--black);
+}
+.pagination:before {
+  content: '';
+  height: 100%;
+  width: 2px;
+  background: var(--black);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.pagination ul {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+.pagination li {
+  position: relative;
+}
+.pagination li:last-child {
+  text-align: right;
+}
+.pagination li:focus-within {
+  outline: 2px solid var(--black);
+  outline-offset: .5rem;
+}
+.pagination span:first-child {
+  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  display: block;
+  margin-block-end: .875em;
+  text-decoration: underline;
+}
+.pagination strong {
+  display: block;
+  text-wrap: balance;
+  font-weight: 700;
+}
+.pagination a {
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.13;
+  text-decoration: none;
+}
+.pagination a::before {
+  content: '';
+  position: absolute;
+  inset: .5rem;
+}
+.pagination a:focus,
+.pagination a:hover {
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+.cantilever dl {
+  font-size: .875em;
+}
+
+.cantilever dt {
+  display: block;
+  font-weight: 700;
+}
+
+.cantilever dd {
+  display: block;
+  margin-top: .25em;
+}
+/** https://gwfh.mranftl.com/fonts **/
+:root {
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-sans: "General Sans", sans-serif;
+  --black: #1D2021;
+  --primary: #F4E6D9;
+  --text-sm: .875em;
+  font-size: clamp(1.00rem, calc(0.60rem + 1.67vw), 1.41rem);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #1D2021;
+    --black: #F4E6D9;
+  }
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.103;
+}
+
+h1,
+h2 {
+  hyphens: auto;
+}
+
+.h1,
+h1 {
+  font-size: 2.25rem;
+}
+
+.h2,
+h2 {
+  font-size: 1.5rem;
+}
+
+.h3,
+h3 {
+  font-size: 1.25rem;
+}
+
+.h4,
+h4 {
+  font-size: 1.125rem;
+}
+
+:where(h2, h3) a {
+  display: inline-block;
+  line-height: 1.13;
+}
+
+strong {
+  font-weight: 600;
+}
+
+:where(ul[role='list'], ol[role='list']) {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  color: var(--black);
+  background: var(--primary);
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+pre {
+  padding: 1.5rem;
+  background-color: var(--code-bg);
+  color: #fff;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+hr {
+  border-width: 2px 0 0 0;
+  display: block;
+  width: 100%;
+}
+
+blockquote {
+  border-inline-start: 2px solid var(--black);
+  font-style: italic;
+  padding-left: 1em;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+main>*:not(article),
+article>* {
+  padding-block: 2rem;
+}
+
+main>header {
+  background: var(--black);
+  color: var(--primary);
+}
+
+main>header h1,
+main>article h1 {
+  font-weight: 700;
+}
+
+[href="#main"] {
+  display: inline-block;
+  padding: 1rem;
+  color: var(--primary);
+  background-color: var(--black);
+  position: absolute;
+  top: -10rem
+}
+
+[href="#main"]:focus {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  outline: none
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+header {
+  background: var(--black);
+  color: var(--primary);
+}
+
+header nav a:focus {
+  outline: 2px solid var(--primary);
+}
+
+header>nav {
+  padding-top: .5rem;
+}
+
+nav ul {
+  margin-inline-start: -.5rem;
+  margin-inline-end: -.5rem;
+  margin-block: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  display: block;
+  font-size: var(--text-sm);
+  padding: .5rem;
+}
+
+nav [aria-current="page"] {
+  text-decoration-line: line-through;
+  text-decoration: line-through;
+}
+
+.stack {
+  --gap: 1.414em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.stack>* {
+  margin-block: 0;
+}
+
+.stack>*+* {
+  margin-block-start: var(--gap);
+}
+
+table {
+  border-collapse: collapse;
+  inline-size: 100%;
+  text-align: left;
+}
+
+thead {
+  border-block-end: 2px solid var(--black);
+}
+
+thead th {
+  vertical-align: bottom;
+}
+
+tbody tr {
+  border-block-end: 1px solid var(--black);
+}
+
+tbody tr:last-child {
+  border-block-end: none;
+}
+
+tbody td {
+  vertical-align: baseline;
+}
+
+tfoot {
+  border-block-start: 2px solid var(--black);
+}
+
+tfoot td {
+  vertical-align: top;
+}
+
+table {
+  font-size: var(--text-sm);
+}
+
+thead th {
+  padding-inline-start: .75em;
+  padding-inline-end: .75em;
+  padding-block-end: .75em;
+}
+
+thead th:first-child {
+  padding-inline-start: 0;
+}
+
+thead th:last-child {
+  padding-inline-end: 0;
+}
+
+thead th {
+  padding-inline-start: .752em;
+  padding-inline-end: .752em;
+  padding-block-end: .752em;
+}
+
+tbody td,
+tfoot td {
+  padding-block: .75em;
+  padding-inline: 1em;
+}
+
+tbody td:first-child,
+tfoot td:first-child {
+  padding-inline-start: 0;
+}
+
+tbody td:last-child,
+tfoot td:last-child {
+  padding-inline-end: 0;
+}
+
+.center {
+  --size: 60.076ch;
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--size);
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  border-width: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px
+}</style>
+  
+
+  <link rel="icon" href="/favicon.svg">
   <link rel="me" href="https://github.com/imacrayon">
   <link rel="me" href="https://twitter.com/ima_crayon">
   <link rel="canonical" href="https://imacrayon.com/pictures/justin-and-jeremy/">
   <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention">
   <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc">
-  <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="I'm a crayon">
-  <link rel="alternate" href="/feed/feed.json" type="application/json" title="I'm a crayon">
+  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="I&#39;m a crayon">
 
   <meta name="author" content="Christian Taylor">
   <meta name="description" content="Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS.">
@@ -134,26 +518,28 @@ dl {
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Justin &amp; Jeremy">
-  <meta property="og:description" content="Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS.">
+  <meta name="og:description" content="Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS.">
+  
   <meta property="og:url" content="https://imacrayon.com/pictures/justin-and-jeremy/">
   <meta property="og:locale" content="en_US">
-  <meta property="og:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fimacrayon.com%2Fpictures%2Fjustin-and-jeremy%2F/opengraph/_wait:2">
+  
+  <meta property="og:image" content="">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ima_crayon">
   <meta name="twitter:creator" content="@ima_crayon">
 </head>
-
 <body>
   <a href="#main">Skip to content</a>
   <header>
     <nav aria-label="Site" class="center">
       <ul role="list">
-        <li><a href="/" aria-current>Home</a></li>
-        <li><a href="/words" aria-current>Words</a></li>
-        <li><a href="/pictures" aria-current>Pictures</a></li>
+        <li><a href="/" aria-current="">Home</a></li>
+        <li><a href="/words" aria-current="">Words</a></li>
+        <li><a href="/pictures" aria-current="">Pictures</a></li>
         <li>
-          <a href="/feed/feed.xml">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="16" width="16" style="width:1rem; height:1rem">
+          
+          <a href="/feed.xml">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="16" width="16" style="width:1rem;height:1rem;">
               <path fill="currentColor" d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64"></path>
             </svg>
             <span class="sr-only">RSS</span>
@@ -162,65 +548,78 @@ dl {
       </ul>
     </nav>
   </header>
-  <main id="main"><header>
+  <main id="main">
+<header>
   <div class="center picture">
-    <img alt loading="lazy" decoding="async" src="/img/_transforms/0NvcFmhlgn-1508.webp" width="1508" height="974">
-
+    <picture><source type="image/avif" srcset="/img/0NvcFmhlgn-1600.avif 1600w"><source type="image/webp" srcset="/img/0NvcFmhlgn-1600.webp 1600w"><img loading="lazy" decoding="async" src="/img/0NvcFmhlgn-1600.jpeg" alt="" width="1600" height="1034"></picture>
   </div>
 </header>
-<cantilever><div>
-  <div class="center">
-    <div>
-      
-  <div class="details">
-    <h1>Justin &amp; Jeremy</h1>
-    <dl>
-      <div>
-        <dt class="sr-only">Year</dt>
-        <dd>2014</dd>
-      </div>
-      <div>
-        <dt class="sr-only">Media</dt>
-        <dd>acrylic on canvas</dd>
-      </div>
-      <div>
-        <dt class="sr-only">Dimensions</dt>
-        <dd>34" × 52"</dd>
-      </div>
-      
-    </dl>
-  </div>
 
+<div class="cantilever">
+  <div>
+    <div class="center">
+      <div>
+        
+<div class="details">
+  <h1 id="justin-and-jeremy">Justin &amp; Jeremy</h1>
+  <dl class="">
+    <div>
+      <dt class="sr-only">Year</dt>
+      <dd>2014</dd>
+    </div>
+    <div>
+      <dt class="sr-only">Media</dt>
+      <dd>acrylic on canvas</dd>
+    </div>
+    <div>
+      <dt class="sr-only">Dimensions</dt>
+      <dd>34&quot; × 52&quot;</dd>
+    </div>
+  </dl>
+</div>
+
+      </div>
     </div>
   </div>
 </div>
 
 
-</cantilever>
+
 <div class="center stack"><div style="display:grid; gap:1px; grid-template: auto / repeat(3, 1fr)">
-    <img loading="lazy" decoding="async" alt="" src="/img/pictures/justin-and-jeremy/justin-and-jeremy-detail-01.jpg">
-    <img loading="lazy" decoding="async" alt="" src="/img/pictures/justin-and-jeremy/justin-and-jeremy-detail-02.jpg">
-    <img loading="lazy" decoding="async" alt="" src="/img/pictures/justin-and-jeremy/justin-and-jeremy-detail-03.jpg">
-    <img loading="lazy" decoding="async" alt="" src="/img/pictures/justin-and-jeremy/justin-and-jeremy-detail-04.jpg">
-    <img loading="lazy" decoding="async" alt="" src="/img/pictures/justin-and-jeremy/justin-and-jeremy-detail-05.jpg">
-    <img loading="lazy" decoding="async" alt="" src="/img/pictures/justin-and-jeremy/justin-and-jeremy-detail-06.jpg">
+  <img loading="lazy" decoding="async" alt="" src="/img/SN7ohx2e-u-533.webp" width="533" height="400">
+  <img loading="lazy" decoding="async" alt="" src="/img/jwRnNHK20H-533.webp" width="533" height="400">
+  <img loading="lazy" decoding="async" alt="" src="/img/mNzxC6MsTK-533.webp" width="533" height="400">
+  <img loading="lazy" decoding="async" alt="" src="/img/qF3FpJIPV8-533.webp" width="533" height="400">
+  <img loading="lazy" decoding="async" alt="" src="/img/_Ndt5ZhUwX-533.webp" width="533" height="400">
+  <img loading="lazy" decoding="async" alt="" src="/img/TAgJQoYp46-533.webp" width="533" height="400">
 </div>
 </div>
-<pagination class="wzsqa_lzd"><nav aria-label="Pictures" class="center"><ul role="list"><li><a href="/pictures/sushi/">
-        <span>Previous</span>
-        Sushi I, Sushi II, Sushi&nbsp;III
-      </a></li><li><a href="/pictures/adam/">
-        <span>Next</span>
-        Adam
-      </a></li></ul></nav>
 
 
-</pagination>
+
+<div class="pagination">
+  <nav aria-label="Pictures" class="center">
+    <ul role="list">
+      <li>
+        <a href="/pictures/adam/">
+          <span>Previous</span>
+          <strong>Adam</strong>
+        </a>
+      </li>
+      <li>
+        <a href="/pictures/sushi/">
+          <span>Next</span>
+          <strong>Sushi I, Sushi II, Sushi III</strong>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+
 
 
 </main>
-
-
-
 </body>
 </html>

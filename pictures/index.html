@@ -4,50 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pictures</title>
-
-  <link rel="stylesheet" href="/css/main.css">
-
-  
-  <style>.pictures li {
-    position: relative;
-  }
-
-  .pictures li:focus-within {
-    outline: 2px solid var(--black);
-    outline-offset: .5rem;
-  }
-
-  .pictures a {
-    display: block;
-    font-size: 1rem;
-    margin-block-start: .25rem;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-  }
-
-  .pictures a::before {
-    content: '';
-    position: absolute;
-    inset: .5rem;
-  }
-
-  .pictures a:focus,
-  .pictures a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-  }
-
-  .pictures a:focus {
-    outline: none;
-  }
-@font-face {
+  <style>
+    @font-face {
       font-family: 'General Sans';
       font-style: normal;
       font-weight: 200 700;
       font-display: swap;
       src: local(''), url('/fonts/general-sans/general-sans-variable.woff2') format('woff2');
     }
-
     @font-face {
       font-family: 'General Sans';
       font-style: italic;
@@ -55,24 +19,386 @@
       font-display: swap;
       src: local(''), url('/fonts/general-sans/general-sans-variable-italic.woff2') format('woff2');
     }
-
     @font-face {
       font-family: 'IBM Plex Mono';
       font-style: normal;
       font-weight: 400;
       font-display: swap;
       src: local(''), url('/fonts/ibm-plex-mono/ibm-plex-mono-400.woff2') format('woff2');
-    }</style>
-  <script></script>
+    }
+  </style>
+  <style>.pictures li {
+  position: relative;
+}
 
-  <link rel="icon" href="/img/favicon.svg">
+.pictures li:focus-within {
+  outline: 2px solid var(--black);
+  outline-offset: .5rem;
+}
+
+.pictures a {
+  display: block;
+  font-size: 1rem;
+  margin-block-start: .25rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.pictures a::before {
+  content: '';
+  position: absolute;
+  inset: .5rem;
+}
+
+.pictures a:focus,
+.pictures a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.pictures a:focus {
+  outline: none;
+}
+/** https://gwfh.mranftl.com/fonts **/
+:root {
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-sans: "General Sans", sans-serif;
+  --black: #1D2021;
+  --primary: #F4E6D9;
+  --text-sm: .875em;
+  font-size: clamp(1.00rem, calc(0.60rem + 1.67vw), 1.41rem);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #1D2021;
+    --black: #F4E6D9;
+  }
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.103;
+}
+
+h1,
+h2 {
+  hyphens: auto;
+}
+
+.h1,
+h1 {
+  font-size: 2.25rem;
+}
+
+.h2,
+h2 {
+  font-size: 1.5rem;
+}
+
+.h3,
+h3 {
+  font-size: 1.25rem;
+}
+
+.h4,
+h4 {
+  font-size: 1.125rem;
+}
+
+:where(h2, h3) a {
+  display: inline-block;
+  line-height: 1.13;
+}
+
+strong {
+  font-weight: 600;
+}
+
+:where(ul[role='list'], ol[role='list']) {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  color: var(--black);
+  background: var(--primary);
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+pre {
+  padding: 1.5rem;
+  background-color: var(--code-bg);
+  color: #fff;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+hr {
+  border-width: 2px 0 0 0;
+  display: block;
+  width: 100%;
+}
+
+blockquote {
+  border-inline-start: 2px solid var(--black);
+  font-style: italic;
+  padding-left: 1em;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+main>*:not(article),
+article>* {
+  padding-block: 2rem;
+}
+
+main>header {
+  background: var(--black);
+  color: var(--primary);
+}
+
+main>header h1,
+main>article h1 {
+  font-weight: 700;
+}
+
+[href="#main"] {
+  display: inline-block;
+  padding: 1rem;
+  color: var(--primary);
+  background-color: var(--black);
+  position: absolute;
+  top: -10rem
+}
+
+[href="#main"]:focus {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  outline: none
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+header {
+  background: var(--black);
+  color: var(--primary);
+}
+
+header nav a:focus {
+  outline: 2px solid var(--primary);
+}
+
+header>nav {
+  padding-top: .5rem;
+}
+
+nav ul {
+  margin-inline-start: -.5rem;
+  margin-inline-end: -.5rem;
+  margin-block: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  display: block;
+  font-size: var(--text-sm);
+  padding: .5rem;
+}
+
+nav [aria-current="page"] {
+  text-decoration-line: line-through;
+  text-decoration: line-through;
+}
+
+.stack {
+  --gap: 1.414em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.stack>* {
+  margin-block: 0;
+}
+
+.stack>*+* {
+  margin-block-start: var(--gap);
+}
+
+table {
+  border-collapse: collapse;
+  inline-size: 100%;
+  text-align: left;
+}
+
+thead {
+  border-block-end: 2px solid var(--black);
+}
+
+thead th {
+  vertical-align: bottom;
+}
+
+tbody tr {
+  border-block-end: 1px solid var(--black);
+}
+
+tbody tr:last-child {
+  border-block-end: none;
+}
+
+tbody td {
+  vertical-align: baseline;
+}
+
+tfoot {
+  border-block-start: 2px solid var(--black);
+}
+
+tfoot td {
+  vertical-align: top;
+}
+
+table {
+  font-size: var(--text-sm);
+}
+
+thead th {
+  padding-inline-start: .75em;
+  padding-inline-end: .75em;
+  padding-block-end: .75em;
+}
+
+thead th:first-child {
+  padding-inline-start: 0;
+}
+
+thead th:last-child {
+  padding-inline-end: 0;
+}
+
+thead th {
+  padding-inline-start: .752em;
+  padding-inline-end: .752em;
+  padding-block-end: .752em;
+}
+
+tbody td,
+tfoot td {
+  padding-block: .75em;
+  padding-inline: 1em;
+}
+
+tbody td:first-child,
+tfoot td:first-child {
+  padding-inline-start: 0;
+}
+
+tbody td:last-child,
+tfoot td:last-child {
+  padding-inline-end: 0;
+}
+
+.center {
+  --size: 60.076ch;
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--size);
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  border-width: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px
+}</style>
+  
+
+  <link rel="icon" href="/favicon.svg">
   <link rel="me" href="https://github.com/imacrayon">
   <link rel="me" href="https://twitter.com/ima_crayon">
   <link rel="canonical" href="https://imacrayon.com/pictures/">
   <link rel="webmention" href="https://webmention.io/imacrayon.com/webmention">
   <link rel="pingback" href="https://webmention.io/imacrayon.com/xmlrpc">
-  <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="I'm a crayon">
-  <link rel="alternate" href="/feed/feed.json" type="application/json" title="I'm a crayon">
+  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="I&#39;m a crayon">
 
   <meta name="author" content="Christian Taylor">
   <meta name="description" content="Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS.">
@@ -80,26 +406,28 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Pictures">
-  <meta property="og:description" content="Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS.">
+  <meta name="og:description" content="Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS.">
+  
   <meta property="og:url" content="https://imacrayon.com/pictures/">
   <meta property="og:locale" content="en_US">
-  <meta property="og:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fimacrayon.com%2Fpictures%2F/opengraph/_wait:2">
+  
+  <meta property="og:image" content="">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ima_crayon">
   <meta name="twitter:creator" content="@ima_crayon">
 </head>
-
 <body>
   <a href="#main">Skip to content</a>
   <header>
     <nav aria-label="Site" class="center">
       <ul role="list">
-        <li><a href="/" aria-current>Home</a></li>
-        <li><a href="/words" aria-current>Words</a></li>
+        <li><a href="/" aria-current="">Home</a></li>
+        <li><a href="/words" aria-current="">Words</a></li>
         <li><a href="/pictures" aria-current="page">Pictures</a></li>
         <li>
-          <a href="/feed/feed.xml">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="16" width="16" style="width:1rem; height:1rem">
+          
+          <a href="/feed.xml">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="16" width="16" style="width:1rem;height:1rem;">
               <path fill="currentColor" d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64"></path>
             </svg>
             <span class="sr-only">RSS</span>
@@ -108,73 +436,70 @@
       </ul>
     </nav>
   </header>
-  <main id="main"><header>
+  <main id="main">
+<header>
   <div class="center">
-    <h1>Pictures</h1>
+    <h1 id="pictures">Pictures</h1>
   </div>
 </header>
 <div class="center">
-  <ul role="list" style="--gap:4rem" class="pictures stack">
+  <ul role="list" class="pictures stack" style="--gap:4rem;">
     <li>
-          <img alt="An abstract painting containing a large centered rectangle with a deep golden ombré color. The rectangle is almost entirely obscured in a cloud of cool-colored, large gestural strokes except for its bottom right corner. The top right quadrant of the canvas contains dark purple stokes emanating from the rectangle with a smoke-like quality. The top left quadrant contains a puddle of harsh pinks and purples that swirl and drip down the full length of the canvas into an angular dark cloud of purple in the bottom left quadrant." loading="lazy" decoding="async" src="/img/_transforms/OBfHkX932g-1508.webp" width="1508" height="1996">
-
-          <strong><a href="/pictures/shine/">Shine</a></strong>
-        </li><li>
-          <img alt="A painting of Christian Taylor positioned to the right of frame and gazing straight to the left. There is a golden hand reaching toward Christian and an word bubble eminating from Christian's mounth containing iconography of a hand being severed by a shard object. Above Christian's head there is a red archer drawing his bow and a red dashed line connecting the end of the bow's arrow and the head of a cherub. The cherub is covering it's mounth in the act of wispering into Christian's ear." loading="lazy" decoding="async" src="/img/_transforms/vGjvxtLm9u-1508.webp" width="1508" height="1508">
-
-          <strong><a href="/pictures/the-impact-what-should-i-focus-on/">The Impact / What Should I Focus on?</a></strong>
-        </li><li>
-          <img alt="Portrait of a young white woman's head framed in a white circle. She has black hair done up in a bun. The woman looks relaxed and is gazing to the left of frame. Her right hand rests against her right cheek and temple. The woman's portait is superimposed over a blue underpainting of the same woman in a slighly different pose, only a blue and and the top of her hair is visible." loading="lazy" decoding="async" src="/img/_transforms/oHvAv2Gi_V-1508.webp" width="1508" height="1508">
-
-          <strong><a href="/pictures/rumination-on-an-anniversary-ii/">Rumination on an Anniversary II</a></strong>
-        </li><li>
-          <img alt="A three-dimentional painting of a ball of white ice cream, with rainbow sprinkles, splattered across dark, textural, parking lot asphalt. The splattered dessert overlaps an amber yellow line denoting a parking stall towards the top of frame. There is a discarded, smashed cigarette butt laying in a puddle of splattered ice cream to the left of the ice cream ball." loading="lazy" decoding="async" src="/img/_transforms/EwDphl4Ap1-1508.webp" width="1508" height="1508">
-
-          <strong><a href="/pictures/summer-portrait-tempered-by-disaster/">Summer Portrait (Tempered By Disaster)</a></strong>
-        </li><li>
-          <img alt loading="lazy" decoding="async" src="/img/_transforms/RevQOnDr8p-1508.webp" width="1508" height="2119">
-
-          <strong><a href="/pictures/pulling-a-thread/">Pulling a Thread</a></strong>
-        </li><li>
-          <img alt loading="lazy" decoding="async" src="/img/_transforms/g89h3GDvtK-1508.webp" width="1508" height="1923">
-
-          <strong><a href="/pictures/hunter/">Hunter</a></strong>
-        </li><li>
-          <img alt loading="lazy" decoding="async" src="/img/_transforms/Wx18D5goAE-1508.webp" width="1508" height="502">
-
-          <strong><a href="/pictures/sushi/">Sushi I, Sushi II, Sushi III</a></strong>
-        </li><li>
-          <img alt loading="lazy" decoding="async" src="/img/_transforms/0NvcFmhlgn-1508.webp" width="1508" height="974">
-
-          <strong><a href="/pictures/justin-and-jeremy/">Justin &amp; Jeremy</a></strong>
-        </li><li>
-          <img alt="Two side-by-side portaits of a young white man with short dark hair, combed back. In both portraits he is wearing a jacked with a Straight Edge symbol. The text " loading="lazy" decoding="async" src="/img/_transforms/qkH09wqNyD-1508.webp" width="1508" height="1081">
-
-          <strong><a href="/pictures/adam/">Adam</a></strong>
-        </li><li>
-          <img alt loading="lazy" decoding="async" src="/img/_transforms/5wCG6S4qWe-1508.webp" width="1508" height="801">
-
-          <strong><a href="/pictures/corbie/">Corbie</a></strong>
-        </li><li>
-          <img alt loading="lazy" decoding="async" src="/img/_transforms/qY5kiFRqYP-1508.webp" width="1508" height="1014">
-
-          <strong><a href="/pictures/untitled-chin-up/">Untitled (Chin Up)</a></strong>
-        </li><li>
-          <img alt loading="lazy" decoding="async" src="/img/_transforms/tta5D0DsHK-1508.webp" width="1508" height="1138">
-
-          <strong><a href="/pictures/bernardo/">Bernardo</a></strong>
-        </li><li>
-          <img alt loading="lazy" decoding="async" src="/img/_transforms/JDZ4iGSfcq-1508.webp" width="1508" height="2056">
-
-          <strong><a href="/pictures/space-cat/">Space Cat</a></strong>
-        </li>
+      <picture><source type="image/avif" srcset="/img/OBfHkX932g-1587.avif 1587w"><source type="image/webp" srcset="/img/OBfHkX932g-1587.webp 1587w"><img loading="lazy" decoding="async" src="/img/OBfHkX932g-1587.jpeg" alt="An abstract painting containing a large centered rectangle with a deep golden ombré color. The rectangle is almost entirely obscured in a cloud of cool-colored, large gestural strokes except for its bottom right corner. The top right quadrant of the canvas contains dark purple stokes emanating from the rectangle with a smoke-like quality. The top left quadrant contains a puddle of harsh pinks and purples that swirl and drip down the full length of the canvas into an angular dark cloud of purple in the bottom left quadrant." width="1587" height="2101"></picture>
+      <strong><a href="/pictures/shine/">Shine</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/vGjvxtLm9u-1652.avif 1652w"><source type="image/webp" srcset="/img/vGjvxtLm9u-1652.webp 1652w"><img loading="lazy" decoding="async" src="/img/vGjvxtLm9u-1652.jpeg" alt="A painting of Christian Taylor positioned to the right of frame and gazing straight to the left. There is a golden hand reaching toward Christian and an word bubble eminating from Christian&#39;s mounth containing iconography of a hand being severed by a shard object. Above Christian&#39;s head there is a red archer drawing his bow and a red dashed line connecting the end of the bow&#39;s arrow and the head of a cherub. The cherub is covering it&#39;s mounth in the act of wispering into Christian&#39;s ear." width="1652" height="1652"></picture>
+      <strong><a href="/pictures/the-impact-what-should-i-focus-on/">The Impact / What Should I Focus on?</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/oHvAv2Gi_V-1600.avif 1600w"><source type="image/webp" srcset="/img/oHvAv2Gi_V-1600.webp 1600w"><img loading="lazy" decoding="async" src="/img/oHvAv2Gi_V-1600.jpeg" alt="Portrait of a young white woman&#39;s head framed in a white circle. She has black hair done up in a bun. The woman looks relaxed and is gazing to the left of frame. Her right hand rests against her right cheek and temple. The woman&#39;s portait is superimposed over a blue underpainting of the same woman in a slighly different pose, only a blue and and the top of her hair is visible." width="1600" height="1600"></picture>
+      <strong><a href="/pictures/rumination-on-an-anniversary-ii/">Rumination on an Anniversary II</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/EwDphl4Ap1-1652.avif 1652w"><source type="image/webp" srcset="/img/EwDphl4Ap1-1652.webp 1652w"><img loading="lazy" decoding="async" src="/img/EwDphl4Ap1-1652.jpeg" alt="A three-dimentional painting of a ball of white ice cream, with rainbow sprinkles, splattered across dark, textural, parking lot asphalt. The splattered dessert overlaps an amber yellow line denoting a parking stall towards the top of frame. There is a discarded, smashed cigarette butt laying in a puddle of splattered ice cream to the left of the ice cream ball." width="1652" height="1652"></picture>
+      <strong><a href="/pictures/summer-portrait-tempered-by-disaster/">Summer Portrait (Tempered By Disaster)</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/RevQOnDr8p-1600.avif 1600w"><source type="image/webp" srcset="/img/RevQOnDr8p-1600.webp 1600w"><img loading="lazy" decoding="async" src="/img/RevQOnDr8p-1600.jpeg" alt="" width="1600" height="2249"></picture>
+      <strong><a href="/pictures/pulling-a-thread/">Pulling a Thread</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/g89h3GDvtK-1600.avif 1600w"><source type="image/webp" srcset="/img/g89h3GDvtK-1600.webp 1600w"><img loading="lazy" decoding="async" src="/img/g89h3GDvtK-1600.jpeg" alt="" width="1600" height="2041"></picture>
+      <strong><a href="/pictures/hunter/">Hunter</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/Wx18D5goAE-1652.avif 1652w"><source type="image/webp" srcset="/img/Wx18D5goAE-1652.webp 1652w"><img loading="lazy" decoding="async" src="/img/Wx18D5goAE-1652.jpeg" alt="" width="1652" height="551"></picture>
+      <strong><a href="/pictures/sushi/">Sushi I, Sushi II, Sushi III</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/0NvcFmhlgn-1600.avif 1600w"><source type="image/webp" srcset="/img/0NvcFmhlgn-1600.webp 1600w"><img loading="lazy" decoding="async" src="/img/0NvcFmhlgn-1600.jpeg" alt="" width="1600" height="1034"></picture>
+      <strong><a href="/pictures/justin-and-jeremy/">Justin &amp; Jeremy</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/qkH09wqNyD-1600.avif 1600w"><source type="image/webp" srcset="/img/qkH09wqNyD-1600.webp 1600w"><img loading="lazy" decoding="async" src="/img/qkH09wqNyD-1600.jpeg" alt="Two side-by-side portaits of a young white man with short dark hair, combed back. In both portraits he is wearing a jacked with a Straight Edge symbol. The text &quot;Jackets speak louder than words is painted over the bottom right quarter of the image." width="1600" height="1148"></picture>
+      <strong><a href="/pictures/adam/">Adam</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/5wCG6S4qWe-1600.avif 1600w"><source type="image/webp" srcset="/img/5wCG6S4qWe-1600.webp 1600w"><img loading="lazy" decoding="async" src="/img/5wCG6S4qWe-1600.jpeg" alt="" width="1600" height="850"></picture>
+      <strong><a href="/pictures/corbie/">Corbie</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/qY5kiFRqYP-1600.avif 1600w"><source type="image/webp" srcset="/img/qY5kiFRqYP-1600.webp 1600w"><img loading="lazy" decoding="async" src="/img/qY5kiFRqYP-1600.jpeg" alt="" width="1600" height="1076"></picture>
+      <strong><a href="/pictures/untitled-chin-up/">Untitled (Chin Up)</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/tta5D0DsHK-1600.avif 1600w"><source type="image/webp" srcset="/img/tta5D0DsHK-1600.webp 1600w"><img loading="lazy" decoding="async" src="/img/tta5D0DsHK-1600.jpeg" alt="" width="1600" height="1208"></picture>
+      <strong><a href="/pictures/bernardo/">Bernardo</a></strong>
+    </li>
+    <li>
+      <picture><source type="image/avif" srcset="/img/JDZ4iGSfcq-1600.avif 1600w"><source type="image/webp" srcset="/img/JDZ4iGSfcq-1600.webp 1600w"><img loading="lazy" decoding="async" src="/img/JDZ4iGSfcq-1600.jpeg" alt="" width="1600" height="2182"></picture>
+      <strong><a href="/pictures/space-cat/">Space Cat</a></strong>
+    </li>
   </ul>
 </div>
 
 
 </main>
-
-
-
 </body>
 </html>
