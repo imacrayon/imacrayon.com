@@ -71,4 +71,22 @@ window.customElements.define('now-playing', class extends HTMLElement {
 })
 ```
 
-Simply add a `<now-playing>` element to your HTML wherever you want the "Now Playing" section to appear. Don't forget to style it with a little CSS to make it look great!
+Simply add a `<now-playing>` element to your HTML wherever you want the "Now Playing" section to appear. Any child elements will act as a "loading" state for the component, here's how the component on my homepage is structured:
+
+```html
+<now-playing>
+  <div class="track">
+    <img src="" alt="" width="64" height="64">
+    <div>
+      <p>Fetching track...</p>
+      <p>Fetching artist...</p>
+    </div>
+  </div>
+  <details>
+    <summary>Recently played</summary>
+    Fetching playlist...
+  </details>
+</now-playing>
+```
+
+ Don't forget to style it with a little CSS to make it look great!
