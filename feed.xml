@@ -4,271 +4,11 @@
   <subtitle>Work by Christian Taylor. An artist &amp; full stack developer based in Wichita, KS.</subtitle>
   <link href="https://imacrayon.com/feed.xml" rel="self" />
   <link href="https://imacrayon.com/" />
-  <updated>2024-10-28T02:20:16Z</updated>
+  <updated>2023-12-31T00:00:00Z</updated>
   <id>https://imacrayon.com/</id>
   <author>
     <name>Christian Taylor</name>
   </author>
-  <entry>
-    <title>Words</title>
-    <link href="https://imacrayon.com/words/" />
-    <updated>2024-10-28T02:20:16Z</updated>
-    <id>https://imacrayon.com/words/</id>
-    <content type="html">
-&lt;header&gt;
-  &lt;div class=&quot;center&quot;&gt;
-    &lt;h1 id=&quot;words&quot;&gt;Words&lt;/h1&gt;
-  &lt;/div&gt;
-&lt;/header&gt;
-&lt;div class=&quot;center&quot;&gt;
-  &lt;ul role=&quot;list&quot; class=&quot;posts stack&quot; style=&quot;--gap:2rem;&quot;&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/2023-recap/&quot;&gt;2023 Recap&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/&quot;&gt;Build a Quick &amp;amp; Easy Instant Search User Interface using Alpine AJAX &amp;amp; Laravel&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/reponsive-images-in-eleventy-markdown/&quot;&gt;Responsive Images in Eleventy Markdown&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/cranking-my-website-up-to-eleventy/&quot;&gt;Cranking My Website Up to Eleventy&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/adding-cloudflare-to-a-laravel-forge-site/&quot;&gt;Adding Cloudflare to a Laravel Forge Site&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/subdomain-redirects-in-laravel-forge/&quot;&gt;Subdomain Redirects in Laravel Forge&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/mlk-day/&quot;&gt;MLK Day&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/gather-the-people-new-artwork/&quot;&gt;Gather the People; New Artwork&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/2020-recap/&quot;&gt;2020 Recap&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/deploy-laravel-apps-with-github-actions/&quot;&gt;Deploy Laravel Apps with Github Actions&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/the-power-of-assertSessionHasNoErrors/&quot;&gt;Make Laravel Tests Easier To Debug With `assertSessionHasNoErrors`&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/css-scroll-padding/&quot;&gt;CSS Scroll Padding&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/get-the-most-out-of-laravels-test-command/&quot;&gt;Get the Most out of Laravel&amp;#39;s Test Runner in Visual Studio Code&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/hosting-a-jigsaw-site-on-github-pages/&quot;&gt;Hosting a Jigsaw Site on GitHub Pages&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/upgrading-php-with-laravel-forge-and-envoyer/&quot;&gt;Upgrading PHP with Laravel Forge and Envoyer&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/dotfiles/&quot;&gt;A Clean Start With Dotfiles&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/an-inline-svg-component-using-vue-and-laravel-mix/&quot;&gt;An Inline SVG Component Using Vue &amp;amp; Laravel Mix&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/mobile-friendly-tables/&quot;&gt;Mobile Friendly Tables&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;
-          &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/expressive-syncing-in-laravel/&quot;&gt;Expressive Syncing in Laravel&lt;/a&gt;
-          &lt;time datetime=&quot;2024-10-28&quot;&gt;28 Oct 2024&lt;/time&gt;
-      &lt;/strong&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-
-</content>
-  </entry>
-  <entry>
-    <title>Pictures</title>
-    <link href="https://imacrayon.com/pictures/" />
-    <updated>2024-10-28T02:20:16Z</updated>
-    <id>https://imacrayon.com/pictures/</id>
-    <content type="html">
-&lt;header&gt;
-  &lt;div class=&quot;center&quot;&gt;
-    &lt;h1 id=&quot;pictures&quot;&gt;Pictures&lt;/h1&gt;
-  &lt;/div&gt;
-&lt;/header&gt;
-&lt;div class=&quot;center&quot;&gt;
-  &lt;ul role=&quot;list&quot; class=&quot;pictures stack&quot; style=&quot;--gap:4rem;&quot;&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/OBfHkX932g-1587.avif 1587w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/OBfHkX932g-1587.webp 1587w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/OBfHkX932g-1587.jpeg&quot; alt=&quot;An abstract painting containing a large centered rectangle with a deep golden ombré color. The rectangle is almost entirely obscured in a cloud of cool-colored, large gestural strokes except for its bottom right corner. The top right quadrant of the canvas contains dark purple stokes emanating from the rectangle with a smoke-like quality. The top left quadrant contains a puddle of harsh pinks and purples that swirl and drip down the full length of the canvas into an angular dark cloud of purple in the bottom left quadrant.&quot; width=&quot;1587&quot; height=&quot;2101&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/shine/&quot;&gt;Shine&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/vGjvxtLm9u-1652.avif 1652w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/vGjvxtLm9u-1652.webp 1652w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/vGjvxtLm9u-1652.jpeg&quot; alt=&quot;A painting of Christian Taylor positioned to the right of frame and gazing straight to the left. There is a golden hand reaching toward Christian and an word bubble eminating from Christian&amp;#39;s mounth containing iconography of a hand being severed by a shard object. Above Christian&amp;#39;s head there is a red archer drawing his bow and a red dashed line connecting the end of the bow&amp;#39;s arrow and the head of a cherub. The cherub is covering it&amp;#39;s mounth in the act of wispering into Christian&amp;#39;s ear.&quot; width=&quot;1652&quot; height=&quot;1652&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/the-impact-what-should-i-focus-on/&quot;&gt;The Impact / What Should I Focus on?&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/oHvAv2Gi_V-1600.avif 1600w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/oHvAv2Gi_V-1600.webp 1600w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/oHvAv2Gi_V-1600.jpeg&quot; alt=&quot;Portrait of a young white woman&amp;#39;s head framed in a white circle. She has black hair done up in a bun. The woman looks relaxed and is gazing to the left of frame. Her right hand rests against her right cheek and temple. The woman&amp;#39;s portait is superimposed over a blue underpainting of the same woman in a slighly different pose, only a blue and and the top of her hair is visible.&quot; width=&quot;1600&quot; height=&quot;1600&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/rumination-on-an-anniversary-ii/&quot;&gt;Rumination on an Anniversary II&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/EwDphl4Ap1-1652.avif 1652w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/EwDphl4Ap1-1652.webp 1652w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/EwDphl4Ap1-1652.jpeg&quot; alt=&quot;A three-dimentional painting of a ball of white ice cream, with rainbow sprinkles, splattered across dark, textural, parking lot asphalt. The splattered dessert overlaps an amber yellow line denoting a parking stall towards the top of frame. There is a discarded, smashed cigarette butt laying in a puddle of splattered ice cream to the left of the ice cream ball.&quot; width=&quot;1652&quot; height=&quot;1652&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/summer-portrait-tempered-by-disaster/&quot;&gt;Summer Portrait (Tempered By Disaster)&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/RevQOnDr8p-1600.avif 1600w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/RevQOnDr8p-1600.webp 1600w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/RevQOnDr8p-1600.jpeg&quot; alt=&quot;&quot; width=&quot;1600&quot; height=&quot;2249&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/pulling-a-thread/&quot;&gt;Pulling a Thread&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/g89h3GDvtK-1600.avif 1600w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/g89h3GDvtK-1600.webp 1600w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/g89h3GDvtK-1600.jpeg&quot; alt=&quot;&quot; width=&quot;1600&quot; height=&quot;2041&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/hunter/&quot;&gt;Hunter&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/Wx18D5goAE-1652.avif 1652w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/Wx18D5goAE-1652.webp 1652w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/Wx18D5goAE-1652.jpeg&quot; alt=&quot;&quot; width=&quot;1652&quot; height=&quot;551&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/sushi/&quot;&gt;Sushi I, Sushi II, Sushi III&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/0NvcFmhlgn-1600.avif 1600w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/0NvcFmhlgn-1600.webp 1600w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/0NvcFmhlgn-1600.jpeg&quot; alt=&quot;&quot; width=&quot;1600&quot; height=&quot;1034&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/justin-and-jeremy/&quot;&gt;Justin &amp;amp; Jeremy&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/qkH09wqNyD-1600.avif 1600w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/qkH09wqNyD-1600.webp 1600w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/qkH09wqNyD-1600.jpeg&quot; alt=&quot;Two side-by-side portaits of a young white man with short dark hair, combed back. In both portraits he is wearing a jacked with a Straight Edge symbol. The text &amp;quot;Jackets speak louder than words is painted over the bottom right quarter of the image.&quot; width=&quot;1600&quot; height=&quot;1148&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/adam/&quot;&gt;Adam&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/5wCG6S4qWe-1600.avif 1600w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/5wCG6S4qWe-1600.webp 1600w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/5wCG6S4qWe-1600.jpeg&quot; alt=&quot;&quot; width=&quot;1600&quot; height=&quot;850&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/corbie/&quot;&gt;Corbie&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/qY5kiFRqYP-1600.avif 1600w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/qY5kiFRqYP-1600.webp 1600w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/qY5kiFRqYP-1600.jpeg&quot; alt=&quot;&quot; width=&quot;1600&quot; height=&quot;1076&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/untitled-chin-up/&quot;&gt;Untitled (Chin Up)&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/tta5D0DsHK-1600.avif 1600w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/tta5D0DsHK-1600.webp 1600w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/tta5D0DsHK-1600.jpeg&quot; alt=&quot;&quot; width=&quot;1600&quot; height=&quot;1208&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/bernardo/&quot;&gt;Bernardo&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/JDZ4iGSfcq-1600.avif 1600w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/JDZ4iGSfcq-1600.webp 1600w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/JDZ4iGSfcq-1600.jpeg&quot; alt=&quot;&quot; width=&quot;1600&quot; height=&quot;2182&quot;&gt;&lt;/picture&gt;
-      &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/space-cat/&quot;&gt;Space Cat&lt;/a&gt;&lt;/strong&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-
-</content>
-  </entry>
-  <entry>
-    <title>I&#39;m a crayon</title>
-    <link href="https://imacrayon.com/" />
-    <updated>2024-10-28T02:20:16Z</updated>
-    <id>https://imacrayon.com/</id>
-    <content type="html">
-&lt;header&gt;
-  &lt;div class=&quot;intro center&quot;&gt;
-    &lt;figure&gt;
-      &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://imacrayon.com/img/2-OPJai-Fr-128.avif 128w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://imacrayon.com/img/2-OPJai-Fr-128.webp 128w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://imacrayon.com/img/2-OPJai-Fr-128.jpeg&quot; alt=&quot;Christian Taylor&#39;s mug shot&quot; width=&quot;128&quot; height=&quot;128&quot;&gt;&lt;/picture&gt;
-      &lt;figcaption&gt;
-        &lt;h1 id=&quot;christian-taylor&quot;&gt;Christian Taylor&lt;/h1&gt;
-        &lt;p&gt;Co-Founder of Moonbase Labs&lt;/p&gt;
-      &lt;/figcaption&gt;
-    &lt;/figure&gt;
-    &lt;p&gt;I’m a full stack developer with an eye for design and an appreciation for practical, accessible solutions.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/header&gt;
-
-&lt;div class=&quot;cantilever&quot;&gt;
-  &lt;div&gt;
-    &lt;div class=&quot;center&quot;&gt;
-      &lt;div&gt;
-        
-&lt;h2 id=&quot;now-playing&quot;&gt;Now Playing&lt;/h2&gt;
-&lt;now-playing&gt;
-  &lt;div class=&quot;track&quot;&gt;
-    &lt;img src=&quot;https://imacrayon.com/&quot; alt=&quot;&quot; width=&quot;64&quot; height=&quot;64&quot;&gt;
-    &lt;div&gt;
-      &lt;p&gt;Fetching track...&lt;/p&gt;
-      &lt;p&gt;Fetching artist...&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;details&gt;
-    &lt;summary&gt;Recently played&lt;/summary&gt;
-    Fetching playlist...
-  &lt;/details&gt;
-&lt;/now-playing&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-&lt;section aria-labelledby=&quot;latest&quot;&gt;
-  &lt;div class=&quot;center&quot;&gt;
-    &lt;h2 id=&quot;latest&quot;&gt;Latest&lt;/h2&gt;
-    &lt;ul role=&quot;list&quot; class=&quot;posts stack&quot; style=&quot;--gap:1rem;&quot;&gt;
-        &lt;li&gt;
-            &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/2023-recap/&quot;&gt;2023 Recap&lt;/a&gt;&lt;/strong&gt;
-            &lt;time datetime=&quot;2023-12-31&quot;&gt;31 Dec 2023&lt;/time&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/pictures/shine/&quot;&gt;Shine&lt;/a&gt;&lt;/strong&gt;
-            &lt;time datetime=&quot;2023-10-15&quot;&gt;15 Oct 2023&lt;/time&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/instant-search-with-alpine-ajax-and-laravel/&quot;&gt;Build a Quick &amp;amp; Easy Instant Search User Interface using Alpine AJAX &amp;amp; Laravel&lt;/a&gt;&lt;/strong&gt;
-            &lt;time datetime=&quot;2023-09-23&quot;&gt;23 Sep 2023&lt;/time&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/reponsive-images-in-eleventy-markdown/&quot;&gt;Responsive Images in Eleventy Markdown&lt;/a&gt;&lt;/strong&gt;
-            &lt;time datetime=&quot;2023-03-03&quot;&gt;03 Mar 2023&lt;/time&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;strong&gt;&lt;a href=&quot;https://imacrayon.com/words/cranking-my-website-up-to-eleventy/&quot;&gt;Cranking My Website Up to Eleventy&lt;/a&gt;&lt;/strong&gt;
-            &lt;time datetime=&quot;2023-02-04&quot;&gt;04 Feb 2023&lt;/time&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/section&gt;
-</content>
-  </entry>
-  <entry>
-    <title></title>
-    <link href="https://imacrayon.com/about/" />
-    <updated>2024-10-28T02:20:15Z</updated>
-    <id>https://imacrayon.com/about/</id>
-    <content type="html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-  &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=https://imacrayon.com&quot;&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-  &lt;p&gt;Redirecting to &lt;a href=&quot;https://imacrayon.com&quot;&gt;https://imacrayon.com&lt;/a&gt;.&lt;/p&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;
-</content>
-  </entry>
   <entry>
     <title>2023 Recap</title>
     <link href="https://imacrayon.com/words/2023-recap/" />
@@ -546,6 +286,124 @@ eleventyConfig&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;
 &lt;p&gt;At this point the website should be ready to go. The last step is to add your SSL certificate to any Digital Ocean Spaces CDNs your might have configured.&lt;/p&gt;
 &lt;h2 id=&quot;spaces-cdn&quot;&gt;Spaces CDN&lt;/h2&gt;
 &lt;p&gt;On the Settings page for your Digital Ocean Space, select &lt;strong&gt;Edit &amp;gt; Add a new certificate&lt;/strong&gt;. Within the settings modal select the &lt;strong&gt;Bring your own certificate&lt;/strong&gt; tab. From here you can add your certificate settings just like you did in SSL step above.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Subdomain Redirects in Laravel Forge</title>
+    <link href="https://imacrayon.com/words/subdomain-redirects-in-laravel-forge/" />
+    <updated>2021-02-04T00:00:00Z</updated>
+    <id>https://imacrayon.com/words/subdomain-redirects-in-laravel-forge/</id>
+    <content type="html">&lt;p&gt;I had to go through some trial and error to get this working so I&#39;m writing it down. My goal was to permanently redirect a domain like &lt;code&gt;beta.imacrayon.com&lt;/code&gt; to &lt;code&gt;imacrayon.com&lt;/code&gt; in Laravel Forge.&lt;/p&gt;
+&lt;p&gt;In order to properly redirect &lt;code&gt;https://beta.imacrayon.com&lt;/code&gt;. I generated a new LetsEncrypt certificate with the following domains:&lt;/p&gt;
+&lt;pre class=&quot;language-shell&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;imacrayon.com,www.imacrayon.com,beta.imacrayon.com&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next I added two new server blocks to the top of my nginx config:&lt;/p&gt;
+&lt;pre class=&quot;language-nginx&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-nginx&quot;&gt;&lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;server&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt; [::]:80&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;server_name&lt;/span&gt; beta.imacrayon.com&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;301&lt;/span&gt; https://imacrayon.com&lt;span class=&quot;token variable&quot;&gt;$request_uri&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;server&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;443&lt;/span&gt; ssl http2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt; [::]:443 ssl http2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# PASTE YOUR SSL DIRECTIVES HERE&lt;/span&gt;
+
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;server_name&lt;/span&gt; beta.imacrayon.com&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;301&lt;/span&gt; https://imacrayon.com&lt;span class=&quot;token variable&quot;&gt;$request_uri&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The second server block requires you to add the SSL directives for the LetsEncrypt certificate generated in the first step. You should be able to find these directives inside your existing nginx config. They’ll probably be labeled with a comment like &lt;code&gt;# FORGE SSL (DO NOT REMOVE!)&lt;/code&gt; and look like this:&lt;/p&gt;
+&lt;pre class=&quot;language-nginx&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-nginx&quot;&gt;    &lt;span class=&quot;token comment&quot;&gt;# FORGE SSL (DO NOT REMOVE!)&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl_certificate&lt;/span&gt; /etc/nginx/ssl/imacrayon.com/xxx/server.crt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl_certificate_key&lt;/span&gt; /etc/nginx/ssl/imacrayon.com/xxx/server.key&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl_protocols&lt;/span&gt; TLSv1.2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl_ciphers&lt;/span&gt; ...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl_prefer_server_ciphers&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;on&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl_dhparam&lt;/span&gt; /etc/nginx/dhparams.pem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That’s it! After saving your config &lt;code&gt;http://beta.imacrayon.com&lt;/code&gt; and &lt;code&gt;https://beta.imacrayon.com&lt;/code&gt; should now redirect to &lt;code&gt;https://imacrayon.com&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Browsers will cache 301 redirects. So when testing these new redirects you may need to enable the “Clear cache” option in your browser&#39;s Developer Tools, it’s usually located under the “Network” tab.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>MLK Day</title>
+    <link href="https://imacrayon.com/words/mlk-day/" />
+    <updated>2021-01-18T00:00:00Z</updated>
+    <id>https://imacrayon.com/words/mlk-day/</id>
+    <content type="html">&lt;p&gt;I came across a speech Dr. Martin Luther King Jr. gave at an annual conference for the American Psychological Association in 1967. I was struck by just how relevant this passage is right now:&lt;/p&gt;
+&lt;blockquote cite=&quot;https://www.apa.org/monitor/features/king-challenge&quot;&gt;
+&lt;p&gt;Urban riots must now be recognized as durable social phenomena. They may be deplored, but they are there and should be understood. Urban riots are a special form of violence. They are not insurrections. The rioters are not seeking to seize territory or to attain control of institutions. They are mainly intended to shock the white community. They are a distorted form of social protest. The looting which is their principal feature serves many functions. It enables the most enraged and deprived Negro to take hold of consumer goods with the ease the white man does by using his purse. Often the Negro does not even want what he takes; he wants the experience of taking. But most of all, alienated from society and knowing that this society cherishes property above people, he is shocking it by abusing property rights. There are thus elements of emotional catharsis in the violent act. This may explain why most cities in which riots have occurred have not had a repetition, even though the causative conditions remain. It is also noteworthy that the amount of physical harm done to white people other than police is infinitesimal and in Detroit whites and Negroes looted in unity.&lt;/p&gt;
+&lt;p&gt;A profound judgment of today&#39;s riots was expressed by Victor Hugo a century ago. He said, &#39;If a soul is left in the darkness, sins will be committed. The guilty one is not he who commits the sin, but he who causes the darkness.&#39;&lt;/p&gt;
+&lt;p&gt;The policymakers of the white society have caused the darkness; they create discrimination; they structured slums; and they perpetuate unemployment, ignorance and poverty. It is incontestable and deplorable that Negroes have committed crimes; but they are derivative crimes. They are born of the greater crimes of the white society. When we ask Negroes to abide by the law, let us also demand that the white man abide by law in the ghettos. Day-in and day-out he violates welfare laws to deprive the poor of their meager allotments; he flagrantly violates building codes and regulations; his police make a mockery of law; and he violates laws on equal employment and education and the provisions for civic services. The slums are the handiwork of a vicious system of the white society; Negroes live in them but do not make them any more than a prisoner makes a prison. Let us say boldly that if the violations of law by the white man in the slums over the years were calculated and compared with the law-breaking of a few days of riots, the hardened criminal would be the white man. These are often difficult things to say but I have come to see more and more that it is necessary to utter the truth in order to deal with the great problems that we face in our society.&lt;/p&gt;
+&lt;cite&gt;Dr. Martin Luther King Jr., 1967&lt;/cite&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This week I&#39;m reminding myself to take time to stop and listen.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.apa.org/monitor/features/king-challenge&quot;&gt;You can read the full speech here&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Gather the People; New Artwork</title>
+    <link href="https://imacrayon.com/words/gather-the-people-new-artwork/" />
+    <updated>2021-01-10T00:00:00Z</updated>
+    <id>https://imacrayon.com/words/gather-the-people-new-artwork/</id>
+    <content type="html">&lt;p&gt;2021 is off to a turbulent start to say the least:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Covid-19 is surging again, spurred by holiday gatherings.&lt;/li&gt;
+&lt;li&gt;Trump supporters &lt;a href=&quot;https://en.wikipedia.org/wiki/2021_storming_of_the_United_States_Capitol&quot;&gt;stormed the United States Capitol&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Democrats gained control of the Senate by winning Georgia&#39;s runoff elections.&lt;/li&gt;
+&lt;li&gt;I started working again after a 2 holiday break.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This week I read &lt;a href=&quot;https://gatherthepeople.com&quot;&gt;&lt;em&gt;Gather the People&lt;/em&gt;&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/sarahavenir&quot;&gt;Sarah Avenir&lt;/a&gt;. It&#39;s helped motivate me to stop and share more often. I tend to get caught up in the projects I&#39;m working on and never take the time to pause and take inventory of the &lt;a href=&quot;https://signalvnoise.com/posts/1620-sell-your-by-products&quot;&gt;&amp;quot;sawdust&amp;quot; around me&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, in the spirit of taking inventory, this weekend I started cataloging past artwork and &lt;a href=&quot;https://imacrayon.com/pictures&quot;&gt;uploading it here&lt;/a&gt;. Up until now this site has functioned as a web development blog. My goal for 2021 is to make this place more of personal space. I hope to keep updating it with current work throughout the rest of the year.&lt;/p&gt;
+&lt;p&gt;Another personal touch I&#39;m adding to this blog is a new &amp;quot;Food for Thought&amp;quot; feature where I&#39;ll document stuff I&#39;m currently &amp;quot;chewing&amp;quot; on. I&#39;m not sure what it will look like yet, but I&#39;ll just get started an see where it goes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gatherthepeople.com&quot;&gt;&lt;em&gt;Gather the People&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?app=desktop&amp;amp;v=sHSLWOh3lJg&quot;&gt;&lt;em&gt;Girls &amp;amp; Boys (From Shrimp Sessions 2)&lt;/em&gt;&lt;/a&gt; by Viagra Boys&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vimeo.com/59384516&quot;&gt;&lt;em&gt;Do Things The Long, Hard, Stupid Way&lt;/em&gt;&lt;/a&gt;: A talk by &lt;a href=&quot;https://twitter.com/frank_chimero&quot;&gt;Frank Chimero&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/CxUrZFAPdiU&quot;&gt;A funny game glitch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://turbo.hotwire.dev&quot;&gt;Hotwire&lt;/a&gt;: An interesting new frontend stack&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wakirin.github.io/Litepicker&quot;&gt;Litepicker&lt;/a&gt;: A nice calendar widget&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>2020 Recap</title>
+    <link href="https://imacrayon.com/words/2020-recap/" />
+    <updated>2020-12-31T00:00:00Z</updated>
+    <id>https://imacrayon.com/words/2020-recap/</id>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;This was the first year I worked as Lead Developer &amp;amp; Co-founder of Moonbase Labs.&lt;/li&gt;
+&lt;li&gt;I mostly quit social media.&lt;/li&gt;
+&lt;li&gt;I started blogging.&lt;/li&gt;
+&lt;li&gt;Moonbase moved into its first office.&lt;/li&gt;
+&lt;li&gt;I setup my first home office.&lt;/li&gt;
+&lt;li&gt;Moonbase went 100% remote.&lt;/li&gt;
+&lt;li&gt;I started playing video games more often.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://goventuredash.com&quot;&gt;VentureDash&lt;/a&gt;, a product we launched late last year, hosted its first 95 entrepreneurship competitions across the country.&lt;/li&gt;
+&lt;li&gt;I improved some of the technology that powers &lt;a href=&quot;https://friendshiplamps.com&quot;&gt;friendshiplamps.com&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I hiked some cool mountains in Colorado with Miranda.&lt;/li&gt;
+&lt;li&gt;I help build &lt;a href=&quot;https://votelocalks.org&quot;&gt;VoteLocal&lt;/a&gt;, in partnership with &lt;a href=&quot;https://www.kmuw.org&quot;&gt;KMUW&lt;/a&gt; and &lt;a href=&quot;http://devict.org&quot;&gt;devICT&lt;/a&gt;, to help Kansans find election info.&lt;/li&gt;
+&lt;li&gt;I voted.&lt;/li&gt;
+&lt;li&gt;I volunteered &amp;amp; contributed to political campaigns outside of Kansas for the first time.&lt;/li&gt;
+&lt;li&gt;I grew my hair out.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/imacrayon&quot;&gt;I contributed code to about 20 open source projects&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Some code I wrote was &lt;a href=&quot;https://www.youtube.com/watch?v=fzI9FNjXQ0o&amp;amp;feature=emb_title&quot;&gt;archived underground in the North Pole&lt;/a&gt; by the Arctic World Archive.&lt;/li&gt;
+&lt;li&gt;I learned a lot about project management.&lt;/li&gt;
+&lt;li&gt;Moobase grew &lt;a href=&quot;https://essentialceu.com&quot;&gt;Essential CEU&lt;/a&gt;&#39;s userbase by 93%.&lt;/li&gt;
+&lt;li&gt;I learned a lot about ADHD.&lt;/li&gt;
+&lt;li&gt;I started making sourdough again.&lt;/li&gt;
+&lt;li&gt;I worried a lot about my health and others.&lt;/li&gt;
+&lt;li&gt;I didn’t eat any meat.&lt;/li&gt;
+&lt;li&gt;I started composting.&lt;/li&gt;
+&lt;li&gt;I listened to a lot of &lt;a href=&quot;https://songwhip.com/pinegrove&quot;&gt;Pinegrove&lt;/a&gt;; &lt;a href=&quot;https://songwhip.com/phoebe-bridgers&quot;&gt;Phoebe Bridges&lt;/a&gt;; &lt;a href=&quot;https://songwhip.com/kevin-devine&quot;&gt;Kevin Devin&lt;/a&gt;, &lt;a href=&quot;https://songwhip.com/touche-amore&quot;&gt;Touché Amoré&lt;/a&gt;; &lt;a href=&quot;https://songwhip.com/slaughter-beach-dog&quot;&gt;Slaughter Beach, Dog&lt;/a&gt;; &lt;a href=&quot;https://songwhip.com/david-bazan&quot;&gt;David Bazan&lt;/a&gt;; &amp;amp; &lt;a href=&quot;https://songwhip.com/jeff-rosenstock&quot;&gt;Jeff Rosenstock&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I discovered new bands like &lt;a href=&quot;https://songwhip.com/dogleg&quot;&gt;Dogleg&lt;/a&gt;, &lt;a href=&quot;https://songwhip.com/beach-bunny&quot;&gt;Beach Bunny&lt;/a&gt;, and &lt;a href=&quot;https://songwhip.com/ernestrareberrg&quot;&gt;Ernest Rareberrg&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I discovered cool work by artists &lt;a href=&quot;https://thedailysplice.com&quot;&gt;Adam Hale&lt;/a&gt;, &lt;a href=&quot;https://www.ifrancis.co.uk&quot;&gt;Ian Francis&lt;/a&gt;, &lt;a href=&quot;https://www.instagram.com/inside_a_ginger/&quot;&gt;inside_a_ginger&lt;/a&gt;, &lt;a href=&quot;https://www.nikolasantoniou.com&quot;&gt;Nikolas Antoniou&lt;/a&gt;, &lt;a href=&quot;http://www.michael-reeder.com&quot;&gt;Michael Reeder&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I built &lt;a href=&quot;https://kansasbeatsthevirus.org&quot;&gt;kansasbeatsthevirus.org&lt;/a&gt; where over 800 communities &amp;amp; organizations across Kansas committed to mitigating the impact of Covid-19.&lt;/li&gt;
+&lt;li&gt;Miranda &amp;amp; I ended our relationship.&lt;/li&gt;
+&lt;li&gt;I re-did the bathroom.&lt;/li&gt;
+&lt;li&gt;I started running again.&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
 </feed>

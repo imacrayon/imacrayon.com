@@ -144,4 +144,8 @@
     <loc>https://imacrayon.com/words/</loc>
     <lastmod>2024-10-28</lastmod>
   </url>
+  <url>
+    <loc>https://imacrayon.com/feed.xml</loc>
+    <lastmod>2024-10-28</lastmod>
+  </url>
 </urlset>
