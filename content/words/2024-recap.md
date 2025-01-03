@@ -6,7 +6,7 @@ description: My 2024 end of year recap
 
 * Moonbase Labs shrunk to two people. I'm both uncomfortable and excited about what next year will bring.
 * Twitter imploded this year and I've become more active on [Bluesky](https://bsky.app/profile/imacrayon.com).
-* I only wrote one blog post this year - yikes - I really was planning on writing more this year.
+* I only wrote one blog post this year - yikes - I really was planning on writing more.
 * I published [my first and only YouTube tutorial](https://www.youtube.com/watch?v=vNiZyFVmoOI); it has earned 2700 views and I now have 101 subscribers.
 * I continued to maintain [Alpine AJAX](https://github.com/imacrayon/alpine-ajax); it's now got 687 stars (+527 from last year). The project has gained a few new contributors and a few positive mentions on Reddit.
 * I maintained a vegetarian diet.
