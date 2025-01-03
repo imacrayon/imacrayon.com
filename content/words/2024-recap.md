@@ -8,9 +8,9 @@ description: My 2024 end of year recap
 * Twitter imploded this year and I've become more active on [Bluesky](https://bsky.app/profile/imacrayon.com).
 * I only wrote one blog post this year - yikes - I really was planning on writing more.
 * I published [my first and only YouTube tutorial](https://www.youtube.com/watch?v=vNiZyFVmoOI); it has earned 2700 views and I now have 101 subscribers.
-* I continued to maintain [Alpine AJAX](https://github.com/imacrayon/alpine-ajax); it's now got 687 stars (+527 from last year). The project has gained a few new contributors and a few positive mentions on Reddit.
+* I continued to maintain [Alpine AJAX](https://github.com/imacrayon/alpine-ajax); it now has 687 stars (+527 from last year) on GitHub. The project has gained a few new contributors and some positive mentions on Reddit.
 * I maintained a vegetarian diet.
-* I lifted at least twice a week all year; I hit a new personal deadlift record of 305 lbs.
+* I lifted at least twice a week all year; I hit a new personal deadlift record of 305lbs.
 * I attended my first [MicroConf](https://microconf.com/) in Atlanta, GA, and my second [Laracon US](https://laracon.us/) in Dallas, TX.
 * At Laracon, [Nic and I won $1,500](https://x.com/nicwentling/status/1829150020794495263) playing Pyramid Scheme, [a game created by the Thunk team for Laracon attendees](https://thunk.dev/blog/we-gave-away-1500).
 * I made [a painting](https://imacrayon.com/pictures/shine/) for Carmen to hang in her office.
